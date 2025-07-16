@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   ArrowRight,
   Phone,
@@ -24,84 +24,49 @@ import {
   Building,
   Home,
   Layers,
-} from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { MobileMenu } from "@/components/mobile-menu"
-import { InteractiveCarousel } from "@/components/interactive-carousel"
-import { ScrollAnimation, StaggerAnimation } from "@/components/scroll-animations"
-import { AluminumBackground, AluminumShapes } from "@/components/aluminum-background"
-import type { Metadata } from "next"
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { MobileMenu } from "@/components/mobile-menu";
+import { InteractiveCarousel } from "@/components/interactive-carousel";
+import {
+  ScrollAnimation,
+  StaggerAnimation,
+} from "@/components/scroll-animations";
+import {
+  AluminumBackground,
+  AluminumShapes,
+} from "@/components/aluminum-background";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Ketar Aluminum - Premium Aluminum Profiles & Technical Services in Ethiopia",
+  title:
+    "Ketar Aluminum - Premium Aluminum Profiles & Technical Services in Ethiopia",
   description:
     "Leading aluminum supplier in Ethiopia since 2006. Specializing in anodized and powder coating aluminum profiles, doors, windows, curtain walls, and technical services. Founded by Anteneh Darsema.",
   keywords:
     "aluminum profiles Ethiopia, anodized aluminum, powder coating, aluminum doors, aluminum windows, curtain wall, Ketar Aluminum, Ethiopian aluminum supplier",
   openGraph: {
     title: "Ketar Aluminum - Premium Aluminum Profiles & Technical Services",
-    description: "Leading aluminum supplier in Ethiopia since 2006. Quality aluminum profiles and technical services.",
+    description:
+      "Leading aluminum supplier in Ethiopia since 2006. Quality aluminum profiles and technical services.",
     url: "https://ketaraluminum.com",
-    images: [{ url: "/og-home.jpg", width: 1200, height: 630, alt: "Ketar Aluminum Homepage" }],
+    images: [
+      {
+        url: "/og-home.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Ketar Aluminum Homepage",
+      },
+    ],
   },
-}
+};
 
 export default function HomePage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 relative">
       <AluminumBackground />
       <AluminumShapes />
-
-      {/* Navigation */}
-      <nav className="bg-white shadow-lg border-b-2 border-gray-100 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            {/* Logo */}
-            <div className="flex items-center space-x-3">
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl">K</span>
-                </div>
-                <div className="absolute -right-2 -bottom-1 w-8 h-8 bg-gradient-to-br from-red-500 to-red-600 rounded-md flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-sm">A</span>
-                </div>
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900">Ketar Aluminum</h1>
-                <p className="text-sm text-gray-600">Premium Aluminum Solutions</p>
-              </div>
-            </div>
-
-            {/* Navigation Links */}
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-900 font-semibold border-b-2 border-green-500 pb-1">
-                Home
-              </Link>
-              <Link href="/about" className="text-gray-600 hover:text-green-600 font-medium transition-colors">
-                About
-              </Link>
-              <Link href="/services" className="text-gray-600 hover:text-green-600 font-medium transition-colors">
-                Services
-              </Link>
-              <Link href="/products" className="text-gray-600 hover:text-green-600 font-medium transition-colors">
-                Products
-              </Link>
-              <Link href="/contact" className="text-gray-600 hover:text-green-600 font-medium transition-colors">
-                Contact
-              </Link>
-              <Button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg">
-                Get Quote
-              </Button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <MobileMenu currentPage="home" />
-            </div>
-          </div>
-        </div>
-      </nav>
 
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-gray-100 min-h-screen flex items-center">
@@ -128,8 +93,9 @@ export default function HomePage() {
                     <span className="text-red-600">Profiles</span>
                   </h1>
                   <p className="text-xl text-gray-600 mt-8 leading-relaxed max-w-lg">
-                    Ethiopia's trusted aluminum supplier offering premium anodized and powder coating profiles,
-                    technical services, and complete aluminum solutions for over 18 years.
+                    Ethiopia's trusted aluminum supplier offering premium
+                    anodized and powder coating profiles, technical services,
+                    and complete aluminum solutions for over 18 years.
                   </p>
                 </div>
 
@@ -156,34 +122,55 @@ export default function HomePage() {
                   <div className="flex items-center space-x-2">
                     <div className="flex -space-x-1">
                       {[1, 2, 3, 4, 5].map((i) => (
-                        <Star key={i} className="h-5 w-5 text-yellow-400 fill-current" />
+                        <Star
+                          key={i}
+                          className="h-5 w-5 text-yellow-400 fill-current"
+                        />
                       ))}
                     </div>
-                    <span className="text-sm text-gray-600 font-medium">Trusted Quality</span>
+                    <span className="text-sm text-gray-600 font-medium">
+                      Trusted Quality
+                    </span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <CheckCircle className="h-5 w-5 text-green-500" />
-                    <span className="text-sm text-gray-600 font-medium">TIN: 00 53 39 59 97</span>
+                    <span className="text-sm text-gray-600 font-medium">
+                      TIN: 00 53 39 59 97
+                    </span>
                   </div>
                   <div className="flex items-center space-x-2">
                     <Users className="h-5 w-5 text-blue-500" />
-                    <span className="text-sm text-gray-600 font-medium">500+ Projects</span>
+                    <span className="text-sm text-gray-600 font-medium">
+                      500+ Projects
+                    </span>
                   </div>
                 </div>
 
                 {/* Stats */}
                 <div className="grid grid-cols-3 gap-8 pt-12 border-t border-gray-200">
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-green-600 mb-2">18+</div>
-                    <div className="text-sm text-gray-600 font-medium">Years Experience</div>
+                    <div className="text-4xl font-bold text-green-600 mb-2">
+                      18+
+                    </div>
+                    <div className="text-sm text-gray-600 font-medium">
+                      Years Experience
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-red-600 mb-2">500+</div>
-                    <div className="text-sm text-gray-600 font-medium">Projects Completed</div>
+                    <div className="text-4xl font-bold text-red-600 mb-2">
+                      500+
+                    </div>
+                    <div className="text-sm text-gray-600 font-medium">
+                      Projects Completed
+                    </div>
                   </div>
                   <div className="text-center">
-                    <div className="text-4xl font-bold text-gray-900 mb-2">100%</div>
-                    <div className="text-sm text-gray-600 font-medium">Client Satisfaction</div>
+                    <div className="text-4xl font-bold text-gray-900 mb-2">
+                      100%
+                    </div>
+                    <div className="text-sm text-gray-600 font-medium">
+                      Client Satisfaction
+                    </div>
                   </div>
                 </div>
               </div>
@@ -204,8 +191,12 @@ export default function HomePage() {
                         <Factory className="h-6 w-6 text-white" />
                       </div>
                       <div>
-                        <div className="text-sm font-semibold text-gray-900">Ethiopian Leader</div>
-                        <div className="text-xs text-gray-600">Aluminum Solutions</div>
+                        <div className="text-sm font-semibold text-gray-900">
+                          Ethiopian Leader
+                        </div>
+                        <div className="text-xs text-gray-600">
+                          Aluminum Solutions
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -235,7 +226,9 @@ export default function HomePage() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-2xl"></div>
                 <div className="absolute bottom-6 left-6 bg-white/95 backdrop-blur-sm rounded-lg p-4 shadow-lg">
                   <div className="text-2xl font-bold text-green-600">2006</div>
-                  <div className="text-sm text-gray-700 font-medium">Founded in Ethiopia</div>
+                  <div className="text-sm text-gray-700 font-medium">
+                    Founded in Ethiopia
+                  </div>
                 </div>
               </div>
 
@@ -249,14 +242,17 @@ export default function HomePage() {
                     <span className="text-green-600"> Aluminum</span> Since 2006
                   </h2>
                   <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                    Founded by Anteneh Darsema, Ketar Aluminum is a privately owned Ethiopian company specializing in
-                    premium aluminum profiles and technical services. Our ambition is to offer customers the finest
-                    quality aluminum products with the quickest service.
+                    Founded by Anteneh Darsema, Ketar Aluminum is a privately
+                    owned Ethiopian company specializing in premium aluminum
+                    profiles and technical services. Our ambition is to offer
+                    customers the finest quality aluminum products with the
+                    quickest service.
                   </p>
                   <p className="text-lg text-gray-600 leading-relaxed">
-                    We believe good service is worrying about the details so our customers don't have to. With over 18
-                    years of experience, we've built lasting relationships with clients across Ethiopia's private and
-                    public sectors.
+                    We believe good service is worrying about the details so our
+                    customers don't have to. With over 18 years of experience,
+                    we've built lasting relationships with clients across
+                    Ethiopia's private and public sectors.
                   </p>
                 </div>
 
@@ -266,8 +262,12 @@ export default function HomePage() {
                       <CheckCircle className="h-6 w-6 text-green-600" />
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900">Quality Assured</div>
-                      <div className="text-sm text-gray-600">Premium Standards</div>
+                      <div className="font-semibold text-gray-900">
+                        Quality Assured
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        Premium Standards
+                      </div>
                     </div>
                   </div>
                   <div className="flex items-center space-x-3">
@@ -275,8 +275,12 @@ export default function HomePage() {
                       <Award className="h-6 w-6 text-red-600" />
                     </div>
                     <div>
-                      <div className="font-semibold text-gray-900">Industry Leader</div>
-                      <div className="text-sm text-gray-600">Ethiopian Market</div>
+                      <div className="font-semibold text-gray-900">
+                        Industry Leader
+                      </div>
+                      <div className="text-sm text-gray-600">
+                        Ethiopian Market
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -299,11 +303,16 @@ export default function HomePage() {
       <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-4 px-4 py-2">Our Expertise</Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Products & Services</h2>
+            <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-4 px-4 py-2">
+              Our Expertise
+            </Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Products & Services
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Comprehensive aluminum solutions including anodized and powder coating profiles, technical services, and
-              complete project implementation
+              Comprehensive aluminum solutions including anodized and powder
+              coating profiles, technical services, and complete project
+              implementation
             </p>
           </div>
 
@@ -319,9 +328,12 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                   </div>
                   <div className="p-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Aluminum Profiles</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      Aluminum Profiles
+                    </h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
-                      Premium anodized and powder coating aluminum profiles with superior quality and finish.
+                      Premium anodized and powder coating aluminum profiles with
+                      superior quality and finish.
                     </p>
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-center text-sm text-gray-600">
@@ -358,9 +370,12 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                   </div>
                   <div className="p-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Doors & Windows</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      Doors & Windows
+                    </h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
-                      High-quality aluminum doors and windows with modern designs and excellent durability.
+                      High-quality aluminum doors and windows with modern
+                      designs and excellent durability.
                     </p>
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-center text-sm text-gray-600">
@@ -397,9 +412,12 @@ export default function HomePage() {
                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                   </div>
                   <div className="p-8">
-                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Curtain Wall & Cladding</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      Curtain Wall & Cladding
+                    </h3>
                     <p className="text-gray-600 mb-6 leading-relaxed">
-                      Professional curtain wall systems and aluminum cladding for modern architectural projects.
+                      Professional curtain wall systems and aluminum cladding
+                      for modern architectural projects.
                     </p>
                     <ul className="space-y-2 mb-6">
                       <li className="flex items-center text-sm text-gray-600">
@@ -431,8 +449,12 @@ export default function HomePage() {
           {/* Additional Services */}
           <div className="bg-white rounded-3xl shadow-xl p-12">
             <div className="text-center mb-12">
-              <h3 className="text-3xl font-bold text-gray-900 mb-4">Additional Services</h3>
-              <p className="text-lg text-gray-600">Complete aluminum solutions for all your needs</p>
+              <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                Additional Services
+              </h3>
+              <p className="text-lg text-gray-600">
+                Complete aluminum solutions for all your needs
+              </p>
             </div>
 
             <div className="grid md:grid-cols-4 gap-8">
@@ -440,32 +462,48 @@ export default function HomePage() {
                 <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-shadow">
                   <Shield className="h-12 w-12 text-green-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Handrails & Guardrails</h4>
-                <p className="text-sm text-gray-600">Safety and aesthetic solutions</p>
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                  Handrails & Guardrails
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Safety and aesthetic solutions
+                </p>
               </div>
 
               <div className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-br from-red-100 to-red-200 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-shadow">
                   <Layers className="h-12 w-12 text-red-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Partitions</h4>
-                <p className="text-sm text-gray-600">Modern space division solutions</p>
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                  Partitions
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Modern space division solutions
+                </p>
               </div>
 
               <div className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-100 to-green-200 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-shadow">
                   <Settings className="h-12 w-12 text-green-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Skylights</h4>
-                <p className="text-sm text-gray-600">Natural lighting solutions</p>
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                  Skylights
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Natural lighting solutions
+                </p>
               </div>
 
               <div className="text-center group">
                 <div className="w-20 h-20 bg-gradient-to-br from-red-100 to-red-200 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:shadow-lg transition-shadow">
                   <Shield className="h-12 w-12 text-red-600" />
                 </div>
-                <h4 className="text-lg font-semibold text-gray-900 mb-2">Sun Barkers</h4>
-                <p className="text-sm text-gray-600">Solar protection systems</p>
+                <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                  Sun Barkers
+                </h4>
+                <p className="text-sm text-gray-600">
+                  Solar protection systems
+                </p>
               </div>
             </div>
           </div>
@@ -476,10 +514,15 @@ export default function HomePage() {
       <section className="py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-20">
-            <Badge className="bg-red-100 text-red-800 hover:bg-red-100 mb-4 px-4 py-2">Why Choose Ketar</Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">Excellence in Every Detail</h2>
+            <Badge className="bg-red-100 text-red-800 hover:bg-red-100 mb-4 px-4 py-2">
+              Why Choose Ketar
+            </Badge>
+            <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+              Excellence in Every Detail
+            </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              Discover what sets us apart as Ethiopia's leading aluminum solutions provider
+              Discover what sets us apart as Ethiopia's leading aluminum
+              solutions provider
             </p>
           </div>
 
@@ -494,9 +537,12 @@ export default function HomePage() {
                     <CheckCircle className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Quality Assured</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Quality Assured
+                </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Premium aluminum profiles with superior anodizing and powder coating finishes for lasting durability.
+                  Premium aluminum profiles with superior anodizing and powder
+                  coating finishes for lasting durability.
                 </p>
               </div>
 
@@ -509,9 +555,12 @@ export default function HomePage() {
                     <Clock className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Quick Service</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Quick Service
+                </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Fast delivery and responsive customer service. We worry about the details so you don't have to.
+                  Fast delivery and responsive customer service. We worry about
+                  the details so you don't have to.
                 </p>
               </div>
 
@@ -524,9 +573,12 @@ export default function HomePage() {
                     <Target className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Technical Expertise</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Technical Expertise
+                </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  Complete technical services including installation, maintenance, and custom fabrication solutions.
+                  Complete technical services including installation,
+                  maintenance, and custom fabrication solutions.
                 </p>
               </div>
 
@@ -539,9 +591,12 @@ export default function HomePage() {
                     <Users className="h-4 w-4 text-white" />
                   </div>
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">Trusted Partner</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  Trusted Partner
+                </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  18+ years of building lasting relationships with clients across Ethiopia's private and public sectors.
+                  18+ years of building lasting relationships with clients
+                  across Ethiopia's private and public sectors.
                 </p>
               </div>
             </div>
@@ -550,8 +605,12 @@ export default function HomePage() {
           {/* Company Pledges */}
           <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-12">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-4">Our Pledges to You</h3>
-              <p className="text-gray-600">The commitments that guide our business relationships</p>
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Our Pledges to You
+              </h3>
+              <p className="text-gray-600">
+                The commitments that guide our business relationships
+              </p>
             </div>
             <div className="grid md:grid-cols-2 gap-8">
               <div className="flex items-start space-x-4">
@@ -559,10 +618,12 @@ export default function HomePage() {
                   <Shield className="h-6 w-6 text-green-600" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Integrity & Honesty</h4>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    Integrity & Honesty
+                  </h4>
                   <p className="text-gray-600">
-                    We pledge to guide all our actions with the utmost in integrity and honesty in every business
-                    interaction.
+                    We pledge to guide all our actions with the utmost in
+                    integrity and honesty in every business interaction.
                   </p>
                 </div>
               </div>
@@ -572,10 +633,12 @@ export default function HomePage() {
                   <Wrench className="h-6 w-6 text-red-600" />
                 </div>
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-900 mb-2">Ready to Assist</h4>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                    Ready to Assist
+                  </h4>
                   <p className="text-gray-600">
-                    We pledge to always be ready to assist and help provide solutions in any way possible for our
-                    clients.
+                    We pledge to always be ready to assist and help provide
+                    solutions in any way possible for our clients.
                   </p>
                 </div>
               </div>
@@ -592,9 +655,12 @@ export default function HomePage() {
               <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-4 px-4 py-2">
                 Client Testimonials
               </Badge>
-              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">What Our Clients Say</h2>
+              <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+                What Our Clients Say
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Hear from satisfied customers who trust Ketar Aluminum for their projects across Ethiopia
+                Hear from satisfied customers who trust Ketar Aluminum for their
+                projects across Ethiopia
               </p>
             </div>
           </ScrollAnimation>
@@ -623,8 +689,9 @@ export default function HomePage() {
             <span className="block">Premium Aluminum</span>
           </h2>
           <p className="text-xl text-green-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-            Join hundreds of satisfied customers who trust Ketar Aluminum for their most important projects. Get your
-            personalized quote today and experience Ethiopian aluminum excellence.
+            Join hundreds of satisfied customers who trust Ketar Aluminum for
+            their most important projects. Get your personalized quote today and
+            experience Ethiopian aluminum excellence.
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
@@ -666,143 +733,6 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid md:grid-cols-4 gap-12">
-            {/* Company Info */}
-            <div className="md:col-span-2">
-              <div className="flex items-center space-x-3 mb-8">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">K</span>
-                  </div>
-                  <div className="absolute -right-2 -bottom-1 w-8 h-8 bg-gradient-to-br from-red-500 to-red-600 rounded-md flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">A</span>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">Ketar Aluminum</h3>
-                  <p className="text-gray-400">Premium Aluminum Solutions</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-8 max-w-md leading-relaxed">
-                Leading provider of high-quality aluminum profiles and technical services in Ethiopia. Committed to
-                excellence, precision, and customer satisfaction since 2006.
-              </p>
-              <div className="mb-6">
-                <p className="text-sm text-gray-400">TIN: 00 53 39 59 97</p>
-                <p className="text-sm text-gray-400">Founded: October 7, 2006 E.C</p>
-              </div>
-              <div className="flex space-x-4">
-                <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors cursor-pointer">
-                  <Facebook className="h-6 w-6" />
-                </div>
-                <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors cursor-pointer">
-                  <Twitter className="h-6 w-6" />
-                </div>
-                <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors cursor-pointer">
-                  <Linkedin className="h-6 w-6" />
-                </div>
-                <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors cursor-pointer">
-                  <Instagram className="h-6 w-6" />
-                </div>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-xl font-semibold mb-8">Quick Links</h4>
-              <ul className="space-y-4">
-                <li>
-                  <Link href="/" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/products" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
-                    Products
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
-                    Contact
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/quote" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
-                    Get Quote
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h4 className="text-xl font-semibold mb-8">Contact Info</h4>
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
-                    <Phone className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-gray-300 font-medium">+251-911-123456</div>
-                    <div className="text-gray-500 text-sm">Mon-Fri 8AM-6PM</div>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
-                    <Mail className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-gray-300 font-medium">info@ketaraluminum.com</div>
-                    <div className="text-gray-500 text-sm">24/7 Support</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
-                    <MapPin className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-gray-300 font-medium">
-                      Addis Ababa, Ethiopia
-                      <br />
-                      Bole Sub City
-                    </div>
-                    <div className="text-gray-500 text-sm">Visit our facility</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400">© {new Date().getFullYear()} Ketar Aluminum. All rights reserved.</p>
-            <div className="flex space-x-8 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-green-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-green-400 transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/sitemap" className="text-gray-400 hover:text-green-400 transition-colors">
-                Sitemap
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
-  )
+  );
 }

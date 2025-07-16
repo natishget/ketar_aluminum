@@ -1,13 +1,16 @@
-import type React from "react"
-import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
+import type React from "react";
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import NavBar from "@/components/nav/navBar";
+import FooterBar from "@/components/footer/footer";
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default: "Ketar Aluminum - Premium Aluminum Profiles & Technical Services in Ethiopia",
+    default:
+      "Ketar Aluminum - Premium Aluminum Profiles & Technical Services in Ethiopia",
     template: "%s | Ketar Aluminum",
   },
   description:
@@ -48,7 +51,8 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://ketaraluminum.com",
     siteName: "Ketar Aluminum",
-    title: "Ketar Aluminum - Premium Aluminum Profiles & Technical Services in Ethiopia",
+    title:
+      "Ketar Aluminum - Premium Aluminum Profiles & Technical Services in Ethiopia",
     description:
       "Leading aluminum supplier in Ethiopia since 2006. Specializing in anodized and powder coating aluminum profiles, doors, windows, curtain walls, and technical services.",
     images: [
@@ -63,7 +67,8 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "Ketar Aluminum - Premium Aluminum Profiles & Technical Services",
-    description: "Leading aluminum supplier in Ethiopia since 2006. Quality aluminum profiles and technical services.",
+    description:
+      "Leading aluminum supplier in Ethiopia since 2006. Quality aluminum profiles and technical services.",
     images: ["/og-image.jpg"],
   },
   verification: {
@@ -72,21 +77,35 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "https://ketaraluminum.com",
   },
-    generator: 'v0.dev'
-}
+  generator: "v0.dev",
+};
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
     <html lang="en">
       <head>
         <link rel="icon" href="/favicon.ico" />
-        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/apple-touch-icon.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="32x32"
+          href="/favicon-32x32.png"
+        />
+        <link
+          rel="icon"
+          type="image/png"
+          sizes="16x16"
+          href="/favicon-16x16.png"
+        />
         <link rel="manifest" href="/site.webmanifest" />
 
         {/* Structured Data */}
@@ -117,7 +136,10 @@ export default function RootLayout({
                 contactType: "customer service",
                 availableLanguage: ["English", "Amharic"],
               },
-              sameAs: ["https://facebook.com/ketaraluminum", "https://linkedin.com/company/ketaraluminum"],
+              sameAs: [
+                "https://facebook.com/ketaraluminum",
+                "https://linkedin.com/company/ketaraluminum",
+              ],
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
                 name: "Aluminum Products and Services",
@@ -127,7 +149,8 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Product",
                       name: "Aluminum Profiles",
-                      description: "Anodized and powder coating aluminum profiles",
+                      description:
+                        "Anodized and powder coating aluminum profiles",
                     },
                   },
                   {
@@ -135,7 +158,8 @@ export default function RootLayout({
                     itemOffered: {
                       "@type": "Service",
                       name: "Aluminum Technical Services",
-                      description: "Doors, Windows, Partition, Handrail, Curtain wall installation",
+                      description:
+                        "Doors, Windows, Partition, Handrail, Curtain wall installation",
                     },
                   },
                 ],
@@ -144,7 +168,11 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={inter.className}>{children}</body>
+      <body className={inter.className}>
+        <NavBar />
+        <main>{children}</main>
+        <FooterBar />
+      </body>
     </html>
-  )
+  );
 }

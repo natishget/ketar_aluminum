@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   ArrowRight,
   Phone,
@@ -18,13 +18,13 @@ import {
   Users,
   Building,
   CheckCircle,
-} from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { MobileMenu } from "@/components/mobile-menu"
-import { ScrollAnimation } from "@/components/scroll-animations"
-import { SimpleAnimations } from "@/components/simple-animations"
-import type { Metadata } from "next"
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { MobileMenu } from "@/components/mobile-menu";
+import { ScrollAnimation } from "@/components/scroll-animations";
+import { SimpleAnimations } from "@/components/simple-animations";
+import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "About Ketar Aluminum - Ethiopian Aluminum Leader Since 2006",
@@ -32,61 +32,11 @@ export const metadata: Metadata = {
     "Learn about Ketar Aluminum's journey since 2006. Founded by Anteneh Darsema, we're Ethiopia's trusted aluminum supplier specializing in anodized profiles, powder coating, and technical services.",
   keywords:
     "Ketar Aluminum history, Anteneh Darsema, Ethiopian aluminum company, aluminum supplier Ethiopia, company founded 2006",
-}
+};
 
 export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
-      {/* Navigation */}
-      <nav className="bg-white shadow-lg border-b-2 border-gray-100 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl">K</span>
-                </div>
-                <div className="absolute -right-2 -bottom-1 w-8 h-8 bg-gradient-to-br from-red-500 to-red-600 rounded-md flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-sm">A</span>
-                </div>
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900">Ketar Aluminum</h1>
-                <p className="text-sm text-gray-600">Premium Aluminum Solutions</p>
-              </div>
-            </Link>
-
-            {/* Navigation Links */}
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-600 hover:text-green-600 font-medium transition-colors">
-                Home
-              </Link>
-              <Link href="/about" className="text-gray-900 font-semibold border-b-2 border-green-500 pb-1">
-                About
-              </Link>
-              <Link href="/services" className="text-gray-600 hover:text-green-600 font-medium transition-colors">
-                Services
-              </Link>
-              <Link href="/products" className="text-gray-600 hover:text-green-600 font-medium transition-colors">
-                Products
-              </Link>
-              <Link href="/contact" className="text-gray-600 hover:text-green-600 font-medium transition-colors">
-                Contact
-              </Link>
-              <Button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg">
-                Get Quote
-              </Button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <MobileMenu currentPage="about" />
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="relative py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
         <SimpleAnimations />
@@ -101,8 +51,9 @@ export default function AboutPage() {
               <span className="text-green-600 block">Ethiopian Aluminum</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              For over 18 years, Ketar Aluminum has been Ethiopia's trusted partner in premium aluminum solutions,
-              delivering quality products and exceptional service across the nation.
+              For over 18 years, Ketar Aluminum has been Ethiopia's trusted
+              partner in premium aluminum solutions, delivering quality products
+              and exceptional service across the nation.
             </p>
           </div>
         </div>
@@ -122,39 +73,58 @@ export default function AboutPage() {
                   className="rounded-2xl shadow-2xl"
                 />
                 <div className="absolute -bottom-6 -right-6 bg-white rounded-xl p-6 shadow-xl">
-                  <div className="text-3xl font-bold text-green-600 mb-1">2006</div>
-                  <div className="text-sm text-gray-600 font-medium">Founded in Ethiopia</div>
+                  <div className="text-3xl font-bold text-green-600 mb-1">
+                    2006
+                  </div>
+                  <div className="text-sm text-gray-600 font-medium">
+                    Founded in Ethiopia
+                  </div>
                 </div>
               </div>
 
               <div className="space-y-8">
                 <div>
-                  <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Story</h2>
+                  <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                    Our Story
+                  </h2>
                   <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                    Ketar Aluminum was founded on October 7, 2006 E.C by <strong>Anteneh Darsema</strong>, who serves as
-                    our General Manager and Owner. What began as a vision to provide Ethiopia with the finest quality
-                    aluminum products has grown into the nation's leading aluminum solutions provider.
+                    Ketar Aluminum was founded on October 7, 2006 E.C by{" "}
+                    <strong>Anteneh Darsema</strong>, who serves as our General
+                    Manager and Owner. What began as a vision to provide
+                    Ethiopia with the finest quality aluminum products has grown
+                    into the nation's leading aluminum solutions provider.
                   </p>
                   <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                    As a privately owned and operated company, we specialize in the supply of premium aluminum profiles
-                    and comprehensive technical services. Our foundation is built on tried and true family values,
-                    ensuring we never compromise on quality or service to our customers.
+                    As a privately owned and operated company, we specialize in
+                    the supply of premium aluminum profiles and comprehensive
+                    technical services. Our foundation is built on tried and
+                    true family values, ensuring we never compromise on quality
+                    or service to our customers.
                   </p>
                   <p className="text-lg text-gray-600 leading-relaxed">
-                    Over the years, Ketar Aluminum has earned the respect and loyalty of many local businesses in both
-                    the private and public sectors, establishing ourselves as a company you can trust and depend upon
-                    for all aluminum needs.
+                    Over the years, Ketar Aluminum has earned the respect and
+                    loyalty of many local businesses in both the private and
+                    public sectors, establishing ourselves as a company you can
+                    trust and depend upon for all aluminum needs.
                   </p>
                 </div>
 
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center p-6 bg-green-50 rounded-xl">
-                    <div className="text-3xl font-bold text-green-600 mb-2">18+</div>
-                    <div className="text-sm text-gray-700 font-medium">Years of Excellence</div>
+                    <div className="text-3xl font-bold text-green-600 mb-2">
+                      18+
+                    </div>
+                    <div className="text-sm text-gray-700 font-medium">
+                      Years of Excellence
+                    </div>
                   </div>
                   <div className="text-center p-6 bg-red-50 rounded-xl">
-                    <div className="text-3xl font-bold text-red-600 mb-2">500+</div>
-                    <div className="text-sm text-gray-700 font-medium">Satisfied Clients</div>
+                    <div className="text-3xl font-bold text-red-600 mb-2">
+                      500+
+                    </div>
+                    <div className="text-sm text-gray-700 font-medium">
+                      Satisfied Clients
+                    </div>
                   </div>
                 </div>
               </div>
@@ -168,9 +138,12 @@ export default function AboutPage() {
         <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Our Foundation</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Our Foundation
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                The principles that guide everything we do and drive our commitment to excellence
+                The principles that guide everything we do and drive our
+                commitment to excellence
               </p>
             </div>
 
@@ -181,11 +154,15 @@ export default function AboutPage() {
                   <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Target className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Our Mission</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                    Our Mission
+                  </h3>
                   <p className="text-gray-600 leading-relaxed text-center">
-                    To connect and build a lifelong relationship with our customers by supplying high quality aluminum
-                    profiles and technical services at a reasonable price. We believe good service is worrying about the
-                    details so our customers don't have to.
+                    To connect and build a lifelong relationship with our
+                    customers by supplying high quality aluminum profiles and
+                    technical services at a reasonable price. We believe good
+                    service is worrying about the details so our customers don't
+                    have to.
                   </p>
                 </CardContent>
               </Card>
@@ -196,10 +173,14 @@ export default function AboutPage() {
                   <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6">
                     <Lightbulb className="h-8 w-8 text-white" />
                   </div>
-                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">Our Vision</h3>
+                  <h3 className="text-2xl font-bold text-gray-900 mb-4 text-center">
+                    Our Vision
+                  </h3>
                   <p className="text-gray-600 leading-relaxed text-center">
-                    To see Ketar Aluminum as one of the top aluminum supplier industries in Ethiopia and the region with
-                    a visible brand image, recognized for quality, reliability, and exceptional customer service.
+                    To see Ketar Aluminum as one of the top aluminum supplier
+                    industries in Ethiopia and the region with a visible brand
+                    image, recognized for quality, reliability, and exceptional
+                    customer service.
                   </p>
                 </CardContent>
               </Card>
@@ -208,8 +189,12 @@ export default function AboutPage() {
             {/* Company Pledges */}
             <div className="bg-white rounded-3xl shadow-xl p-12">
               <div className="text-center mb-8">
-                <h3 className="text-3xl font-bold text-gray-900 mb-4">Our Pledges to You</h3>
-                <p className="text-gray-600">The commitments that guide our business relationships</p>
+                <h3 className="text-3xl font-bold text-gray-900 mb-4">
+                  Our Pledges to You
+                </h3>
+                <p className="text-gray-600">
+                  The commitments that guide our business relationships
+                </p>
               </div>
               <div className="grid md:grid-cols-2 gap-8">
                 <div className="flex items-start space-x-4">
@@ -217,10 +202,12 @@ export default function AboutPage() {
                     <Shield className="h-6 w-6 text-green-600" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Integrity & Honesty</h4>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                      Integrity & Honesty
+                    </h4>
                     <p className="text-gray-600">
-                      We pledge to guide all our actions with the utmost in integrity and honesty in every business
-                      interaction.
+                      We pledge to guide all our actions with the utmost in
+                      integrity and honesty in every business interaction.
                     </p>
                   </div>
                 </div>
@@ -230,10 +217,12 @@ export default function AboutPage() {
                     <Handshake className="h-6 w-6 text-red-600" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-gray-900 mb-2">Ready to Assist</h4>
+                    <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                      Ready to Assist
+                    </h4>
                     <p className="text-gray-600">
-                      We pledge to always be ready to assist and help provide solutions in any way possible for our
-                      valued customers.
+                      We pledge to always be ready to assist and help provide
+                      solutions in any way possible for our valued customers.
                     </p>
                   </div>
                 </div>
@@ -248,8 +237,12 @@ export default function AboutPage() {
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Leadership</h2>
-              <p className="text-xl text-gray-600">Meet the visionary behind Ketar Aluminum's success</p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Leadership
+              </h2>
+              <p className="text-xl text-gray-600">
+                Meet the visionary behind Ketar Aluminum's success
+              </p>
             </div>
 
             <div className="max-w-4xl mx-auto">
@@ -258,21 +251,31 @@ export default function AboutPage() {
                   <div className="grid md:grid-cols-3 gap-8 items-center">
                     <div className="text-center">
                       <div className="w-32 h-32 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
-                        <span className="text-white font-bold text-4xl">AD</span>
+                        <span className="text-white font-bold text-4xl">
+                          AD
+                        </span>
                       </div>
                     </div>
                     <div className="md:col-span-2">
-                      <h3 className="text-3xl font-bold text-gray-900 mb-2">Anteneh Darsema</h3>
-                      <p className="text-green-600 font-medium mb-6 text-lg">General Manager & Owner</p>
+                      <h3 className="text-3xl font-bold text-gray-900 mb-2">
+                        Anteneh Darsema
+                      </h3>
+                      <p className="text-green-600 font-medium mb-6 text-lg">
+                        General Manager & Owner
+                      </p>
                       <p className="text-gray-600 leading-relaxed mb-4">
-                        As the founder and visionary leader of Ketar Aluminum, Anteneh Darsema has dedicated over 18
-                        years to building Ethiopia's premier aluminum solutions company. His commitment to quality,
-                        integrity, and customer satisfaction has established Ketar as a trusted name across the nation.
+                        As the founder and visionary leader of Ketar Aluminum,
+                        Anteneh Darsema has dedicated over 18 years to building
+                        Ethiopia's premier aluminum solutions company. His
+                        commitment to quality, integrity, and customer
+                        satisfaction has established Ketar as a trusted name
+                        across the nation.
                       </p>
                       <p className="text-gray-600 leading-relaxed">
-                        Under his leadership, Ketar Aluminum has grown from a small family business to a company that
-                        serves both private and public sectors, always maintaining the core values of excellence and
-                        reliability.
+                        Under his leadership, Ketar Aluminum has grown from a
+                        small family business to a company that serves both
+                        private and public sectors, always maintaining the core
+                        values of excellence and reliability.
                       </p>
                     </div>
                   </div>
@@ -288,8 +291,12 @@ export default function AboutPage() {
         <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-20">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">What Sets Us Apart</h2>
-              <p className="text-xl text-gray-600">The values that make Ketar Aluminum Ethiopia's trusted choice</p>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                What Sets Us Apart
+              </h2>
+              <p className="text-xl text-gray-600">
+                The values that make Ketar Aluminum Ethiopia's trusted choice
+              </p>
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -297,9 +304,12 @@ export default function AboutPage() {
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <Users className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Family Values</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Family Values
+                </h3>
                 <p className="text-gray-600 text-sm">
-                  As a family-owned business, we maintain personal relationships and never compromise on quality.
+                  As a family-owned business, we maintain personal relationships
+                  and never compromise on quality.
                 </p>
               </div>
 
@@ -307,9 +317,12 @@ export default function AboutPage() {
                 <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <Award className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Proven Excellence</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Proven Excellence
+                </h3>
                 <p className="text-gray-600 text-sm">
-                  18+ years of consistent quality and service excellence in the Ethiopian market.
+                  18+ years of consistent quality and service excellence in the
+                  Ethiopian market.
                 </p>
               </div>
 
@@ -317,9 +330,12 @@ export default function AboutPage() {
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <Building className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Local Expertise</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Local Expertise
+                </h3>
                 <p className="text-gray-600 text-sm">
-                  Deep understanding of Ethiopian construction needs and building requirements.
+                  Deep understanding of Ethiopian construction needs and
+                  building requirements.
                 </p>
               </div>
 
@@ -327,9 +343,12 @@ export default function AboutPage() {
                 <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <CheckCircle className="h-10 w-10 text-white" />
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Reliable Service</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                  Reliable Service
+                </h3>
                 <p className="text-gray-600 text-sm">
-                  Dependable partner for all aluminum needs with consistent quality and timely delivery.
+                  Dependable partner for all aluminum needs with consistent
+                  quality and timely delivery.
                 </p>
               </div>
             </div>
@@ -340,13 +359,19 @@ export default function AboutPage() {
       {/* CTA Section */}
       <section className="py-24 bg-gradient-to-r from-green-600 to-red-600">
         <div className="max-w-4xl mx-auto text-center px-4 sm:px-6 lg:px-8">
-          <h2 className="text-4xl font-bold text-white mb-6">Ready to Work with Ethiopia's Best?</h2>
+          <h2 className="text-4xl font-bold text-white mb-6">
+            Ready to Work with Ethiopia's Best?
+          </h2>
           <p className="text-xl text-green-100 mb-8 max-w-2xl mx-auto">
-            Experience the Ketar Aluminum difference. Let's discuss how we can help bring your aluminum projects to life
-            with quality and reliability.
+            Experience the Ketar Aluminum difference. Let's discuss how we can
+            help bring your aluminum projects to life with quality and
+            reliability.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" className="bg-white text-green-600 hover:bg-gray-100 shadow-xl">
+            <Button
+              size="lg"
+              className="bg-white text-green-600 hover:bg-gray-100 shadow-xl"
+            >
               Contact Us Today
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>
@@ -360,120 +385,6 @@ export default function AboutPage() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-          <div className="grid md:grid-cols-4 gap-8">
-            {/* Company Info */}
-            <div className="md:col-span-2">
-              <div className="flex items-center space-x-3 mb-6">
-                <div className="relative">
-                  <div className="w-10 h-10 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold">K</span>
-                  </div>
-                  <div className="absolute -right-1 -bottom-1 w-6 h-6 bg-gradient-to-br from-red-500 to-red-600 rounded-md flex items-center justify-center">
-                    <span className="text-white font-bold text-xs">A</span>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-xl font-bold">Ketar Aluminum</h3>
-                  <p className="text-gray-400 text-sm">Premium Aluminum Solutions</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-6 max-w-md">
-                Leading provider of high-quality aluminum profiles and technical services in Ethiopia. Committed to
-                excellence, precision, and customer satisfaction since 2006.
-              </p>
-              <div className="mb-4">
-                <p className="text-sm text-gray-400">TIN: 00 53 39 59 97</p>
-                <p className="text-sm text-gray-400">Founded: October 7, 2006 E.C</p>
-              </div>
-              <div className="flex space-x-4">
-                <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors cursor-pointer">
-                  <Facebook className="h-5 w-5" />
-                </div>
-                <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors cursor-pointer">
-                  <Twitter className="h-5 w-5" />
-                </div>
-                <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors cursor-pointer">
-                  <Linkedin className="h-5 w-5" />
-                </div>
-                <div className="w-10 h-10 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors cursor-pointer">
-                  <Instagram className="h-5 w-5" />
-                </div>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Quick Links</h4>
-              <ul className="space-y-3">
-                <li>
-                  <Link href="/" className="text-gray-300 hover:text-green-400 transition-colors">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="text-gray-300 hover:text-green-400 transition-colors">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services" className="text-gray-300 hover:text-green-400 transition-colors">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/products" className="text-gray-300 hover:text-green-400 transition-colors">
-                    Products
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-gray-300 hover:text-green-400 transition-colors">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h4 className="text-lg font-semibold mb-6">Contact Info</h4>
-              <div className="space-y-4">
-                <div className="flex items-center space-x-3">
-                  <Phone className="h-5 w-5 text-green-400" />
-                  <span className="text-gray-300">+251-911-123456</span>
-                </div>
-                <div className="flex items-center space-x-3">
-                  <Mail className="h-5 w-5 text-green-400" />
-                  <span className="text-gray-300">info@ketaraluminum.com</span>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <MapPin className="h-5 w-5 text-green-400 mt-1" />
-                  <span className="text-gray-300">
-                    Addis Ababa, Ethiopia
-                    <br />
-                    Bole Sub City
-                  </span>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400 text-sm">© {new Date().getFullYear()} Ketar Aluminum. All rights reserved.</p>
-            <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-green-400 text-sm transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-green-400 text-sm transition-colors">
-                Terms of Service
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
-  )
+  );
 }

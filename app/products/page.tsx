@@ -1,6 +1,6 @@
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 import {
   ArrowRight,
   Search,
@@ -16,13 +16,19 @@ import {
   Twitter,
   Linkedin,
   Instagram,
-} from "lucide-react"
-import Image from "next/image"
-import Link from "next/link"
-import { MobileMenu } from "@/components/mobile-menu"
-import { ExampleProductGallery } from "@/components/product-image-gallery"
-import { ScrollAnimation, StaggerAnimation } from "@/components/scroll-animations"
-import { AluminumBackground, AluminumShapes } from "@/components/aluminum-background"
+} from "lucide-react";
+import Image from "next/image";
+import Link from "next/link";
+import { MobileMenu } from "@/components/mobile-menu";
+import { ExampleProductGallery } from "@/components/product-image-gallery";
+import {
+  ScrollAnimation,
+  StaggerAnimation,
+} from "@/components/scroll-animations";
+import {
+  AluminumBackground,
+  AluminumShapes,
+} from "@/components/aluminum-background";
 
 export default function ProductsPage() {
   const productCategories = [
@@ -58,13 +64,14 @@ export default function ProductsPage() {
       productCount: 32,
       color: "red",
     },
-  ]
+  ];
 
   const featuredProducts = [
     {
       id: 1,
       name: "6061-T6 Aluminum Sheet",
-      description: "Premium grade aluminum sheet with excellent corrosion resistance",
+      description:
+        "Premium grade aluminum sheet with excellent corrosion resistance",
       price: "$12.50",
       unit: "per sq ft",
       rating: 4.9,
@@ -77,7 +84,8 @@ export default function ProductsPage() {
     {
       id: 2,
       name: "Custom Aluminum Extrusion",
-      description: "Precision-engineered custom profiles for your specific needs",
+      description:
+        "Precision-engineered custom profiles for your specific needs",
       price: "Quote",
       unit: "per linear ft",
       rating: 5.0,
@@ -139,7 +147,7 @@ export default function ProductsPage() {
       inStock: true,
       category: "Finishes",
     },
-  ]
+  ];
 
   const alloySpecs = [
     {
@@ -170,75 +178,28 @@ export default function ProductsPage() {
       weldability: "Excellent",
       applications: "General Purpose",
     },
-  ]
+  ];
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 relative">
       <AluminumBackground />
       <AluminumShapes />
 
-      {/* Navigation */}
-      <nav className="bg-white shadow-lg border-b-2 border-gray-100 sticky top-0 z-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-20">
-            {/* Logo */}
-            <Link href="/" className="flex items-center space-x-3">
-              <div className="relative">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-xl">K</span>
-                </div>
-                <div className="absolute -right-2 -bottom-1 w-8 h-8 bg-gradient-to-br from-red-500 to-red-600 rounded-md flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-sm">M</span>
-                </div>
-              </div>
-              <div>
-                <h1 className="text-2xl font-bold text-gray-900">K & M Aluminum</h1>
-                <p className="text-sm text-gray-600">Premium Aluminum Solutions</p>
-              </div>
-            </Link>
-
-            {/* Navigation Links */}
-            <div className="hidden md:flex items-center space-x-8">
-              <Link href="/" className="text-gray-600 hover:text-green-600 font-medium transition-colors">
-                Home
-              </Link>
-              <Link href="/about" className="text-gray-600 hover:text-green-600 font-medium transition-colors">
-                About
-              </Link>
-              <Link href="/services" className="text-gray-600 hover:text-green-600 font-medium transition-colors">
-                Services
-              </Link>
-              <Link href="/products" className="text-gray-900 font-semibold border-b-2 border-green-500 pb-1">
-                Products
-              </Link>
-              <Link href="/contact" className="text-gray-600 hover:text-green-600 font-medium transition-colors">
-                Contact
-              </Link>
-              <Button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg">
-                Get Quote
-              </Button>
-            </div>
-
-            {/* Mobile Menu Button */}
-            <div className="md:hidden">
-              <MobileMenu currentPage="products" />
-            </div>
-          </div>
-        </div>
-      </nav>
-
       {/* Hero Section */}
       <section className="py-20 bg-gradient-to-br from-gray-50 via-white to-gray-100 relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollAnimation animation="slideUp">
-            <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-6 px-4 py-2">Premium Products</Badge>
+            <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-6 px-4 py-2">
+              Premium Products
+            </Badge>
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Aluminum <span className="text-green-600">Products</span>
               <span className="text-red-600 block">Catalog</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Discover our comprehensive range of premium aluminum products, from standard sheets and bars to custom
-              extrusions and specialized alloys.
+              Discover our comprehensive range of premium aluminum products,
+              from standard sheets and bars to custom extrusions and specialized
+              alloys.
             </p>
 
             {/* Search and Filter */}
@@ -265,7 +226,9 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimation animation="slideUp">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Product Categories</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Product Categories
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Browse our extensive catalog organized by product type
               </p>
@@ -290,15 +253,21 @@ export default function ProductsPage() {
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                       <div
                         className={`absolute top-4 right-4 px-3 py-1 rounded-full text-white text-sm font-semibold ${
-                          category.color === "green" ? "bg-green-500" : "bg-red-500"
+                          category.color === "green"
+                            ? "bg-green-500"
+                            : "bg-red-500"
                         }`}
                       >
                         {category.productCount} items
                       </div>
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{category.name}</h3>
-                      <p className="text-gray-600 mb-4">{category.description}</p>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        {category.name}
+                      </h3>
+                      <p className="text-gray-600 mb-4">
+                        {category.description}
+                      </p>
                       <Button
                         variant="outline"
                         size="sm"
@@ -325,17 +294,26 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimation animation="slideUp">
             <div className="text-center mb-16">
-              <Badge className="bg-red-100 text-red-800 hover:bg-red-100 mb-4 px-4 py-2">Featured Products</Badge>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Popular Products</h2>
+              <Badge className="bg-red-100 text-red-800 hover:bg-red-100 mb-4 px-4 py-2">
+                Featured Products
+              </Badge>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Popular Products
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Our most requested aluminum products with detailed specifications and pricing
+                Our most requested aluminum products with detailed
+                specifications and pricing
               </p>
             </div>
           </ScrollAnimation>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {featuredProducts.map((product, index) => (
-              <ScrollAnimation key={product.id} animation="slideUp" delay={index * 100}>
+              <ScrollAnimation
+                key={product.id}
+                animation="slideUp"
+                delay={index * 100}
+              >
                 <Card className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg overflow-hidden">
                   <CardContent className="p-0">
                     <div className="relative h-64 overflow-hidden">
@@ -347,17 +325,27 @@ export default function ProductsPage() {
                       />
                       <div className="absolute inset-0 bg-black/0 group-hover:bg-black/10 transition-colors"></div>
                       <div className="absolute top-4 left-4">
-                        <Badge className={`${product.inStock ? "bg-green-500" : "bg-red-500"} text-white`}>
+                        <Badge
+                          className={`${
+                            product.inStock ? "bg-green-500" : "bg-red-500"
+                          } text-white`}
+                        >
                           {product.inStock ? "In Stock" : "Out of Stock"}
                         </Badge>
                       </div>
                       <div className="absolute top-4 right-4">
-                        <Badge className="bg-white/90 text-gray-800">{product.category}</Badge>
+                        <Badge className="bg-white/90 text-gray-800">
+                          {product.category}
+                        </Badge>
                       </div>
                     </div>
                     <div className="p-6">
-                      <h3 className="text-xl font-bold text-gray-900 mb-2">{product.name}</h3>
-                      <p className="text-gray-600 mb-4 text-sm">{product.description}</p>
+                      <h3 className="text-xl font-bold text-gray-900 mb-2">
+                        {product.name}
+                      </h3>
+                      <p className="text-gray-600 mb-4 text-sm">
+                        {product.description}
+                      </p>
 
                       {/* Rating */}
                       <div className="flex items-center mb-4">
@@ -366,7 +354,9 @@ export default function ProductsPage() {
                             <Star
                               key={star}
                               className={`h-4 w-4 ${
-                                star <= Math.floor(product.rating) ? "text-yellow-400 fill-current" : "text-gray-300"
+                                star <= Math.floor(product.rating)
+                                  ? "text-yellow-400 fill-current"
+                                  : "text-gray-300"
                               }`}
                             />
                           ))}
@@ -378,7 +368,9 @@ export default function ProductsPage() {
 
                       {/* Specifications */}
                       <div className="mb-4">
-                        <h4 className="text-sm font-semibold text-gray-900 mb-2">Specifications:</h4>
+                        <h4 className="text-sm font-semibold text-gray-900 mb-2">
+                          Specifications:
+                        </h4>
                         <ul className="text-sm text-gray-600 space-y-1">
                           {product.specs.map((spec, index) => (
                             <li key={index}>• {spec}</li>
@@ -389,8 +381,12 @@ export default function ProductsPage() {
                       {/* Price and Actions */}
                       <div className="flex items-center justify-between mb-4">
                         <div>
-                          <span className="text-2xl font-bold text-gray-900">{product.price}</span>
-                          <span className="text-sm text-gray-600 ml-1">{product.unit}</span>
+                          <span className="text-2xl font-bold text-gray-900">
+                            {product.price}
+                          </span>
+                          <span className="text-sm text-gray-600 ml-1">
+                            {product.unit}
+                          </span>
                         </div>
                       </div>
 
@@ -401,7 +397,9 @@ export default function ProductsPage() {
                           disabled={!product.inStock}
                         >
                           <ShoppingCart className="h-4 w-4 mr-2" />
-                          {product.price === "Quote" ? "Get Quote" : "Add to Cart"}
+                          {product.price === "Quote"
+                            ? "Get Quote"
+                            : "Add to Cart"}
                         </Button>
                         <Button variant="outline" size="sm">
                           <Eye className="h-4 w-4" />
@@ -421,7 +419,9 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimation animation="slideUp">
             <div className="text-center mb-16">
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">Aluminum Alloy Specifications</h2>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                Aluminum Alloy Specifications
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 Technical specifications for our most common aluminum alloys
               </p>
@@ -434,21 +434,44 @@ export default function ProductsPage() {
                 <table className="w-full">
                   <thead className="bg-gradient-to-r from-green-500 to-red-500 text-white">
                     <tr>
-                      <th className="px-6 py-4 text-left font-semibold">Alloy</th>
-                      <th className="px-6 py-4 text-left font-semibold">Strength</th>
-                      <th className="px-6 py-4 text-left font-semibold">Corrosion Resistance</th>
-                      <th className="px-6 py-4 text-left font-semibold">Weldability</th>
-                      <th className="px-6 py-4 text-left font-semibold">Common Applications</th>
+                      <th className="px-6 py-4 text-left font-semibold">
+                        Alloy
+                      </th>
+                      <th className="px-6 py-4 text-left font-semibold">
+                        Strength
+                      </th>
+                      <th className="px-6 py-4 text-left font-semibold">
+                        Corrosion Resistance
+                      </th>
+                      <th className="px-6 py-4 text-left font-semibold">
+                        Weldability
+                      </th>
+                      <th className="px-6 py-4 text-left font-semibold">
+                        Common Applications
+                      </th>
                     </tr>
                   </thead>
                   <tbody>
                     {alloySpecs.map((spec, index) => (
-                      <tr key={index} className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}>
-                        <td className="px-6 py-4 font-semibold text-gray-900">{spec.alloy}</td>
-                        <td className="px-6 py-4 text-gray-600">{spec.strength}</td>
-                        <td className="px-6 py-4 text-gray-600">{spec.corrosion}</td>
-                        <td className="px-6 py-4 text-gray-600">{spec.weldability}</td>
-                        <td className="px-6 py-4 text-gray-600">{spec.applications}</td>
+                      <tr
+                        key={index}
+                        className={index % 2 === 0 ? "bg-gray-50" : "bg-white"}
+                      >
+                        <td className="px-6 py-4 font-semibold text-gray-900">
+                          {spec.alloy}
+                        </td>
+                        <td className="px-6 py-4 text-gray-600">
+                          {spec.strength}
+                        </td>
+                        <td className="px-6 py-4 text-gray-600">
+                          {spec.corrosion}
+                        </td>
+                        <td className="px-6 py-4 text-gray-600">
+                          {spec.weldability}
+                        </td>
+                        <td className="px-6 py-4 text-gray-600">
+                          {spec.applications}
+                        </td>
                       </tr>
                     ))}
                   </tbody>
@@ -464,10 +487,15 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimation animation="slideUp">
             <div className="text-center mb-16">
-              <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-4 px-4 py-2">Product Gallery</Badge>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">See Our Products</h2>
+              <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-4 px-4 py-2">
+                Product Gallery
+              </Badge>
+              <h2 className="text-4xl font-bold text-gray-900 mb-6">
+                See Our Products
+              </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                High-resolution images of our aluminum products and manufacturing processes
+                High-resolution images of our aluminum products and
+                manufacturing processes
               </p>
             </div>
           </ScrollAnimation>
@@ -490,10 +518,12 @@ export default function ProductsPage() {
             <Badge className="bg-white/20 text-white hover:bg-white/20 mb-6 px-4 py-2 backdrop-blur-sm">
               Need Custom Products?
             </Badge>
-            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">Can't Find What You Need?</h2>
+            <h2 className="text-4xl lg:text-5xl font-bold text-white mb-8 leading-tight">
+              Can't Find What You Need?
+            </h2>
             <p className="text-xl text-green-100 mb-12 max-w-3xl mx-auto leading-relaxed">
-              Our expert team can create custom aluminum products tailored to your exact specifications. Get a
-              personalized quote today.
+              Our expert team can create custom aluminum products tailored to
+              your exact specifications. Get a personalized quote today.
             </p>
 
             <div className="flex flex-col sm:flex-row gap-6 justify-center">
@@ -516,134 +546,6 @@ export default function ProductsPage() {
           </ScrollAnimation>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-white relative z-10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-          <div className="grid md:grid-cols-4 gap-12">
-            {/* Company Info */}
-            <div className="md:col-span-2">
-              <div className="flex items-center space-x-3 mb-8">
-                <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
-                    <span className="text-white font-bold text-xl">K</span>
-                  </div>
-                  <div className="absolute -right-2 -bottom-1 w-8 h-8 bg-gradient-to-br from-red-500 to-red-600 rounded-md flex items-center justify-center">
-                    <span className="text-white font-bold text-sm">M</span>
-                  </div>
-                </div>
-                <div>
-                  <h3 className="text-2xl font-bold">K & M Aluminum</h3>
-                  <p className="text-gray-400">Premium Aluminum Solutions</p>
-                </div>
-              </div>
-              <p className="text-gray-300 mb-8 max-w-md leading-relaxed">
-                Leading provider of high-quality aluminum products and services. Committed to excellence, precision, and
-                customer satisfaction since 1998.
-              </p>
-              <div className="flex space-x-4">
-                <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors cursor-pointer">
-                  <Facebook className="h-6 w-6" />
-                </div>
-                <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors cursor-pointer">
-                  <Twitter className="h-6 w-6" />
-                </div>
-                <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors cursor-pointer">
-                  <Linkedin className="h-6 w-6" />
-                </div>
-                <div className="w-12 h-12 bg-gray-800 rounded-lg flex items-center justify-center hover:bg-green-600 transition-colors cursor-pointer">
-                  <Instagram className="h-6 w-6" />
-                </div>
-              </div>
-            </div>
-
-            {/* Quick Links */}
-            <div>
-              <h4 className="text-xl font-semibold mb-8">Quick Links</h4>
-              <ul className="space-y-4">
-                <li>
-                  <Link href="/" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
-                    Home
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/about" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/services" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
-                    Services
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/products" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
-                    Products
-                  </Link>
-                </li>
-                <li>
-                  <Link href="/contact" className="text-gray-300 hover:text-green-400 transition-colors font-medium">
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-
-            {/* Contact Info */}
-            <div>
-              <h4 className="text-xl font-semibold mb-8">Contact Info</h4>
-              <div className="space-y-6">
-                <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
-                    <Phone className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-gray-300 font-medium">(555) 123-4567</div>
-                    <div className="text-gray-500 text-sm">Mon-Fri 8AM-6PM</div>
-                  </div>
-                </div>
-                <div className="flex items-center space-x-4">
-                  <div className="w-10 h-10 bg-red-600 rounded-lg flex items-center justify-center">
-                    <Mail className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-gray-300 font-medium">info@kmaluminum.com</div>
-                    <div className="text-gray-500 text-sm">24/7 Support</div>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-4">
-                  <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
-                    <MapPin className="h-5 w-5 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-gray-300 font-medium">
-                      123 Industrial Drive
-                      <br />
-                      Manufacturing City, MC 12345
-                    </div>
-                    <div className="text-gray-500 text-sm">Visit our facility</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div className="border-t border-gray-800 mt-16 pt-8 flex flex-col md:flex-row justify-between items-center">
-            <p className="text-gray-400">© {new Date().getFullYear()} K & M Aluminum. All rights reserved.</p>
-            <div className="flex space-x-8 mt-4 md:mt-0">
-              <Link href="/privacy" className="text-gray-400 hover:text-green-400 transition-colors">
-                Privacy Policy
-              </Link>
-              <Link href="/terms" className="text-gray-400 hover:text-green-400 transition-colors">
-                Terms of Service
-              </Link>
-              <Link href="/sitemap" className="text-gray-400 hover:text-green-400 transition-colors">
-                Sitemap
-              </Link>
-            </div>
-          </div>
-        </div>
-      </footer>
     </div>
-  )
+  );
 }
