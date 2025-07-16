@@ -29,7 +29,7 @@ const navBar = () => {
                 Ketar Aluminum
               </h1>
               <p className="text-sm text-gray-600">
-                Premium Aluminum Solutions
+                Product and Service at its best
               </p>
             </div>
           </div>

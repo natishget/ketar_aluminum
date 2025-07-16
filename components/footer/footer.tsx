@@ -32,7 +32,9 @@ const footerBar = () => {
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold">Ketar Aluminum</h3>
-                  <p className="text-gray-400">Premium Aluminum Solutions</p>
+                  <p className="text-gray-400">
+                    Product and Service at its best
+                  </p>
                 </div>
               </div>
               <p className="text-gray-300 mb-8 max-w-md leading-relaxed">
@@ -41,7 +43,6 @@ const footerBar = () => {
                 customer satisfaction since 2006.
               </p>
               <div className="mb-6">
-                <p className="text-sm text-gray-400">TIN: 00 53 39 59 97</p>
                 <p className="text-sm text-gray-400">
                   Founded: October 7, 2006 E.C
                 </p>
@@ -120,16 +121,20 @@ const footerBar = () => {
             {/* Contact Info */}
             <div>
               <h4 className="text-xl font-semibold mb-8">Contact Info</h4>
-              <div className="space-y-6">
+              <div className="space-y-6 ">
                 <div className="flex items-center space-x-4">
                   <div className="w-10 h-10 bg-green-600 rounded-lg flex items-center justify-center">
                     <Phone className="h-5 w-5 text-white" />
                   </div>
                   <div>
                     <div className="text-gray-300 font-medium">
-                      +251-911-123456
+                      +251-930-329599 <br />
+                      +251-911-690818
                     </div>
-                    <div className="text-gray-500 text-sm">Mon-Fri 8AM-6PM</div>
+                    <div className="text-gray-500 text-sm">
+                      Mon-Fri 8AM-5PM <br />
+                      Sat 8AM-12AM
+                    </div>
                   </div>
                 </div>
                 <div className="flex items-center space-x-4">
@@ -137,9 +142,13 @@ const footerBar = () => {
                     <Mail className="h-5 w-5 text-white" />
                   </div>
                   <div>
-                    <div className="text-gray-300 font-medium">
-                      info@ketaraluminum.com
-                    </div>
+                    <a
+                      href="mailto:ketaraluminumplc@gmail.com"
+                      // target="_blank"
+                      className="text-gray-300 font-medium text-sm hover:text-green-400 transition-colors"
+                    >
+                      ketaraluminumplc@gmail.com
+                    </a>
                     <div className="text-gray-500 text-sm">24/7 Support</div>
                   </div>
                 </div>
@@ -151,11 +160,18 @@ const footerBar = () => {
                     <div className="text-gray-300 font-medium">
                       Addis Ababa, Ethiopia
                       <br />
-                      Bole Sub City
+                      Yeka Sub City Megenagna <br /> Shola infront of Sumeya{" "}
+                      <br />
+                      Mosque
                     </div>
-                    <div className="text-gray-500 text-sm">
+                    <a
+                      href="https://maps.app.goo.gl/mQBxswnxp55V8FdT9"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-500 text-sm hover:text-green-400 hover:font-bold transition-colors "
+                    >
                       Visit our facility
-                    </div>
+                    </a>
                   </div>
                 </div>
               </div>
