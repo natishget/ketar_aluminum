@@ -1,6 +1,8 @@
 import React from "react";
 import { MobileMenu } from "@/components/mobile-menu";
 import NavLinks from "./navLinks";
+import ketar_logo from "@/assets/ketar_logo2.png";
+import Image from "next/image";
 
 const navBar = () => {
   return (
@@ -9,14 +11,19 @@ const navBar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="relative">
+            <Image
+              src={ketar_logo}
+              alt="Ketar Logo"
+              className="w-16 shadow-lg"
+            />
+            {/* <div className="relative">
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center shadow-lg">
                 <span className="text-white font-bold text-xl">K</span>
               </div>
               <div className="absolute -right-2 -bottom-1 w-8 h-8 bg-gradient-to-br from-red-500 to-red-600 rounded-md flex items-center justify-center shadow-lg">
                 <span className="text-white font-bold text-sm">A</span>
               </div>
-            </div>
+            </div> */}
             <div>
               <h1 className="text-2xl font-bold text-gray-900">
                 Ketar Aluminum

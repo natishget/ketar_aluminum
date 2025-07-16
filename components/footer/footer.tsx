@@ -9,6 +9,8 @@ import {
   Instagram,
 } from "lucide-react";
 import Link from "next/link";
+import ketar_logo from "@/assets/ketar_logo2.png";
+import Image from "next/image";
 
 const footerBar = () => {
   return (
@@ -20,12 +22,13 @@ const footerBar = () => {
             <div className="md:col-span-2">
               <div className="flex items-center space-x-3 mb-8">
                 <div className="relative">
-                  <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
+                  <Image src={ketar_logo} alt="" className="w-16 shadow-lg" />
+                  {/* <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center">
                     <span className="text-white font-bold text-xl">K</span>
                   </div>
                   <div className="absolute -right-2 -bottom-1 w-8 h-8 bg-gradient-to-br from-red-500 to-red-600 rounded-md flex items-center justify-center">
                     <span className="text-white font-bold text-sm">A</span>
-                  </div>
+                  </div> */}
                 </div>
                 <div>
                   <h3 className="text-2xl font-bold">Ketar Aluminum</h3>
