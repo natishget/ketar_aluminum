@@ -25,6 +25,7 @@ import { MobileMenu } from "@/components/mobile-menu";
 import { ScrollAnimation } from "@/components/scroll-animations";
 import { SimpleAnimations } from "@/components/simple-animations";
 import type { Metadata } from "next";
+import product1 from "@/assets/Product1.jpg";
 
 export const metadata: Metadata = {
   title: "About Ketar Aluminum - Ethiopian Aluminum Leader Since 2006",
@@ -48,10 +49,12 @@ export default function AboutPage() {
             </Badge>
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Building Excellence in
-              <span className="text-green-600 block">Ethiopian Aluminum</span>
+              <span className="text-green-600 block mt-6">
+                Ethiopian Aluminum
+              </span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              For over 18 years, Ketar Aluminum has been Ethiopia's trusted
+              For over 12+ years, Ketar Aluminum has been Ethiopia's trusted
               partner in premium aluminum solutions, delivering quality products
               and exceptional service across the nation.
             </p>
@@ -66,7 +69,7 @@ export default function AboutPage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=600&width=700"
+                  src={product1}
                   alt="Ketar Aluminum founder Anteneh Darsema and company facility in Ethiopia"
                   width={700}
                   height={600}
@@ -112,7 +115,7 @@ export default function AboutPage() {
                 <div className="grid grid-cols-2 gap-6">
                   <div className="text-center p-6 bg-green-50 rounded-xl">
                     <div className="text-3xl font-bold text-green-600 mb-2">
-                      18+
+                      12+
                     </div>
                     <div className="text-sm text-gray-700 font-medium">
                       Years of Excellence
@@ -321,7 +324,7 @@ export default function AboutPage() {
                   Proven Excellence
                 </h3>
                 <p className="text-gray-600 text-sm">
-                  18+ years of consistent quality and service excellence in the
+                  12+ years of consistent quality and service excellence in the
                   Ethiopian market.
                 </p>
               </div>
