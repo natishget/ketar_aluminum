@@ -56,9 +56,9 @@ export default function ServicesPage() {
               <span className="text-green-600 block">Aluminum Solutions</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              From premium anodized profiles to complete technical
-              installations, we offer the full spectrum of aluminum services to
-              meet Ethiopia's construction and architectural needs.
+              From anodized and powder-coated aluminum profiles to complete technical works, 
+              Ketar Aluminum provides a full range of aluminum solutions tailored to Ethiopia's 
+              construction and architectural demands.
             </p>
           </div>
         </div>
@@ -86,9 +86,9 @@ export default function ServicesPage() {
                         Anodized Aluminum Profiles
                       </h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">
-                        Premium anodized aluminum profiles with superior
-                        corrosion resistance and exceptional finish quality for
-                        long-lasting durability.
+                        High-quality anodized aluminum profiles designed for durability, 
+                        aesthetics, and corrosion resistance — a trusted choice by public 
+                        and private sector clients.
                       </p>
                       <ul className="space-y-3 mb-8">
                         <li className="flex items-center text-sm text-gray-600">
@@ -134,12 +134,12 @@ export default function ServicesPage() {
                     </div>
                     <div className="p-8">
                       <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                        Powder Coating Services
+                        Powder Coating <br /> Services
                       </h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">
-                        Professional powder coating services offering durable,
-                        attractive finishes in a wide range of colors and
-                        textures for enhanced aesthetics.
+                        Durable powder coating finishes in a wide color selection. 
+                        Enhance appearance and protection with our professionally 
+                        coated aluminum profiles.
                       </p>
                       <ul className="space-y-3 mb-8">
                         <li className="flex items-center text-sm text-gray-600">
