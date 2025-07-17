@@ -14,7 +14,7 @@ const navBar = () => {
             <Image
               src={ketar_logo}
               alt="Ketar Logo"
-              className="w-16 shadow-lg"
+              className="w-16"
             />
             {/* <div className="relative">
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center shadow-lg">
