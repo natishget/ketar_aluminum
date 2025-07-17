@@ -184,22 +184,10 @@ const footerBar = () => {
             </p>
             <div className="flex space-x-8 mt-4 md:mt-0">
               <Link
-                href="/privacy"
-                className="text-gray-400 hover:text-green-400 transition-colors"
+                href="https://t.me/webDesignDevelopmentE2N"
+                className="text-green-400 hover:text-red-400 transition-colors animate-bounce"
               >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/terms"
-                className="text-gray-400 hover:text-green-400 transition-colors"
-              >
-                Terms of Service
-              </Link>
-              <Link
-                href="/sitemap"
-                className="text-gray-400 hover:text-green-400 transition-colors"
-              >
-                Sitemap
+                Powered By ByteForge
               </Link>
             </div>
           </div>
