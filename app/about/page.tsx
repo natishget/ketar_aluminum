@@ -25,7 +25,7 @@ import { MobileMenu } from "@/components/mobile-menu";
 import { ScrollAnimation } from "@/components/scroll-animations";
 import { SimpleAnimations } from "@/components/simple-animations";
 import type { Metadata } from "next";
-import product1 from "@/assets/Product1.jpg";
+import product2 from "@/assets/aboutImg.png";
 
 export const metadata: Metadata = {
   title: "About Ketar Aluminum - Ethiopian Aluminum Leader Since 2006",
@@ -39,37 +39,39 @@ export default function AboutPage() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
       {/* Hero Section */}
-      <section className="relative py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
-        <SimpleAnimations />
+      <ScrollAnimation animation="slideUp" delay={500}>
+        <section className="relative py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden">
+          <SimpleAnimations />
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="text-center mb-16">
-            <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-6 px-4 py-2">
-              About Ketar Aluminum
-            </Badge>
-            <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-              Building Excellence in
-              <span className="text-green-600 block mt-6">
-                Ethiopian Aluminum
-              </span>
-            </h1>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              For over 12+ years, Ketar Aluminum has been Ethiopia's trusted
-              partner in premium aluminum solutions, delivering quality products
-              and exceptional service across the nation.
-            </p>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="text-center mb-16">
+              <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-6 px-4 py-2">
+                About Ketar Aluminum
+              </Badge>
+              <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
+                Building Excellence in
+                <span className="text-green-600 block mt-6">
+                  Ethiopian Aluminum
+                </span>
+              </h1>
+              <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+                For over 12+ years, Ketar Aluminum has been Ethiopia's trusted
+                partner in premium aluminum solutions, delivering quality
+                products and exceptional service across the nation.
+              </p>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      </ScrollAnimation>
 
       {/* Company Story */}
-      <ScrollAnimation>
+      <ScrollAnimation animation="slideLeft" delay={500}>
         <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid lg:grid-cols-2 gap-16 items-center mb-20">
               <div className="relative">
                 <Image
-                  src={product1}
+                  src={product2}
                   alt="Ketar Aluminum founder Anteneh Darsema and company facility in Ethiopia"
                   width={700}
                   height={600}
@@ -137,9 +139,10 @@ export default function AboutPage() {
       </ScrollAnimation>
 
       {/* Mission, Vision, Values */}
-      <ScrollAnimation>
-        <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+      <section className="py-24 bg-gradient-to-br from-gray-50 to-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollAnimation>
             <div className="text-center mb-20">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Our Foundation
@@ -149,8 +152,9 @@ export default function AboutPage() {
                 commitment to excellence
               </p>
             </div>
-
-            <div className="grid md:grid-cols-2 gap-8 mb-16">
+          </ScrollAnimation>
+          <div className="grid md:grid-cols-2 gap-8 mb-16">
+            <ScrollAnimation animation="slideRight">
               {/* Mission */}
               <Card className="bg-white shadow-xl border-0 hover:shadow-2xl transition-shadow duration-300">
                 <CardContent className="p-8">
@@ -169,7 +173,8 @@ export default function AboutPage() {
                   </p>
                 </CardContent>
               </Card>
-
+            </ScrollAnimation>
+            <ScrollAnimation animation="slideLeft">
               {/* Vision */}
               <Card className="bg-white shadow-xl border-0 hover:shadow-2xl transition-shadow duration-300">
                 <CardContent className="p-8">
@@ -187,8 +192,9 @@ export default function AboutPage() {
                   </p>
                 </CardContent>
               </Card>
-            </div>
-
+            </ScrollAnimation>
+          </div>
+          <ScrollAnimation animation="slideUp">
             {/* Company Pledges */}
             <div className="bg-white rounded-3xl shadow-xl p-12">
               <div className="text-center mb-8">
@@ -231,14 +237,14 @@ export default function AboutPage() {
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-      </ScrollAnimation>
+          </ScrollAnimation>
+        </div>
+      </section>
 
       {/* Leadership */}
-      <ScrollAnimation>
-        <section className="py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <ScrollAnimation>
             <div className="text-center mb-20">
               <h2 className="text-4xl font-bold text-gray-900 mb-6">
                 Leadership
@@ -247,19 +253,23 @@ export default function AboutPage() {
                 Meet the visionary behind Ketar Aluminum's success
               </p>
             </div>
+          </ScrollAnimation>
 
-            <div className="max-w-4xl mx-auto">
-              <Card className="bg-white shadow-xl border-0 hover:shadow-2xl transition-shadow duration-300">
-                <CardContent className="p-12">
-                  <div className="grid md:grid-cols-3 gap-8 items-center">
-                    <div className="text-center">
+          <div className="max-w-4xl mx-auto">
+            <Card className="bg-white shadow-xl border-0 hover:shadow-2xl transition-shadow duration-300">
+              <CardContent className="p-12">
+                <div className="grid md:grid-cols-3 gap-8 items-center">
+                  <div className="text-center">
+                    <ScrollAnimation animation="scaleIn">
                       <div className="w-32 h-32 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
                         <span className="text-white font-bold text-4xl">
                           AD
                         </span>
                       </div>
-                    </div>
-                    <div className="md:col-span-2">
+                    </ScrollAnimation>
+                  </div>
+                  <div className="md:col-span-2">
+                    <ScrollAnimation animation="slideUp">
                       <h3 className="text-3xl font-bold text-gray-900 mb-2">
                         Anteneh Darsema
                       </h3>
@@ -268,7 +278,7 @@ export default function AboutPage() {
                       </p>
                       <p className="text-gray-600 leading-relaxed mb-4">
                         As the founder and visionary leader of Ketar Aluminum,
-                        Anteneh Darsema has dedicated over 18 years to building
+                        Anteneh Darsema has dedicated over 12 years to building
                         Ethiopia's premier aluminum solutions company. His
                         commitment to quality, integrity, and customer
                         satisfaction has established Ketar as a trusted name
@@ -280,14 +290,14 @@ export default function AboutPage() {
                         private and public sectors, always maintaining the core
                         values of excellence and reliability.
                       </p>
-                    </div>
+                    </ScrollAnimation>
                   </div>
-                </CardContent>
-              </Card>
-            </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
-        </section>
-      </ScrollAnimation>
+        </div>
+      </section>
 
       {/* Company Values */}
       <ScrollAnimation>
@@ -305,54 +315,70 @@ export default function AboutPage() {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <Users className="h-10 w-10 text-white" />
+                  <ScrollAnimation>
+                    <Users className="h-10 w-10 text-white" />
+                  </ScrollAnimation>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Family Values
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  As a family-owned business, we maintain personal relationships
-                  and never compromise on quality.
-                </p>
+                <ScrollAnimation animation="slideUp">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Family Values
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    As a family-owned business, we maintain personal
+                    relationships and never compromise on quality.
+                  </p>
+                </ScrollAnimation>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <Award className="h-10 w-10 text-white" />
+                  <ScrollAnimation>
+                    <Award className="h-10 w-10 text-white" />
+                  </ScrollAnimation>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Proven Excellence
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  12+ years of consistent quality and service excellence in the
-                  Ethiopian market.
-                </p>
+                <ScrollAnimation animation="slideUp">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Proven Excellence
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    12+ years of consistent quality and service excellence in
+                    the Ethiopian market.
+                  </p>
+                </ScrollAnimation>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <Building className="h-10 w-10 text-white" />
+                  <ScrollAnimation>
+                    <Building className="h-10 w-10 text-white" />
+                  </ScrollAnimation>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Local Expertise
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Deep understanding of Ethiopian construction needs and
-                  building requirements.
-                </p>
+                <ScrollAnimation animation="slideUp">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Local Expertise
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Deep understanding of Ethiopian construction needs and
+                    building requirements.
+                  </p>
+                </ScrollAnimation>
               </div>
 
               <div className="text-center">
                 <div className="w-20 h-20 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <CheckCircle className="h-10 w-10 text-white" />
+                  <ScrollAnimation>
+                    <CheckCircle className="h-10 w-10 text-white" />
+                  </ScrollAnimation>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                  Reliable Service
-                </h3>
-                <p className="text-gray-600 text-sm">
-                  Dependable partner for all aluminum needs with consistent
-                  quality and timely delivery.
-                </p>
+                <ScrollAnimation animation="slideUp">
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
+                    Reliable Service
+                  </h3>
+                  <p className="text-gray-600 text-sm">
+                    Dependable partner for all aluminum needs with consistent
+                    quality and timely delivery.
+                  </p>
+                </ScrollAnimation>
               </div>
             </div>
           </div>
