@@ -4,14 +4,17 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/nav/navBar";
 import FooterBar from "@/components/footer/footer";
+import ketar_logo from "@/assets/ketar_logo2.png";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: {
-    default:
-      "Ketar Aluminum - Premium Aluminum Profiles & Technical Services in Ethiopia",
+    default: "Ketar Aluminum - Product and Service at its best",
     template: "%s | Ketar Aluminum",
+  },
+  icons: {
+    icon: "/ketar_logo2.png",
   },
   description:
     "Leading aluminum supplier in Ethiopia since 2006. Specializing in anodized and powder coating aluminum profiles, doors, windows, curtain walls, and technical services. Quality products at competitive prices.",
@@ -31,6 +34,7 @@ export const metadata: Metadata = {
     "Ketar Aluminum",
     "Ethiopian aluminum supplier",
     "aluminum technical services",
+    "Product and Service at its best",
   ],
   authors: [{ name: "Ketar Aluminum" }],
   creator: "Ketar Aluminum",
@@ -51,8 +55,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://ketaraluminum.com",
     siteName: "Ketar Aluminum",
-    title:
-      "Ketar Aluminum - Premium Aluminum Profiles & Technical Services in Ethiopia",
+    title: "Ketar Aluminum - Product and Service at its best",
     description:
       "Leading aluminum supplier in Ethiopia since 2006. Specializing in anodized and powder coating aluminum profiles, doors, windows, curtain walls, and technical services.",
     images: [
@@ -60,24 +63,25 @@ export const metadata: Metadata = {
         url: "/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "Ketar Aluminum - Premium Aluminum Solutions",
+        alt: "Ketar Aluminum - Product and Service at its best",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ketar Aluminum - Premium Aluminum Profiles & Technical Services",
+    title: "Ketar Aluminum - Product and Service at its best",
     description:
       "Leading aluminum supplier in Ethiopia since 2006. Quality aluminum profiles and technical services.",
     images: ["/og-image.jpg"],
   },
+
   verification: {
     google: "your-google-verification-code",
   },
   alternates: {
     canonical: "https://ketaraluminum.com",
   },
-  generator: "v0.dev",
+  generator: "ByteForge",
 };
 
 export default function RootLayout({
@@ -92,19 +96,19 @@ export default function RootLayout({
         <link
           rel="apple-touch-icon"
           sizes="180x180"
-          href="/apple-touch-icon.png"
+          href="@/assets/ketar_logo2.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="32x32"
-          href="/favicon-32x32.png"
+          href="@/assets/ketar_logo2.png"
         />
         <link
           rel="icon"
           type="image/png"
           sizes="16x16"
-          href="/favicon-16x16.png"
+          href="@/assets/ketar_logo2.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
 
@@ -132,7 +136,7 @@ export default function RootLayout({
               },
               contactPoint: {
                 "@type": "ContactPoint",
-                telephone: "+251-911-123456",
+                telephone: "+251-930-32-9599",
                 contactType: "customer service",
                 availableLanguage: ["English", "Amharic"],
               },
