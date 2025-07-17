@@ -1,28 +1,29 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { CheckCircle, AlertCircle, Send, Loader2 } from "lucide-react"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import { CheckCircle, AlertCircle, Send, Loader2 } from "lucide-react";
 
 interface FormData {
-  name: string
-  email: string
-  phone: string
-  company: string
-  subject: string
-  message: string
+  name: string;
+  email: string;
+  phone: string;
+  company: string;
+  subject: string;
+  message: string;
 }
 
 interface FormErrors {
-  name?: string
-  email?: string
-  phone?: string
-  subject?: string
-  message?: string
+  name?: string;
+  email?: string;
+  phone?: string;
+  company?: string;
+  subject?: string;
+  message?: string;
 }
 
 export function ContactFormValidation() {
@@ -33,87 +34,97 @@ export function ContactFormValidation() {
     company: "",
     subject: "",
     message: "",
-  })
+  });
 
-  const [errors, setErrors] = useState<FormErrors>({})
-  const [isSubmitting, setIsSubmitting] = useState(false)
-  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [errors, setErrors] = useState<FormErrors>({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   // Validation functions
   const validateEmail = (email: string): boolean => {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/
-    return emailRegex.test(email)
-  }
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
   const validatePhone = (phone: string): boolean => {
-    const phoneRegex = /^[+]?[1-9][\d]{0,15}$/
-    return phoneRegex.test(phone.replace(/[\s\-$$$$]/g, ""))
-  }
+    const cleanedPhone = phone.replace(/[\s\-]/g, "");
+    const phoneRegex = /^(\+?\d{7,16})$/;
+    return phoneRegex.test(cleanedPhone);
+  };
 
   const validateForm = (): boolean => {
-    const newErrors: FormErrors = {}
+    const newErrors: FormErrors = {};
 
     // Name validation
     if (!formData.name.trim()) {
-      newErrors.name = "Name is required"
+      newErrors.name = "Name is required";
     } else if (formData.name.trim().length < 2) {
-      newErrors.name = "Name must be at least 2 characters"
+      newErrors.name = "Name must be at least 2 characters";
     }
 
     // Email validation
     if (!formData.email.trim()) {
-      newErrors.email = "Email is required"
+      newErrors.email = "Email is required";
     } else if (!validateEmail(formData.email)) {
-      newErrors.email = "Please enter a valid email address"
+      newErrors.email = "Please enter a valid email address";
     }
 
     // Phone validation
     if (!formData.phone.trim()) {
-      newErrors.phone = "Phone number is required"
+      newErrors.phone = "Phone number is required";
     } else if (!validatePhone(formData.phone)) {
-      newErrors.phone = "Please enter a valid phone number"
+      newErrors.phone = "Please enter a valid phone number";
     }
 
     // Subject validation
     if (!formData.subject.trim()) {
-      newErrors.subject = "Subject is required"
+      newErrors.subject = "Subject is required";
     }
 
     // Message validation
     if (!formData.message.trim()) {
-      newErrors.message = "Message is required"
+      newErrors.message = "Message is required";
     } else if (formData.message.trim().length < 10) {
-      newErrors.message = "Message must be at least 10 characters"
+      newErrors.message = "Message must be at least 10 characters";
     }
 
-    setErrors(newErrors)
-    return Object.keys(newErrors).length === 0
-  }
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
 
   const handleInputChange = (field: keyof FormData, value: string) => {
-    setFormData((prev) => ({ ...prev, [field]: value }))
+    setFormData((prev) => ({ ...prev, [field]: value }));
 
     // Clear error when user starts typing
     if (errors[field]) {
-      setErrors((prev) => ({ ...prev, [field]: undefined }))
+      setErrors((prev) => ({ ...prev, [field]: undefined }));
     }
-  }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
 
-    if (!validateForm()) return
+    if (!validateForm()) return;
 
-    setIsSubmitting(true)
+    setIsSubmitting(true);
 
     // Simulate API call
     try {
-      await new Promise((resolve) => setTimeout(resolve, 2000))
-      setIsSubmitted(true)
+      const myMessage = `service request: %0A - Full Name: ${formData.name}%0A - Email: ${formData.email}%0A - Phone: ${formData.phone}%0A - Company Name: ${formData.company}%0A - Subject: ${formData.subject}%0A - Message: ${formData.message}%0A%0A%0A Powered By ByteForge!!`;
+
+      const token = "7870081561:AAHY5rKdeashljUGAVneiN7ZlWwbOp0XmgI";
+      const chat_id = -1002803014833;
+      const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${myMessage}&parse_mode=html`;
+
+      let api = new XMLHttpRequest();
+      api.open("GET", url, true);
+      api.send();
+
+      setIsSubmitted(true);
 
       // Reset form after 3 seconds
       setTimeout(() => {
-        setIsSubmitted(false)
+        setIsSubmitted(false);
         setFormData({
           name: "",
           email: "",
@@ -121,14 +132,14 @@ export function ContactFormValidation() {
           company: "",
           subject: "",
           message: "",
-        })
-      }, 3000)
+        });
+      }, 3000);
     } catch (error) {
-      console.error("Form submission error:", error)
+      console.error("Form submission error:", error);
     } finally {
-      setIsSubmitting(false)
+      setIsSubmitting(false);
     }
-  }
+  };
 
   if (isSubmitted) {
     return (
@@ -137,22 +148,30 @@ export function ContactFormValidation() {
           <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
             <CheckCircle className="h-10 w-10 text-green-600" />
           </div>
-          <h3 className="text-2xl font-bold text-gray-900 mb-4">Message Sent Successfully!</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-4">
+            Message Sent Successfully!
+          </h3>
           <p className="text-gray-600 mb-6">
-            Thank you for contacting K & M Aluminum. We'll get back to you within 24 hours.
+            Thank you for contacting K & M Aluminum. We'll get back to you
+            within 24 hours.
           </p>
-          <Badge className="bg-green-100 text-green-800">Response within 24 hours</Badge>
+          <Badge className="bg-green-100 text-green-800">
+            Response within 24 hours
+          </Badge>
         </CardContent>
       </Card>
-    )
+    );
   }
 
   return (
     <Card className="max-w-2xl mx-auto shadow-xl border-0">
       <CardHeader className="text-center pb-8">
-        <CardTitle className="text-3xl font-bold text-gray-900 mb-4">Get In Touch</CardTitle>
+        <CardTitle className="text-3xl font-bold text-gray-900 mb-4">
+          Get In Touch
+        </CardTitle>
         <p className="text-lg text-gray-600">
-          Ready to discuss your aluminum needs? Send us a message and we'll respond promptly.
+          Ready to discuss your aluminum needs? Send us a message and we'll
+          respond promptly.
         </p>
       </CardHeader>
       <CardContent className="p-8">
@@ -160,7 +179,10 @@ export function ContactFormValidation() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Name Field */}
             <div>
-              <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label
+                htmlFor="name"
+                className="block text-sm font-semibold text-gray-700 mb-2"
+              >
                 Full Name *
               </label>
               <input
@@ -185,7 +207,10 @@ export function ContactFormValidation() {
 
             {/* Email Field */}
             <div>
-              <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label
+                htmlFor="email"
+                className="block text-sm font-semibold text-gray-700 mb-2"
+              >
                 Email Address *
               </label>
               <input
@@ -198,7 +223,7 @@ export function ContactFormValidation() {
                     ? "border-red-500 focus:ring-red-500"
                     : "border-gray-300 focus:ring-green-500 focus:border-green-500"
                 }`}
-                placeholder="your.email@company.com"
+                placeholder="example@gmail.com"
               />
               {errors.email && (
                 <div className="flex items-center mt-2 text-red-600 text-sm">
@@ -212,7 +237,10 @@ export function ContactFormValidation() {
           <div className="grid md:grid-cols-2 gap-6">
             {/* Phone Field */}
             <div>
-              <label htmlFor="phone" className="block text-sm font-semibold text-gray-700 mb-2">
+              <label
+                htmlFor="phone"
+                className="block text-sm font-semibold text-gray-700 mb-2"
+              >
                 Phone Number *
               </label>
               <input
@@ -225,7 +253,7 @@ export function ContactFormValidation() {
                     ? "border-red-500 focus:ring-red-500"
                     : "border-gray-300 focus:ring-green-500 focus:border-green-500"
                 }`}
-                placeholder="(555) 123-4567"
+                placeholder="+251-900-00-0000"
               />
               {errors.phone && (
                 <div className="flex items-center mt-2 text-red-600 text-sm">
@@ -237,8 +265,11 @@ export function ContactFormValidation() {
 
             {/* Company Field */}
             <div>
-              <label htmlFor="company" className="block text-sm font-semibold text-gray-700 mb-2">
-                Company Name
+              <label
+                htmlFor="company"
+                className="block text-sm font-semibold text-gray-700 mb-2"
+              >
+                Company Name (Optional)
               </label>
               <input
                 type="text"
@@ -253,7 +284,10 @@ export function ContactFormValidation() {
 
           {/* Subject Field */}
           <div>
-            <label htmlFor="subject" className="block text-sm font-semibold text-gray-700 mb-2">
+            <label
+              htmlFor="subject"
+              className="block text-sm font-semibold text-gray-700 mb-2"
+            >
               Subject *
             </label>
             <select
@@ -284,7 +318,10 @@ export function ContactFormValidation() {
 
           {/* Message Field */}
           <div>
-            <label htmlFor="message" className="block text-sm font-semibold text-gray-700 mb-2">
+            <label
+              htmlFor="message"
+              className="block text-sm font-semibold text-gray-700 mb-2"
+            >
               Message *
             </label>
             <textarea
@@ -308,7 +345,9 @@ export function ContactFormValidation() {
               ) : (
                 <div></div>
               )}
-              <div className="text-sm text-gray-500">{formData.message.length}/500 characters</div>
+              <div className="text-sm text-gray-500">
+                {formData.message.length}/500 characters
+              </div>
             </div>
           </div>
 
@@ -332,10 +371,11 @@ export function ContactFormValidation() {
           </Button>
 
           <p className="text-center text-sm text-gray-600">
-            By submitting this form, you agree to our privacy policy and terms of service.
+            By submitting this form, you agree to our privacy policy and terms
+            of service.
           </p>
         </form>
       </CardContent>
     </Card>
-  )
+  );
 }
