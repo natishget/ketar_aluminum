@@ -37,7 +37,7 @@ export const metadata: Metadata = {
 
 export default function AboutPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 overflow-hidden">
       {/* Hero Section */}
       <ScrollAnimation animation="slideUp" delay={500}>
         <section className="relative py-24 bg-gradient-to-br from-gray-50 to-white overflow-hidden">

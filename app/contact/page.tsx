@@ -79,7 +79,7 @@ export default function ContactPage() {
   const checkTimeAndDate = isWithInBusinessHours();
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 relative">
+    <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       <AluminumBackground />
       <AluminumShapes />
 
