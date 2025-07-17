@@ -188,9 +188,9 @@ export default function ServicesPage() {
                         Aluminum Doors & Windows
                       </h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">
-                        High-quality aluminum doors and windows with modern
-                        designs, excellent security features, and superior
-                        thermal performance.
+                        Custom aluminum doors and windows, combining modern aesthetics, 
+                        reliable performance, and expert installation for both residential 
+                        and commercial needs.
                       </p>
                       <ul className="space-y-3 mb-8">
                         <li className="flex items-center text-sm text-gray-600">
@@ -239,9 +239,9 @@ export default function ServicesPage() {
                         Curtain Wall Systems
                       </h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">
-                        Advanced curtain wall systems for modern commercial
-                        buildings, providing structural integrity, weather
-                        protection, and architectural beauty.
+                        Advanced curtain wall solutions including structural glazing, 
+                        aluminum cladding, and weatherproof sealing — installed with 
+                        precision and care.
                       </p>
                       <ul className="space-y-3 mb-8">
                         <li className="flex items-center text-sm text-gray-600">
@@ -290,9 +290,8 @@ export default function ServicesPage() {
                         Handrails & Guardrails
                       </h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">
-                        Safety-focused handrail and guardrail systems combining
-                        functionality with aesthetic appeal for stairs,
-                        balconies, and walkways.
+                        Functional and stylish aluminum handrails and guardrails for stairs, 
+                        balconies, and walkways — crafted for safety and built to last.
                       </p>
                       <ul className="space-y-3 mb-8">
                         <li className="flex items-center text-sm text-gray-600">
@@ -341,9 +340,9 @@ export default function ServicesPage() {
                         Additional Services
                       </h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">
-                        Complete range of aluminum solutions including
-                        partitions, skylights, sun barkers, and aluminum
-                        cladding for comprehensive project needs.
+                        We also offer expert installation of aluminum 
+                        partitions, skylights, sun barkers, aluminum 
+                        cladding, and composite panels.
                       </p>
                       <ul className="space-y-3 mb-8">
                         <li className="flex items-center text-sm text-gray-600">
@@ -398,11 +397,11 @@ export default function ServicesPage() {
                 <Award className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                18+ Years Experience
+                Integrity & Honesty
               </h3>
               <p className="text-gray-600">
-                Nearly two decades of expertise in aluminum solutions across
-                Ethiopia's construction industry.
+                We conduct all our business with honesty and integrity 
+                to build lasting trust with every client.
               </p>
             </div>
 
@@ -411,11 +410,11 @@ export default function ServicesPage() {
                 <Target className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Quality Focus
+                Helpful Support
               </h3>
               <p className="text-gray-600">
-                Commitment to delivering the finest quality aluminum products
-                with superior finishes and durability.
+                Our team is always ready to assist and provide practical 
+                solutions at every stage of your project.
               </p>
             </div>
 
@@ -424,11 +423,11 @@ export default function ServicesPage() {
                 <Zap className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Quick Service
+                Proven Track Record
               </h3>
               <p className="text-gray-600">
-                Fast, responsive service delivery because we believe in worrying
-                about the details for our customers.
+                Trusted by both private and public sectors across Ethiopia 
+                for consistent quality and reliability.
               </p>
             </div>
 
@@ -437,11 +436,10 @@ export default function ServicesPage() {
                 <Clock className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Reliable Partner
+                Family-Owned Quality
               </h3>
               <p className="text-gray-600">
-                Trusted by both private and public sectors across Ethiopia for
-                consistent quality and reliability.
+                Built on strong family values, we deliver reliable service with a personal touch and attention to detail.
               </p>
             </div>
           </div>
