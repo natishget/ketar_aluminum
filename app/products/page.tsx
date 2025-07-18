@@ -31,37 +31,70 @@ import {
 } from "@/components/aluminum-background";
 
 export default function ProductsPage() {
+
   const productCategories = [
     {
       id: 1,
-      name: "Aluminum Sheets",
-      description: "High-quality sheets in various thicknesses",
-      image: "/placeholder.svg?height=300&width=400",
-      productCount: 24,
+      name: "Aluminum Profiles",
+      description: "Anodized and powder-coated profiles in various shapes and finishes.",
+      image: "/images/aluminum-profiles.jpg",
+      productCount: 20,
       color: "green",
     },
     {
       id: 2,
-      name: "Aluminum Bars",
-      description: "Round, square, and rectangular bars",
-      image: "/placeholder.svg?height=300&width=400",
-      productCount: 18,
+      name: "Composite Panels",
+      description: "Durable and aesthetic panels for cladding and facades.",
+      image: "/images/composite-panels.jpg",
+      productCount: 76,
       color: "red",
     },
     {
       id: 3,
-      name: "Aluminum Tubes",
-      description: "Seamless and welded tube options",
-      image: "/placeholder.svg?height=300&width=400",
-      productCount: 15,
+      name: "Aluminum Accessories",
+      description: "Fittings and accessories for aluminum installations.",
+      image: "/images/aluminum-accessories.jpg",
+      productCount: 55,
       color: "green",
     },
     {
       id: 4,
-      name: "Custom Extrusions",
-      description: "Engineered to your specifications",
-      image: "/placeholder.svg?height=300&width=400",
-      productCount: 32,
+      name: "Doors & Windows",
+      description: "Custom aluminum doors and windows for all building types.",
+      image: "/images/aluminum-doors-windows.jpg",
+      productCount: 82,
+      color: "red",
+    },
+    {
+      id: 5,
+      name: "Curtain Wall & Cladding",
+      description: "Advanced aluminum systems for modern architectural facades.",
+      image: "/images/curtain-wall.jpg",
+      productCount: 45,
+      color: "green",
+    },
+    {
+      id: 6,
+      name: "Handrails & Guardrails",
+      description: "Safe and stylish handrail systems for stairs and balconies.",
+      image: "/images/handrails.jpg",
+      productCount: 62,
+      color: "red",
+    },
+    {
+      id: 7,
+      name: "Sun Barkers & Skylights",
+      description: "Functional aluminum systems for shading and daylighting.",
+      image: "/images/sun-barkers.jpg",
+      productCount: 91,
+      color: "green",
+    },
+    {
+      id: 8,
+      name: "Aluminum\nPartitions",
+      description: "Elegant aluminum partition systems for interior layouts.",
+      image: "/images/partitions.jpg",
+      productCount: 19,
       color: "red",
     },
   ];
@@ -190,16 +223,16 @@ export default function ProductsPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <ScrollAnimation animation="slideUp">
             <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-6 px-4 py-2">
-              Premium Products
+              Our Aluminum Products
             </Badge>
             <h1 className="text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
               Aluminum <span className="text-green-600">Products</span>
               <span className="text-red-600 block">Catalog</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed mb-8">
-              Discover our comprehensive range of premium aluminum products,
-              from standard sheets and bars to custom extrusions and specialized
-              alloys.
+              Explore a wide range of high-quality aluminum profiles, accessories, 
+              and components designed to meet the needs of Ethiopia’s 
+              construction industry.
             </p>
 
             {/* Search and Filter */}
@@ -263,7 +296,14 @@ export default function ProductsPage() {
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
-                        {category.name}
+                        {category.name.split("\n").map((line, index) => (
+                          <span key={index}>
+                            {line}
+                            {index < category.name.split("\n").length - 1 && (
+                              <br />
+                            )}
+                          </span>
+                        ))}
                       </h3>
                       <p className="text-gray-600 mb-4">
                         {category.description}
@@ -414,7 +454,7 @@ export default function ProductsPage() {
         </div>
       </section>
 
-      {/* Technical Specifications */}
+      {/* Technical Specifications
       <section className="py-16 bg-white relative z-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimation animation="slideUp">
@@ -480,7 +520,7 @@ export default function ProductsPage() {
             </div>
           </ScrollAnimation>
         </div>
-      </section>
+      </section> */}
 
       {/* Product Gallery */}
       <section className="py-16 bg-gradient-to-br from-gray-50 to-white relative z-10">
