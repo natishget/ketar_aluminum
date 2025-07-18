@@ -16,6 +16,7 @@ import {
   Twitter,
   Linkedin,
   Instagram,
+  FileText,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -158,7 +159,7 @@ const featuredProducts = [
     reviews: 64,
     image: Product4,
     specs: ["Types: Sliding, Hinged, Fixed", "Energy-Efficient", "Customizable Designs"],
-    inStock: false,
+    inStock: true,
     category: "Doors & Windows",
   },
   {
@@ -171,7 +172,7 @@ const featuredProducts = [
     reviews: 72,
     image: Product5,
     specs: ["Weather Sealing", "Thermal Performance", "Installation Included"],
-    inStock: false,
+    inStock: true,
     category: "Curtain Wall",
   },
 ];
@@ -422,7 +423,7 @@ const featuredProducts = [
                           className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white"
                           disabled={!product.inStock}
                         >
-                          <ShoppingCart className="h-4 w-4 mr-2" />
+                          <FileText className="h-4 w-4 mr-2" />
                           {product.price === "Quote"
                             ? "Get Quote"
                             : "Add to Cart"}
