@@ -39,6 +39,12 @@ import product6 from "@/assets/Products/handrails.webp";
 import product7 from "@/assets/Products/sun-barkers.avif";
 import product8 from "@/assets/Products/partitions.webp";
 
+import Product1 from "@/assets/Products/AnodizedAluminumProfile.jpg";
+import Product2 from "@/assets/Products/PowderCoatedProfile.jpg";
+import Product3 from "@/assets/Products/AluminumCompositePanel.jpg";
+import Product4 from "@/assets/Products/AluminumDoorWindow.jpg";
+import Product5 from "@/assets/Products/CurtainWallSystem.jpg";
+
 
 export default function ProductsPage() {
 
@@ -110,88 +116,74 @@ export default function ProductsPage() {
 ];
 
 
-  const featuredProducts = [
-    {
-      id: 1,
-      name: "6061-T6 Aluminum Sheet",
-      description:
-        "Premium grade aluminum sheet with excellent corrosion resistance",
-      price: "$12.50",
-      unit: "per sq ft",
-      rating: 4.9,
-      reviews: 127,
-      image: "/placeholder.svg?height=300&width=300",
-      specs: ['Thickness: 0.125"', "Size: 4' x 8'", "Alloy: 6061-T6"],
-      inStock: true,
-      category: "Sheets",
-    },
-    {
-      id: 2,
-      name: "Custom Aluminum Extrusion",
-      description:
-        "Precision-engineered custom profiles for your specific needs",
-      price: "Quote",
-      unit: "per linear ft",
-      rating: 5.0,
-      reviews: 89,
-      image: "/placeholder.svg?height=300&width=300",
-      specs: ["Custom Design", "Various Alloys", "Any Length"],
-      inStock: true,
-      category: "Extrusions",
-    },
-    {
-      id: 3,
-      name: "6063 Aluminum Tube",
-      description: "Seamless aluminum tubing for structural applications",
-      price: "$8.75",
-      unit: "per linear ft",
-      rating: 4.8,
-      reviews: 203,
-      image: "/placeholder.svg?height=300&width=300",
-      specs: ['OD: 2"', 'Wall: 0.125"', "Length: 20'"],
-      inStock: true,
-      category: "Tubes",
-    },
-    {
-      id: 4,
-      name: "Anodized Aluminum Bar",
-      description: "Premium anodized finish for enhanced durability",
-      price: "$15.25",
-      unit: "per linear ft",
-      rating: 4.7,
-      reviews: 156,
-      image: "/placeholder.svg?height=300&width=300",
-      specs: ['Size: 1" x 2"', "Length: 12'", "Finish: Clear Anodized"],
-      inStock: false,
-      category: "Bars",
-    },
-    {
-      id: 5,
-      name: "5052 Marine Grade Sheet",
-      description: "Corrosion-resistant aluminum for marine applications",
-      price: "$18.90",
-      unit: "per sq ft",
-      rating: 4.9,
-      reviews: 94,
-      image: "/placeholder.svg?height=300&width=300",
-      specs: ['Thickness: 0.190"', "Size: 4' x 10'", "Marine Grade"],
-      inStock: true,
-      category: "Sheets",
-    },
-    {
-      id: 6,
-      name: "Powder Coated Profile",
-      description: "Custom powder coating in various colors",
-      price: "Quote",
-      unit: "per linear ft",
-      rating: 4.8,
-      reviews: 67,
-      image: "/placeholder.svg?height=300&width=300",
-      specs: ["Custom Colors", "Durable Finish", "Various Profiles"],
-      inStock: true,
-      category: "Finishes",
-    },
-  ];
+const featuredProducts = [
+  {
+    id: 1,
+    name: "Anodized Aluminum Profile",
+    description: "Durable aluminum profile with corrosion-resistant anodized finish.",
+    price: "Quote",
+    unit: "per meter",
+    rating: 4.9,
+    reviews: 98,
+    image: Product1,
+    specs: ["Finish: Clear or Colored Anodizing", "Length: Custom sizes", "Use: Windows, Doors, Curtain Walls"],
+    inStock: true,
+    category: "Profiles",
+  },
+  {
+    id: 2,
+    name: "Powder Coated Profile",
+    description: "Aluminum profile with high-quality powder coating for enhanced aesthetics.",
+    price: "Quote",
+    unit: "per meter",
+    rating: 4.8,
+    reviews: 76,
+    image: Product2,
+    specs: ["Colors: Wide range available", "Use: Frames, Partitions", "Finish: Durable and Weather-Resistant"],
+    inStock: true,
+    category: "Finishes",
+  },
+  {
+    id: 3,
+    name: "Aluminum Composite Panel",
+    description: "Premium composite panels for cladding and architectural façades.",
+    price: "Quote",
+    unit: "per sq meter",
+    rating: 4.7,
+    reviews: 88,
+    image: Product3,
+    specs: ["Finish: Matte, Glossy, Brushed", "Size: Standard & Custom", "Use: Exterior Cladding"],
+    inStock: true,
+    category: "Panels",
+  },
+  {
+    id: 4,
+    name: "Aluminum Door & Window System",
+    description: "Modern aluminum frames built for performance and style.",
+    price: "Quote",
+    unit: "per set",
+    rating: 4.6,
+    reviews: 64,
+    image: Product4,
+    specs: ["Types: Sliding, Hinged, Fixed", "Energy-Efficient", "Customizable Designs"],
+    inStock: false,
+    category: "Doors & Windows",
+  },
+  {
+    id: 5,
+    name: "Curtain Wall System",
+    description: "Advanced curtain wall and structural glazing systems.",
+    price: "Quote",
+    unit: "per sq meter",
+    rating: 4.8,
+    reviews: 72,
+    image: Product5,
+    specs: ["Weather Sealing", "Thermal Performance", "Installation Included"],
+    inStock: false,
+    category: "Curtain Wall",
+  },
+];
+
 
   const alloySpecs = [
     {
