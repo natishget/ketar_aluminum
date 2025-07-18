@@ -30,74 +30,85 @@ import {
   AluminumShapes,
 } from "@/components/aluminum-background";
 
+import product1 from "@/assets/Products/aluminum-profiles.jpg";
+import product2 from "@/assets/Products/composite-panels.jpg";
+import product3 from "@/assets/Products/aluminum-accessories.jpg";
+import product4 from "@/assets/Products/aluminum-doors-windows.jpg";
+import product5 from "@/assets/Products/curtain-wall.avif";
+import product6 from "@/assets/Products/handrails.webp";
+import product7 from "@/assets/Products/sun-barkers.avif";
+import product8 from "@/assets/Products/partitions.webp";
+
+
 export default function ProductsPage() {
 
   const productCategories = [
-    {
-      id: 1,
-      name: "Aluminum Profiles",
-      description: "Anodized and powder-coated profiles in various shapes and finishes.",
-      image: "/images/aluminum-profiles.jpg",
-      productCount: 20,
-      color: "green",
-    },
-    {
-      id: 2,
-      name: "Composite Panels",
-      description: "Durable and aesthetic panels for cladding and facades.",
-      image: "/images/composite-panels.jpg",
-      productCount: 76,
-      color: "red",
-    },
-    {
-      id: 3,
-      name: "Aluminum Accessories",
-      description: "Fittings and accessories for aluminum installations.",
-      image: "/images/aluminum-accessories.jpg",
-      productCount: 55,
-      color: "green",
-    },
-    {
-      id: 4,
-      name: "Doors & Windows",
-      description: "Custom aluminum doors and windows for all building types.",
-      image: "/images/aluminum-doors-windows.jpg",
-      productCount: 82,
-      color: "red",
-    },
-    {
-      id: 5,
-      name: "Curtain Wall & Cladding",
-      description: "Advanced aluminum systems for modern architectural facades.",
-      image: "/images/curtain-wall.jpg",
-      productCount: 45,
-      color: "green",
-    },
-    {
-      id: 6,
-      name: "Handrails & Guardrails",
-      description: "Safe and stylish handrail systems for stairs and balconies.",
-      image: "/images/handrails.jpg",
-      productCount: 62,
-      color: "red",
-    },
-    {
-      id: 7,
-      name: "Sun Barkers & Skylights",
-      description: "Functional aluminum systems for shading and daylighting.",
-      image: "/images/sun-barkers.jpg",
-      productCount: 91,
-      color: "green",
-    },
-    {
-      id: 8,
-      name: "Aluminum\nPartitions",
-      description: "Elegant aluminum partition systems for interior layouts.",
-      image: "/images/partitions.jpg",
-      productCount: 19,
-      color: "red",
-    },
-  ];
+  {
+    id: 1,
+    name: "Aluminum Profiles",
+    description: "Anodized and powder-coated profiles in various shapes.",
+    image: product1,
+    productCount: 248,
+    color: "green",
+  },
+  {
+    id: 2,
+    name: "Composite Panels",
+    description: "Durable and aesthetic panels for cladding and facades.",
+    image: product2,
+    productCount: 75,
+    color: "red",
+  },
+  {
+    id: 3,
+    name: "Aluminum Accessories",
+    description: "Fittings and accessories for aluminum installations.",
+    image: product3,
+    productCount: 165,
+    color: "green",
+  },
+  {
+    id: 4,
+    name: "Doors & Windows",
+    description: "Custom aluminum doors and windows for all building types.",
+    image: product4,
+    productCount: 162,
+    color: "red",
+  },
+  {
+    id: 5,
+    name: "Curtain Wall & Cladding",
+    description: "Advanced aluminum systems for modern architectural facades.",
+    image: product5,
+    productCount: 89,
+    color: "green",
+  },
+  {
+    id: 6,
+    name: "Handrails & Guardrails",
+    description: "Safe and stylish handrail systems for stairs and balconies.",
+    image: product6,
+    productCount: 92,
+    color: "red",
+  },
+  {
+    id: 7,
+    name: "Sun Barkers & Skylights",
+    description: "Functional aluminum systems for shading and daylighting.",
+    image: product7,
+    productCount: 66,
+    color: "green",
+  },
+  {
+    id: 8,
+    name: "Aluminum Partitions",
+    description: "Elegant aluminum partition systems for interior layouts.",
+    image: product8,
+    productCount: 79,
+    color: "red",
+  },
+];
+
 
   const featuredProducts = [
     {
@@ -263,7 +274,7 @@ export default function ProductsPage() {
                 Product Categories
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Browse our extensive catalog organized by product type
+                Browse our extensive catalog by product type
               </p>
             </div>
           </ScrollAnimation>
@@ -285,7 +296,7 @@ export default function ProductsPage() {
                       />
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
                       <div
-                        className={`absolute top-4 right-4 px-3 py-1 rounded-full text-white text-sm font-semibold ${
+                        className={`absolute top-4 right-4 px-3 py-1 rounded-full text-white text-xs font-semibold ${
                           category.color === "green"
                             ? "bg-green-500"
                             : "bg-red-500"
