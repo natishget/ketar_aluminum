@@ -54,7 +54,6 @@ export default function ProductsPage() {
     name: "Aluminum Profiles",
     description: "Anodized and powder-coated profiles in various shapes.",
     image: product1,
-    productCount: 248,
     color: "green",
   },
   {
@@ -62,7 +61,6 @@ export default function ProductsPage() {
     name: "Composite Panels",
     description: "Durable and aesthetic panels for cladding and facades.",
     image: product2,
-    productCount: 75,
     color: "red",
   },
   {
@@ -70,7 +68,6 @@ export default function ProductsPage() {
     name: "Aluminum Accessories",
     description: "Fittings and accessories for aluminum installations.",
     image: product3,
-    productCount: 165,
     color: "green",
   },
   {
@@ -78,7 +75,6 @@ export default function ProductsPage() {
     name: "Doors & Windows",
     description: "Custom aluminum doors and windows for all building types.",
     image: product4,
-    productCount: 162,
     color: "red",
   },
   {
@@ -86,7 +82,6 @@ export default function ProductsPage() {
     name: "Curtain Wall & Cladding",
     description: "Advanced aluminum systems for modern architectural facades.",
     image: product5,
-    productCount: 89,
     color: "green",
   },
   {
@@ -94,7 +89,6 @@ export default function ProductsPage() {
     name: "Handrails & Guardrails",
     description: "Safe and stylish handrail systems for stairs and balconies.",
     image: product6,
-    productCount: 92,
     color: "red",
   },
   {
@@ -102,7 +96,6 @@ export default function ProductsPage() {
     name: "Sun Barkers & Skylights",
     description: "Functional aluminum systems for shading and daylighting.",
     image: product7,
-    productCount: 66,
     color: "green",
   },
   {
@@ -110,7 +103,6 @@ export default function ProductsPage() {
     name: "Aluminum Partitions",
     description: "Elegant aluminum partition systems for interior layouts.",
     image: product8,
-    productCount: 79,
     color: "red",
   },
 ];
@@ -287,15 +279,6 @@ const featuredProducts = [
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
-                      <div
-                        className={`absolute top-4 right-4 px-3 py-1 rounded-full text-white text-xs font-semibold ${
-                          category.color === "green"
-                            ? "bg-green-500"
-                            : "bg-red-500"
-                        }`}
-                      >
-                        {category.productCount} items
-                      </div>
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
