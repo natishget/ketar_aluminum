@@ -407,7 +407,7 @@ export default function ServicesPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Target className="h-8 w-8 text-white" />
+                <Zap className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Helpful Support
@@ -420,7 +420,7 @@ export default function ServicesPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Zap className="h-8 w-8 text-white" />
+                <Clock className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Proven Track Record
@@ -433,13 +433,13 @@ export default function ServicesPage() {
 
             <div className="text-center">
               <div className="w-16 h-16 bg-gradient-to-br from-red-500 to-red-600 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg">
-                <Clock className="h-8 w-8 text-white" />
+                <Target className="h-8 w-8 text-white" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
                 Family-Owned Quality
               </h3>
               <p className="text-gray-600">
-                Built on strong family values, we deliver reliable service with a personal touch and attention to detail.
+                Built on strong family values, we deliver service with a personal touch and attention to detail.
               </p>
             </div>
           </div>
