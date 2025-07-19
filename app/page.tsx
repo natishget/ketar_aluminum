@@ -38,6 +38,8 @@ import {
   AluminumShapes,
 } from "@/components/aluminum-background";
 import type { Metadata } from "next";
+import aluminumHeroImg from "@/assets/aluminum_home3.jpg";
+import aluminumBodyImg from "@/assets/aluminum2-img.png";
 
 export const metadata: Metadata = {
   title:
@@ -150,7 +152,7 @@ export default function HomePage() {
                 <div className="grid grid-cols-3 gap-8 pt-12 border-t border-gray-200">
                   <div className="text-center">
                     <div className="text-4xl font-bold text-green-600 mb-2">
-                      18+
+                      12+
                     </div>
                     <div className="text-sm text-gray-600 font-medium">
                       Years Experience
@@ -178,7 +180,7 @@ export default function HomePage() {
               <div className="relative">
                 <div className="relative z-10">
                   <Image
-                    src="/placeholder.svg?height=700&width=600"
+                    src={aluminumHeroImg}
                     alt="Ketar Aluminum premium aluminum profiles and manufacturing facility in Ethiopia"
                     width={600}
                     height={700}
@@ -217,7 +219,7 @@ export default function HomePage() {
             <div className="grid lg:grid-cols-2 gap-16 items-center">
               <div className="relative">
                 <Image
-                  src="/placeholder.svg?height=500&width=600"
+                  src={aluminumBodyImg}
                   alt="Ketar Aluminum manufacturing process and quality aluminum profiles"
                   width={600}
                   height={500}
@@ -595,7 +597,7 @@ export default function HomePage() {
                   Trusted Partner
                 </h3>
                 <p className="text-gray-600 leading-relaxed">
-                  18+ years of building lasting relationships with clients
+                  12+ years of building lasting relationships with clients
                   across Ethiopia's private and public sectors.
                 </p>
               </div>
@@ -728,7 +730,7 @@ export default function HomePage() {
             </div>
             <div className="flex items-center space-x-2">
               <CheckCircle className="h-6 w-6 text-green-200" />
-              <span className="font-medium">18+ Years Experience</span>
+              <span className="font-medium">12+ Years Experience</span>
             </div>
           </div>
         </div>
