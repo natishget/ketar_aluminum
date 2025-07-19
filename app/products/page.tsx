@@ -548,7 +548,7 @@ const featuredProducts = [
               Our expert team can create custom aluminum products tailored to
               your exact specifications. Get a personalized quote today.
             </p>
-            <ContactUsButtons />
+            <ContactUsButtons size="lg" />
           </ScrollAnimation>
         </div>
       </section>

@@ -30,6 +30,7 @@ import {
 } from "@/components/scroll-animations";
 import { SimpleAnimations } from "@/components/simple-animations";
 import type { Metadata } from "next";
+import ContactUsButtons from "../products/ContactUsButtons";
 
 export const metadata: Metadata = {
   title:
@@ -525,7 +526,8 @@ export default function ServicesPage() {
             Contact our experts today to discuss your aluminum service needs and
             get a personalized quote for your project.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <ContactUsButtons size="sm" />
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
               className="bg-white text-green-600 hover:bg-gray-100 shadow-xl"
@@ -541,7 +543,7 @@ export default function ServicesPage() {
               Call +251-911-123456
               <Phone className="ml-2 h-5 w-5" />
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>
