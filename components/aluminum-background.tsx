@@ -1,36 +1,36 @@
-"use client"
+"use client";
 
-import { useEffect, useRef } from "react"
+import { useEffect, useRef } from "react";
 
 export function AluminumBackground() {
-  const canvasRef = useRef<HTMLCanvasElement>(null)
+  const canvasRef = useRef<HTMLCanvasElement>(null);
 
   useEffect(() => {
-    const canvas = canvasRef.current
-    if (!canvas) return
+    const canvas = canvasRef.current;
+    if (!canvas) return;
 
-    const ctx = canvas.getContext("2d")
-    if (!ctx) return
+    const ctx = canvas.getContext("2d");
+    if (!ctx) return;
 
     // Set canvas size
     const resizeCanvas = () => {
-      canvas.width = window.innerWidth
-      canvas.height = window.innerHeight
-    }
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+    };
 
-    resizeCanvas()
-    window.addEventListener("resize", resizeCanvas)
+    resizeCanvas();
+    window.addEventListener("resize", resizeCanvas);
 
     // Reduced particle system for subtlety
     const particles: Array<{
-      x: number
-      y: number
-      vx: number
-      vy: number
-      size: number
-      opacity: number
-      color: string
-    }> = []
+      x: number;
+      y: number;
+      vx: number;
+      vy: number;
+      size: number;
+      opacity: number;
+      color: string;
+    }> = [];
 
     // Create fewer particles with lower opacity
     for (let i = 0; i < 25; i++) {
@@ -42,63 +42,71 @@ export function AluminumBackground() {
         size: Math.random() * 2 + 0.5,
         opacity: Math.random() * 0.1 + 0.05,
         color: Math.random() > 0.5 ? "#10b981" : "#ef4444",
-      })
+      });
     }
 
     // Animation loop
     const animate = () => {
-      ctx.clearRect(0, 0, canvas.width, canvas.height)
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
       // Update and draw particles
       particles.forEach((particle, index) => {
         // Update position
-        particle.x += particle.vx
-        particle.y += particle.vy
+        particle.x += particle.vx;
+        particle.y += particle.vy;
 
         // Bounce off edges
-        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1
-        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1
+        if (particle.x <= 0 || particle.x >= canvas.width) particle.vx *= -1;
+        if (particle.y <= 0 || particle.y >= canvas.height) particle.vy *= -1;
 
         // Draw particle
-        ctx.beginPath()
-        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2)
+        ctx.beginPath();
+        ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2);
         ctx.fillStyle =
           particle.color +
           Math.floor(particle.opacity * 255)
             .toString(16)
-            .padStart(2, "0")
-        ctx.fill()
+            .padStart(2, "0");
+        ctx.fill();
 
         // Draw very subtle connections
         particles.forEach((otherParticle, otherIndex) => {
           if (index !== otherIndex) {
-            const dx = particle.x - otherParticle.x
-            const dy = particle.y - otherParticle.y
-            const distance = Math.sqrt(dx * dx + dy * dy)
+            const dx = particle.x - otherParticle.x;
+            const dy = particle.y - otherParticle.y;
+            const distance = Math.sqrt(dx * dx + dy * dy);
 
             if (distance < 80) {
-              ctx.beginPath()
-              ctx.moveTo(particle.x, particle.y)
-              ctx.lineTo(otherParticle.x, otherParticle.y)
-              ctx.strokeStyle = `rgba(156, 163, 175, ${0.05 * (1 - distance / 80)})`
-              ctx.lineWidth = 0.3
-              ctx.stroke()
+              ctx.beginPath();
+              ctx.moveTo(particle.x, particle.y);
+              ctx.lineTo(otherParticle.x, otherParticle.y);
+              ctx.strokeStyle = `rgba(156, 163, 175, ${
+                0.05 * (1 - distance / 80)
+              })`;
+              ctx.lineWidth = 0.3;
+              ctx.stroke();
             }
           }
-        })
-      })
+        });
+      });
 
-      requestAnimationFrame(animate)
-    }
+      requestAnimationFrame(animate);
+    };
 
-    animate()
+    animate();
 
     return () => {
-      window.removeEventListener("resize", resizeCanvas)
-    }
-  }, [])
+      window.removeEventListener("resize", resizeCanvas);
+    };
+  }, []);
 
-  return <canvas ref={canvasRef} className="fixed inset-0 pointer-events-none z-0" style={{ opacity: 0.2 }} />
+  return (
+    <canvas
+      ref={canvasRef}
+      className="fixed inset-0 pointer-events-none z-0"
+      style={{ opacity: 0.2 }}
+    />
+  );
 }
 
 // Simplified professional shapes - no footer background shapes
@@ -107,7 +115,7 @@ export function AluminumShapes() {
     <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
       {/* Very subtle floating geometric shapes - only in hero areas */}
       <div className="absolute top-20 left-10 w-32 h-32 bg-gradient-to-br from-green-100 to-green-200 rounded-full opacity-5" />
-      <div className="absolute top-40 right-20 w-24 h-24 bg-gradient-to-br from-red-100 to-red-200 rounded-lg opacity-8 transform -rotate-12" />
+      <div className="absolute top-40 right-20 w-24 h-24 hidden lg:block bg-gradient-to-br from-red-100 to-red-200 rounded-lg opacity-8 transform -rotate-12" />
       <div className="absolute bottom-20 left-1/4 w-40 h-2 bg-gradient-to-r from-green-200 to-transparent opacity-10" />
 
       {/* Subtle hexagon pattern - no animation */}
@@ -123,5 +131,5 @@ export function AluminumShapes() {
         </svg>
       </div>
     </div>
-  )
+  );
 }

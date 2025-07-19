@@ -90,7 +90,13 @@ const footerBar = () => {
                   >
                     Services
                   </Link>
-                </li>
+                </li><a
+                      href="mailto:ketaraluminumplc@gmail.com"
+                      // target="_blank"
+                      className="text-gray-300 font-medium text-sm hover:text-green-400 transition-colors"
+                    >
+                      ketaraluminumplc@gmail.com
+                    </a>
                 <li>
                   <Link
                     href="/products"
@@ -145,7 +151,7 @@ const footerBar = () => {
                     <a
                       href="mailto:ketaraluminumplc@gmail.com"
                       // target="_blank"
-                      className="text-gray-300 font-medium text-sm hover:text-green-400 transition-colors"
+                      className="text-gray-300 break-words font-medium text-sm hover:text-green-400 transition-colors"
                     >
                       ketaraluminumplc@gmail.com
                     </a>
