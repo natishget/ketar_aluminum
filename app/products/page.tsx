@@ -16,6 +16,8 @@ import {
   Twitter,
   Linkedin,
   Instagram,
+  FileText,
+  View,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -30,157 +32,153 @@ import {
   AluminumShapes,
 } from "@/components/aluminum-background";
 
+import product1 from "@/assets/Products/aluminum-profiles.jpg";
+import product2 from "@/assets/Products/composite-panels.jpg";
+import product3 from "@/assets/Products/aluminum-accessories.jpg";
+import product4 from "@/assets/Products/aluminum-doors-windows.jpg";
+import product5 from "@/assets/Products/curtain-wall.avif";
+import product6 from "@/assets/Products/handrails.webp";
+import product7 from "@/assets/Products/sun-barkers.avif";
+import product8 from "@/assets/Products/partitions.webp";
+
+import Product1 from "@/assets/Products/AnodizedAluminumProfile.jpg";
+import Product2 from "@/assets/Products/PowderCoatedProfile.jpg";
+import Product3 from "@/assets/Products/AluminumCompositePanel.jpg";
+import Product4 from "@/assets/Products/AluminumDoorWindow.jpg";
+import Product5 from "@/assets/Products/CurtainWallSystem.jpg";
+import { ViewProductsButton } from "./ViewProductsButton";
+
+
 export default function ProductsPage() {
 
   const productCategories = [
-    {
-      id: 1,
-      name: "Aluminum Profiles",
-      description: "Anodized and powder-coated profiles in various shapes and finishes.",
-      image: "/images/aluminum-profiles.jpg",
-      productCount: 20,
-      color: "green",
-    },
-    {
-      id: 2,
-      name: "Composite Panels",
-      description: "Durable and aesthetic panels for cladding and facades.",
-      image: "/images/composite-panels.jpg",
-      productCount: 76,
-      color: "red",
-    },
-    {
-      id: 3,
-      name: "Aluminum Accessories",
-      description: "Fittings and accessories for aluminum installations.",
-      image: "/images/aluminum-accessories.jpg",
-      productCount: 55,
-      color: "green",
-    },
-    {
-      id: 4,
-      name: "Doors & Windows",
-      description: "Custom aluminum doors and windows for all building types.",
-      image: "/images/aluminum-doors-windows.jpg",
-      productCount: 82,
-      color: "red",
-    },
-    {
-      id: 5,
-      name: "Curtain Wall & Cladding",
-      description: "Advanced aluminum systems for modern architectural facades.",
-      image: "/images/curtain-wall.jpg",
-      productCount: 45,
-      color: "green",
-    },
-    {
-      id: 6,
-      name: "Handrails & Guardrails",
-      description: "Safe and stylish handrail systems for stairs and balconies.",
-      image: "/images/handrails.jpg",
-      productCount: 62,
-      color: "red",
-    },
-    {
-      id: 7,
-      name: "Sun Barkers & Skylights",
-      description: "Functional aluminum systems for shading and daylighting.",
-      image: "/images/sun-barkers.jpg",
-      productCount: 91,
-      color: "green",
-    },
-    {
-      id: 8,
-      name: "Aluminum\nPartitions",
-      description: "Elegant aluminum partition systems for interior layouts.",
-      image: "/images/partitions.jpg",
-      productCount: 19,
-      color: "red",
-    },
-  ];
+  {
+    id: 1,
+    name: "Aluminum Profiles",
+    description: "Anodized and powder-coated profiles in various shapes.",
+    image: product1,
+    color: "green",
+  },
+  {
+    id: 2,
+    name: "Composite Panels",
+    description: "Durable and aesthetic panels for cladding and facades.",
+    image: product2,
+    color: "red",
+  },
+  {
+    id: 3,
+    name: "Aluminum Accessories",
+    description: "Fittings and accessories for aluminum installations.",
+    image: product3,
+    color: "green",
+  },
+  {
+    id: 4,
+    name: "Doors & Windows",
+    description: "Custom aluminum doors and windows for all building types.",
+    image: product4,
+    color: "red",
+  },
+  {
+    id: 5,
+    name: "Curtain Wall & Cladding",
+    description: "Advanced aluminum systems for modern architectural facades.",
+    image: product5,
+    color: "green",
+  },
+  {
+    id: 6,
+    name: "Handrails & Guardrails",
+    description: "Safe and stylish handrail systems for stairs and balconies.",
+    image: product6,
+    color: "red",
+  },
+  {
+    id: 7,
+    name: "Sun Barkers & Skylights",
+    description: "Functional aluminum systems for shading and daylighting.",
+    image: product7,
+    color: "green",
+  },
+  {
+    id: 8,
+    name: "Aluminum Partitions",
+    description: "Elegant aluminum partition systems for interior layouts.",
+    image: product8,
+    color: "red",
+  },
+];
 
-  const featuredProducts = [
-    {
-      id: 1,
-      name: "6061-T6 Aluminum Sheet",
-      description:
-        "Premium grade aluminum sheet with excellent corrosion resistance",
-      price: "$12.50",
-      unit: "per sq ft",
-      rating: 4.9,
-      reviews: 127,
-      image: "/placeholder.svg?height=300&width=300",
-      specs: ['Thickness: 0.125"', "Size: 4' x 8'", "Alloy: 6061-T6"],
-      inStock: true,
-      category: "Sheets",
-    },
-    {
-      id: 2,
-      name: "Custom Aluminum Extrusion",
-      description:
-        "Precision-engineered custom profiles for your specific needs",
-      price: "Quote",
-      unit: "per linear ft",
-      rating: 5.0,
-      reviews: 89,
-      image: "/placeholder.svg?height=300&width=300",
-      specs: ["Custom Design", "Various Alloys", "Any Length"],
-      inStock: true,
-      category: "Extrusions",
-    },
-    {
-      id: 3,
-      name: "6063 Aluminum Tube",
-      description: "Seamless aluminum tubing for structural applications",
-      price: "$8.75",
-      unit: "per linear ft",
-      rating: 4.8,
-      reviews: 203,
-      image: "/placeholder.svg?height=300&width=300",
-      specs: ['OD: 2"', 'Wall: 0.125"', "Length: 20'"],
-      inStock: true,
-      category: "Tubes",
-    },
-    {
-      id: 4,
-      name: "Anodized Aluminum Bar",
-      description: "Premium anodized finish for enhanced durability",
-      price: "$15.25",
-      unit: "per linear ft",
-      rating: 4.7,
-      reviews: 156,
-      image: "/placeholder.svg?height=300&width=300",
-      specs: ['Size: 1" x 2"', "Length: 12'", "Finish: Clear Anodized"],
-      inStock: false,
-      category: "Bars",
-    },
-    {
-      id: 5,
-      name: "5052 Marine Grade Sheet",
-      description: "Corrosion-resistant aluminum for marine applications",
-      price: "$18.90",
-      unit: "per sq ft",
-      rating: 4.9,
-      reviews: 94,
-      image: "/placeholder.svg?height=300&width=300",
-      specs: ['Thickness: 0.190"', "Size: 4' x 10'", "Marine Grade"],
-      inStock: true,
-      category: "Sheets",
-    },
-    {
-      id: 6,
-      name: "Powder Coated Profile",
-      description: "Custom powder coating in various colors",
-      price: "Quote",
-      unit: "per linear ft",
-      rating: 4.8,
-      reviews: 67,
-      image: "/placeholder.svg?height=300&width=300",
-      specs: ["Custom Colors", "Durable Finish", "Various Profiles"],
-      inStock: true,
-      category: "Finishes",
-    },
-  ];
+
+const featuredProducts = [
+  {
+    id: 1,
+    name: "Anodized Aluminum Profile",
+    description: "Durable aluminum profile with corrosion-resistant anodized finish.",
+    price: "Quote",
+    unit: "per meter",
+    rating: 4.9,
+    reviews: 98,
+    image: Product1,
+    specs: ["Finish: Clear or Colored Anodizing", "Length: Custom sizes", "Use: Windows, Doors, Curtain Walls"],
+    inStock: true,
+    category: "Profiles",
+  },
+  {
+    id: 2,
+    name: "Powder Coated Profile",
+    description: "Aluminum profile with high-quality powder coating for enhanced aesthetics.",
+    price: "Quote",
+    unit: "per meter",
+    rating: 4.8,
+    reviews: 76,
+    image: Product2,
+    specs: ["Colors: Wide range available", "Use: Frames, Partitions", "Finish: Durable and Weather-Resistant"],
+    inStock: true,
+    category: "Finishes",
+  },
+  {
+    id: 3,
+    name: "Aluminum Composite Panel",
+    description: "Premium composite panels for cladding and architectural façades.",
+    price: "Quote",
+    unit: "per sq meter",
+    rating: 4.7,
+    reviews: 88,
+    image: Product3,
+    specs: ["Finish: Matte, Glossy, Brushed", "Size: Standard & Custom", "Use: Exterior Cladding"],
+    inStock: true,
+    category: "Panels",
+  },
+  {
+    id: 4,
+    name: "Aluminum Door & Window System",
+    description: "Modern aluminum frames built for performance and style.",
+    price: "Quote",
+    unit: "per set",
+    rating: 4.6,
+    reviews: 64,
+    image: Product4,
+    specs: ["Types: Sliding, Hinged, Fixed", "Energy-Efficient", "Customizable Designs"],
+    inStock: true,
+    category: "Doors & Windows",
+  },
+  {
+    id: 5,
+    name: "Curtain Wall System",
+    description: "Advanced curtain wall and structural glazing systems.",
+    price: "Quote",
+    unit: "per sq meter",
+    rating: 4.8,
+    reviews: 72,
+    image: Product5,
+    specs: ["Weather Sealing", "Thermal Performance", "Installation Included"],
+    inStock: true,
+    category: "Curtain Wall",
+  },
+];
+
 
   const alloySpecs = [
     {
@@ -263,7 +261,7 @@ export default function ProductsPage() {
                 Product Categories
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                Browse our extensive catalog organized by product type
+                Browse our extensive catalog by product type
               </p>
             </div>
           </ScrollAnimation>
@@ -284,15 +282,6 @@ export default function ProductsPage() {
                         className="object-cover group-hover:scale-110 transition-transform duration-500"
                       />
                       <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
-                      <div
-                        className={`absolute top-4 right-4 px-3 py-1 rounded-full text-white text-sm font-semibold ${
-                          category.color === "green"
-                            ? "bg-green-500"
-                            : "bg-red-500"
-                        }`}
-                      >
-                        {category.productCount} items
-                      </div>
                     </div>
                     <div className="p-6">
                       <h3 className="text-xl font-bold text-gray-900 mb-2">
@@ -308,18 +297,9 @@ export default function ProductsPage() {
                       <p className="text-gray-600 mb-4">
                         {category.description}
                       </p>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className={`${
-                          category.color === "green"
-                            ? "text-green-600 border-green-600 hover:bg-green-50"
-                            : "text-red-600 border-red-600 hover:bg-red-50"
-                        } bg-transparent`}
-                      >
-                        View Products
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <ViewProductsButton
+                        color={category.color as "green" | "red"}
+                      />
                     </div>
                   </CardContent>
                 </Card>
@@ -436,7 +416,7 @@ export default function ProductsPage() {
                           className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white"
                           disabled={!product.inStock}
                         >
-                          <ShoppingCart className="h-4 w-4 mr-2" />
+                          <FileText className="h-4 w-4 mr-2" />
                           {product.price === "Quote"
                             ? "Get Quote"
                             : "Add to Cart"}
@@ -523,7 +503,7 @@ export default function ProductsPage() {
       </section> */}
 
       {/* Product Gallery */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 to-white relative z-10">
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-white relative z-10" id="product-gallery">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimation animation="slideUp">
             <div className="text-center mb-16">

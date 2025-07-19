@@ -7,11 +7,19 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { X, ChevronLeft, ChevronRight, ZoomIn, Download, Share2, Maximize2 } from "lucide-react"
-import Image from "next/image"
+import Image, { StaticImageData } from "next/image"
+
+import Product1 from "@/assets/Products/composite-panels.jpg";
+import Product2 from "@/assets/Products/AluminumAccessories.jpg";
+import Product3 from "@/assets/Products/AluminumProfiles.jpg";
+import Product4 from "@/assets/Products/ColoredGlass.jpg";
+import Product5 from "@/assets/Products/AluminumProfile.jpg";
+import Product6 from "@/assets/Products/Partitions2.jpg";
+
 
 interface ProductImage {
   id: number
-  src: string
+  src: StaticImageData
   alt: string
   title: string
   category: string
@@ -54,7 +62,7 @@ export function ProductImageGallery({ productName, images }: ProductImageGallery
 
   const handleDownload = () => {
     const link = document.createElement("a")
-    link.href = images[selectedImageIndex].src
+    link.href = images[selectedImageIndex].src.src
     link.download = `${productName}-${images[selectedImageIndex].title}.jpg`
     link.click()
   }
@@ -246,45 +254,45 @@ export function ExampleProductGallery() {
   const sampleImages: ProductImage[] = [
     {
       id: 1,
-      src: "/placeholder.svg?height=400&width=400",
+      src: Product1,
       alt: "Aluminum sheet sample",
-      title: "Premium Aluminum Sheet",
+      title: "Aluminum Sheet Panel",
       category: "Sheets",
     },
     {
       id: 2,
-      src: "/placeholder.svg?height=400&width=400",
-      alt: "Custom aluminum extrusion",
-      title: "Custom Extrusion Profile",
+      src: Product2,
+      alt: "Aluminum profiles & sections",
+      title: "Aluminum Profiles & Sections",
       category: "Extrusions",
     },
     {
       id: 3,
-      src: "/placeholder.svg?height=400&width=400",
-      alt: "Anodized aluminum finish",
-      title: "Anodized Finish Sample",
-      category: "Finishes",
+      src: Product3,
+      alt: "Aluminum accessories & gaskets",
+      title: "Aluminum Accessories & Gaskets",
+      category: "Accessories",
     },
     {
       id: 4,
-      src: "/placeholder.svg?height=400&width=400",
-      alt: "Aluminum tube cutting",
-      title: "Precision Cut Tubes",
-      category: "Tubes",
+      src: Product4,
+      alt: "Colored glasses",
+      title: "Colored Glasses",
+      category: "Glasses",
     },
     {
       id: 5,
-      src: "/placeholder.svg?height=400&width=400",
-      alt: "Welded aluminum assembly",
-      title: "Custom Welded Assembly",
-      category: "Fabrication",
+      src: Product5,
+      alt: "Aluminum Profiles",
+      title: "Various Aluminum Profiles",
+      category: "Accessories",
     },
     {
       id: 6,
-      src: "/placeholder.svg?height=400&width=400",
-      alt: "Powder coated aluminum",
-      title: "Powder Coated Parts",
-      category: "Finishes",
+      src: Product6,
+      alt: "Aluminum partitions",
+      title: "Office Aluminum Partitions",
+      category: "Partitions",
     },
   ]
 
