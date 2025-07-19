@@ -33,23 +33,22 @@ export function ViewProductsButton({ type = "categories", color = "green", label
           <ArrowRight className="ml-2 h-4 w-4" />
         </Button>
       ) : (
-        <ContactUsButtons />
-        // <div className="flex space-x-2">
-        //     <Button
-        //         onClick={handleClick}
-        //         size="sm"
-        //         className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white">
-        //     <FileText className="h-4 w-4 mr-2" />
-        //     {label}
-        //     </Button>
-        //     <Button 
-        //         onClick={handleClick}
-        //         variant="outline" 
-        //         size="sm">
+        <div className="flex space-x-2">
+            <Button
+                onClick={handleClick}
+                size="sm"
+                className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white">
+            <FileText className="h-4 w-4 mr-2" />
+            {label}
+            </Button>
+            <Button 
+                onClick={handleClick}
+                variant="outline" 
+                size="sm">
 
-        //         <Eye className="h-4 w-4" />
-        //     </Button>
-        // </div>
+                <Eye className="h-4 w-4" />
+            </Button>
+        </div>
       )}
     </div>
   );
