@@ -3,7 +3,6 @@
 import { Button } from "@/components/ui/button";
 import { Mail, PhoneCall } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { ReactNode } from "react";
 
 type ButtonSize = "sm" | "lg";
 

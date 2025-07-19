@@ -31,6 +31,7 @@ import {
 import { SimpleAnimations } from "@/components/simple-animations";
 import type { Metadata } from "next";
 import ContactUsButtons from "../products/ContactUsButtons";
+import LearnMoreButton from "./LearnMoreButton";
 
 export const metadata: Metadata = {
   title:
@@ -109,13 +110,7 @@ export default function ServicesPage() {
                           Custom Specifications
                         </li>
                       </ul>
-                      <Button
-                        variant="outline"
-                        className="text-green-600 border-green-600 hover:bg-green-50 bg-transparent w-full"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <LearnMoreButton color="green" />
                     </div>
                   </CardContent>
                 </Card>
@@ -160,13 +155,7 @@ export default function ServicesPage() {
                           Custom Color Matching
                         </li>
                       </ul>
-                      <Button
-                        variant="outline"
-                        className="text-red-600 border-red-600 hover:bg-red-50 bg-transparent w-full"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <LearnMoreButton color="red" />
                     </div>
                   </CardContent>
                 </Card>
@@ -211,13 +200,7 @@ export default function ServicesPage() {
                           Professional Installation
                         </li>
                       </ul>
-                      <Button
-                        variant="outline"
-                        className="text-green-600 border-green-600 hover:bg-green-50 bg-transparent w-full"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <LearnMoreButton color="green" />
                     </div>
                   </CardContent>
                 </Card>
@@ -262,13 +245,7 @@ export default function ServicesPage() {
                           Complete Installation
                         </li>
                       </ul>
-                      <Button
-                        variant="outline"
-                        className="text-red-600 border-red-600 hover:bg-red-50 bg-transparent w-full"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <LearnMoreButton color="red" />
                     </div>
                   </CardContent>
                 </Card>
@@ -312,13 +289,7 @@ export default function ServicesPage() {
                           Professional Installation
                         </li>
                       </ul>
-                      <Button
-                        variant="outline"
-                        className="text-green-600 border-green-600 hover:bg-green-50 bg-transparent w-full"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <LearnMoreButton color="green" />
                     </div>
                   </CardContent>
                 </Card>
@@ -363,13 +334,7 @@ export default function ServicesPage() {
                           Composite Panels
                         </li>
                       </ul>
-                      <Button
-                        variant="outline"
-                        className="text-red-600 border-red-600 hover:bg-red-50 bg-transparent w-full"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <LearnMoreButton color="red" />
                     </div>
                   </CardContent>
                 </Card>
