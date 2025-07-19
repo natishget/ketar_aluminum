@@ -505,8 +505,8 @@ const featuredProducts = [
                 See Our Products
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                High-resolution images of our aluminum products and
-                manufacturing processes
+   
+                Browse High-quality images showcasing our aluminum products and some finished works.
               </p>
             </div>
           </ScrollAnimation>
