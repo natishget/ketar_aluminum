@@ -31,7 +31,7 @@ export default function ContactUsButtons({ size = "lg" }: ContactUsButtonsProps)
   const { padding, fontSize, iconSize } = sizeStyles[size];
 
   return (
-    <div className="flex flex-col sm:flex-row gap-6 justify-center">
+    <div className={`flex flex-col sm:flex-row ${size === "lg" ? "gap-6" : "gap-4" } justify-center`}>
       <Button
         onClick={() => router.push("/contact")}
         className={`bg-white text-green-600 hover:bg-gray-100 shadow-2xl ${padding} ${fontSize} font-semibold`}
