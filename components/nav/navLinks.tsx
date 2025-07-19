@@ -30,9 +30,9 @@ const navLinks = () => {
           {label}
         </Link>
       ))}
-      <Button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg">
+      {/* <Button className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-lg">
         Get Quote
-      </Button>
+      </Button> */}
     </div>
   );
 };
