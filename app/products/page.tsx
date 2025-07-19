@@ -17,6 +17,7 @@ import {
   Linkedin,
   Instagram,
   FileText,
+  View,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -45,6 +46,7 @@ import Product2 from "@/assets/Products/PowderCoatedProfile.jpg";
 import Product3 from "@/assets/Products/AluminumCompositePanel.jpg";
 import Product4 from "@/assets/Products/AluminumDoorWindow.jpg";
 import Product5 from "@/assets/Products/CurtainWallSystem.jpg";
+import { ViewProductsButton } from "./ViewProductsButton";
 
 
 export default function ProductsPage() {
@@ -295,18 +297,9 @@ const featuredProducts = [
                       <p className="text-gray-600 mb-4">
                         {category.description}
                       </p>
-                      <Button
-                        variant="outline"
-                        size="sm"
-                        className={`${
-                          category.color === "green"
-                            ? "text-green-600 border-green-600 hover:bg-green-50"
-                            : "text-red-600 border-red-600 hover:bg-red-50"
-                        } bg-transparent`}
-                      >
-                        View Products
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <ViewProductsButton
+                        color={category.color as "green" | "red"}
+                      />
                     </div>
                   </CardContent>
                 </Card>
@@ -510,7 +503,7 @@ const featuredProducts = [
       </section> */}
 
       {/* Product Gallery */}
-      <section className="py-16 bg-gradient-to-br from-gray-50 to-white relative z-10">
+      <section className="py-16 bg-gradient-to-br from-gray-50 to-white relative z-10" id="product-gallery">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <ScrollAnimation animation="slideUp">
             <div className="text-center mb-16">
