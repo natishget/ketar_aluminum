@@ -210,6 +210,8 @@ const featuredProducts = [
       applications: "General Purpose",
     },
   ];
+  
+  const which = "product";
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 relative">
@@ -411,19 +413,19 @@ const featuredProducts = [
                       </div>
 
                       <div className="flex space-x-2">
-                        <Button
+                        <ViewProductsButton type={which as "product" | "categories"} />
+                        {/* <Button
                           size="sm"
                           className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white"
-                          disabled={!product.inStock}
                         >
                           <FileText className="h-4 w-4 mr-2" />
                           {product.price === "Quote"
                             ? "Get Quote"
                             : "Add to Cart"}
-                        </Button>
-                        <Button variant="outline" size="sm">
+                        </Button> */}
+                        {/* <Button variant="outline" size="sm">
                           <Eye className="h-4 w-4" />
-                        </Button>
+                        </Button> */}
                       </div>
                     </div>
                   </CardContent>
