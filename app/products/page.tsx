@@ -47,6 +47,7 @@ import Product3 from "@/assets/Products/AluminumCompositePanel.jpg";
 import Product4 from "@/assets/Products/AluminumDoorWindow.jpg";
 import Product5 from "@/assets/Products/CurtainWallSystem.jpg";
 import { ViewProductsButton } from "./ViewProductsButton";
+import ContactUsButtons from "./ContactUsButtons";
 
 
 export default function ProductsPage() {
@@ -547,24 +548,7 @@ const featuredProducts = [
               Our expert team can create custom aluminum products tailored to
               your exact specifications. Get a personalized quote today.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button
-                size="lg"
-                className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl px-10 py-4 text-lg font-semibold"
-              >
-                <Download className="mr-3 h-6 w-6" />
-                Download Catalog
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-green-600 shadow-2xl bg-transparent px-10 py-4 text-lg font-semibold"
-              >
-                Request Custom Quote
-                <ArrowRight className="ml-3 h-5 w-5" />
-              </Button>
-            </div>
+            <ContactUsButtons />
           </ScrollAnimation>
         </div>
       </section>
