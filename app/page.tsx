@@ -38,8 +38,8 @@ import {
   AluminumShapes,
 } from "@/components/aluminum-background";
 import type { Metadata } from "next";
-import aluminumHeroImg from "@/assets/aluminum_home3.jpg";
-import aluminumBodyImg from "@/assets/aluminum2-img.png";
+import aluminumHeroImg from "@/assets/home/aluminum_home3.jpg";
+import aluminumBodyImg from "@/assets/home/aluminum2-img.png";
 
 export const metadata: Metadata = {
   title:
@@ -97,26 +97,30 @@ export default function HomePage() {
                   <p className="text-xl text-gray-600 mt-8 leading-relaxed max-w-lg">
                     Ethiopia's trusted aluminum supplier offering premium
                     anodized and powder coating profiles, technical services,
-                    and complete aluminum solutions for over 18 years.
+                    and complete aluminum solutions for over 12 years.
                   </p>
                 </div>
 
                 <div className="flex flex-col sm:flex-row gap-6">
-                  <Button
-                    size="lg"
-                    className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-xl px-8 py-4 text-lg font-semibold"
-                  >
-                    Explore Products
-                    <ArrowRight className="ml-3 h-6 w-6" />
-                  </Button>
-                  <Button
-                    size="lg"
-                    variant="outline"
-                    className="border-2 border-red-500 text-red-600 hover:bg-red-50 shadow-lg bg-transparent px-8 py-4 text-lg font-semibold"
-                  >
-                    Request Quote
-                    <Phone className="ml-3 h-5 w-5" />
-                  </Button>
+                  <Link href={"/products"}>
+                    <Button
+                      size="lg"
+                      className="bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white shadow-xl px-8 py-4 text-lg font-semibold"
+                    >
+                      Explore Products
+                      <ArrowRight className="ml-3 h-6 w-6" />
+                    </Button>
+                  </Link>
+                  <Link href={`tel:+251-930-329599`}>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-2 border-red-500 text-red-600 hover:bg-red-50 shadow-lg bg-transparent px-8 py-4 text-lg font-semibold"
+                    >
+                      Call Us Now
+                      <Phone className="ml-3 h-5 w-5" />
+                    </Button>
+                  </Link>
                 </div>
 
                 {/* Trust Indicators */}
@@ -286,15 +290,16 @@ export default function HomePage() {
                     </div>
                   </div>
                 </div>
-
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent"
-                >
-                  Learn More About Us
-                  <ArrowRight className="ml-2 h-5 w-5" />
-                </Button>
+                <Link href={`/about`}>
+                  <Button
+                    size="lg"
+                    variant="outline"
+                    className="border-green-600 text-green-600 hover:bg-green-50 bg-transparent mt-6"
+                  >
+                    Learn More About Us
+                    <ArrowRight className="ml-2 h-5 w-5" />
+                  </Button>
+                </Link>
               </div>
             </div>
           </ScrollAnimation>
@@ -655,14 +660,15 @@ export default function HomePage() {
           <ScrollAnimation animation="slideUp">
             <div className="text-center mb-20">
               <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-4 px-4 py-2">
-                Client Testimonials
+                Our Clients
               </Badge>
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                What Our Clients Say
+                Some of Our Happy Clients
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Hear from satisfied customers who trust Ketar Aluminum for their
-                projects across Ethiopia
+                We take pride in our long-standing relationships with clients
+                across Ethiopia's private and public sectors. Here are some of
+                the esteemed organizations we've had the pleasure to work with.
               </p>
             </div>
           </ScrollAnimation>
@@ -697,21 +703,23 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-12">
-            <Button
+            {/* <Button
               size="lg"
               className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl px-10 py-4 text-lg font-semibold"
             >
               Get Free Quote
               <ArrowRight className="ml-3 h-6 w-6" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-2 border-white text-white hover:bg-white hover:text-green-600 shadow-2xl bg-transparent px-10 py-4 text-lg font-semibold"
-            >
-              Call: +251-911-123456
-              <Phone className="ml-3 h-5 w-5" />
-            </Button>
+            </Button> */}
+            <Link href={`tel:+251-911-123456`}>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-2 border-white text-white hover:bg-white hover:text-green-600 shadow-2xl bg-transparent px-10 py-4 text-lg font-semibold"
+              >
+                Call: +251-911-123456
+                <Phone className="ml-3 h-5 w-5" />
+              </Button>
+            </Link>
           </div>
 
           {/* Trust Indicators */}
