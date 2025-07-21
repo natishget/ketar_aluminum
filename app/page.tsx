@@ -655,14 +655,15 @@ export default function HomePage() {
           <ScrollAnimation animation="slideUp">
             <div className="text-center mb-20">
               <Badge className="bg-green-100 text-green-800 hover:bg-green-100 mb-4 px-4 py-2">
-                Client Testimonials
+                Our Clients
               </Badge>
               <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
-                What Our Clients Say
+                Some of Our Happy Clients
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-                Hear from satisfied customers who trust Ketar Aluminum for their
-                projects across Ethiopia
+                We take pride in our long-standing relationships with clients
+                across Ethiopia's private and public sectors. Here are some of
+                the esteemed organizations we've had the pleasure to work with.
               </p>
             </div>
           </ScrollAnimation>
