@@ -23,7 +23,7 @@ const testimonials = [
     id: 1,
     name: "Ato Bekele Tadesse",
     title: "Construction Manager",
-    company: "Amhara construction works organization",
+    company: "Amhara Construction Works Organization",
     avatar: "BT",
     rating: 5,
     text: "Ketar Aluminum has been our trusted partner for over 8 years. Their anodized profiles are of exceptional quality and their technical services are unmatched in Ethiopia.",
@@ -34,7 +34,7 @@ const testimonials = [
     id: 2,
     name: "W/ro Meron Haile",
     title: "Project Director",
-    company: "Tsedey bank",
+    company: "Tsedey Bank",
     avatar: "MH",
     rating: 5,
     text: "The curtain wall systems provided by Ketar transformed our commercial building project. Professional installation and excellent customer service throughout.",
@@ -44,7 +44,7 @@ const testimonials = [
   {
     id: 3,
     name: "Ato Samuel Girma",
-    title: "Getus real estate",
+    title: "Getus Real Estate",
     company: "Modern Buildings Ltd",
     avatar: "SG",
     rating: 5,
@@ -56,7 +56,7 @@ const testimonials = [
     id: 4,
     name: "W/ro Hanan Ahmed",
     title: "Architect",
-    company: "Ethiopian construction works organization",
+    company: "Ethiopian Construction Works Organization",
     avatar: "HA",
     rating: 5,
     text: "Ketar's powder coating finishes are beautiful and durable. They understand architectural requirements and deliver exactly what we need.",
@@ -129,7 +129,7 @@ export function InteractiveCarousel() {
                     alt=""
                     className="w-32 h-32 object-cover"
                   />
-                  <h3 className="text-xl font-semibold font-serif text-gray-500">
+                  <h3 className="text-xl font-semibold text-gray-500">
                     {testimonial.company}
                   </h3>
                 </div>
