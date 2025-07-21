@@ -139,7 +139,7 @@ export function ProductImageGallery({ productName, images }: ProductImageGallery
                   </div>
                 </div>
                 <div className="p-3">
-                  <Badge className="bg-green-100 text-green-800 text-xs mb-2">{image.category}</Badge>
+                  <Badge className="bg-green-100 hover:bg-green-200 text-green-800 text-xs mb-2">{image.category}</Badge>
                   <h4 className="text-sm font-semibold text-gray-900 truncate">{image.title}</h4>
                 </div>
               </CardContent>

@@ -30,6 +30,8 @@ import {
 } from "@/components/scroll-animations";
 import { SimpleAnimations } from "@/components/simple-animations";
 import type { Metadata } from "next";
+import ContactUsButtons from "../products/ContactUsButtons";
+import LearnMoreButton from "./LearnMoreButton";
 
 export const metadata: Metadata = {
   title:
@@ -108,13 +110,7 @@ export default function ServicesPage() {
                           Custom Specifications
                         </li>
                       </ul>
-                      <Button
-                        variant="outline"
-                        className="text-green-600 border-green-600 hover:bg-green-50 bg-transparent w-full"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <LearnMoreButton color="green" />
                     </div>
                   </CardContent>
                 </Card>
@@ -159,13 +155,7 @@ export default function ServicesPage() {
                           Custom Color Matching
                         </li>
                       </ul>
-                      <Button
-                        variant="outline"
-                        className="text-red-600 border-red-600 hover:bg-red-50 bg-transparent w-full"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <LearnMoreButton color="red" />
                     </div>
                   </CardContent>
                 </Card>
@@ -210,13 +200,7 @@ export default function ServicesPage() {
                           Professional Installation
                         </li>
                       </ul>
-                      <Button
-                        variant="outline"
-                        className="text-green-600 border-green-600 hover:bg-green-50 bg-transparent w-full"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <LearnMoreButton color="green" />
                     </div>
                   </CardContent>
                 </Card>
@@ -261,13 +245,7 @@ export default function ServicesPage() {
                           Complete Installation
                         </li>
                       </ul>
-                      <Button
-                        variant="outline"
-                        className="text-red-600 border-red-600 hover:bg-red-50 bg-transparent w-full"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <LearnMoreButton color="red" />
                     </div>
                   </CardContent>
                 </Card>
@@ -311,13 +289,7 @@ export default function ServicesPage() {
                           Professional Installation
                         </li>
                       </ul>
-                      <Button
-                        variant="outline"
-                        className="text-green-600 border-green-600 hover:bg-green-50 bg-transparent w-full"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <LearnMoreButton color="green" />
                     </div>
                   </CardContent>
                 </Card>
@@ -362,13 +334,7 @@ export default function ServicesPage() {
                           Composite Panels
                         </li>
                       </ul>
-                      <Button
-                        variant="outline"
-                        className="text-red-600 border-red-600 hover:bg-red-50 bg-transparent w-full"
-                      >
-                        Learn More
-                        <ArrowRight className="ml-2 h-4 w-4" />
-                      </Button>
+                      <LearnMoreButton color="red" />
                     </div>
                   </CardContent>
                 </Card>
@@ -525,7 +491,8 @@ export default function ServicesPage() {
             Contact our experts today to discuss your aluminum service needs and
             get a personalized quote for your project.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <ContactUsButtons size="sm" />
+          {/* <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button
               size="lg"
               className="bg-white text-green-600 hover:bg-gray-100 shadow-xl"
@@ -541,7 +508,7 @@ export default function ServicesPage() {
               Call +251-911-123456
               <Phone className="ml-2 h-5 w-5" />
             </Button>
-          </div>
+          </div> */}
         </div>
       </section>
     </div>

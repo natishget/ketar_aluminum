@@ -47,6 +47,7 @@ import Product3 from "@/assets/Products/AluminumCompositePanel.jpg";
 import Product4 from "@/assets/Products/AluminumDoorWindow.jpg";
 import Product5 from "@/assets/Products/CurtainWallSystem.jpg";
 import { ViewProductsButton } from "./ViewProductsButton";
+import ContactUsButtons from "./ContactUsButtons";
 
 
 export default function ProductsPage() {
@@ -210,6 +211,8 @@ const featuredProducts = [
       applications: "General Purpose",
     },
   ];
+  
+  const which = "product";
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 relative">
@@ -411,19 +414,7 @@ const featuredProducts = [
                       </div>
 
                       <div className="flex space-x-2">
-                        <Button
-                          size="sm"
-                          className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white"
-                          disabled={!product.inStock}
-                        >
-                          <FileText className="h-4 w-4 mr-2" />
-                          {product.price === "Quote"
-                            ? "Get Quote"
-                            : "Add to Cart"}
-                        </Button>
-                        <Button variant="outline" size="sm">
-                          <Eye className="h-4 w-4" />
-                        </Button>
+                        <ViewProductsButton type={which as "product" | "categories"} />
                       </div>
                     </div>
                   </CardContent>
@@ -514,8 +505,8 @@ const featuredProducts = [
                 See Our Products
               </h2>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                High-resolution images of our aluminum products and
-                manufacturing processes
+   
+                Browse High-quality images showcasing our aluminum products and some finished works.
               </p>
             </div>
           </ScrollAnimation>
@@ -545,24 +536,7 @@ const featuredProducts = [
               Our expert team can create custom aluminum products tailored to
               your exact specifications. Get a personalized quote today.
             </p>
-
-            <div className="flex flex-col sm:flex-row gap-6 justify-center">
-              <Button
-                size="lg"
-                className="bg-white text-green-600 hover:bg-gray-100 shadow-2xl px-10 py-4 text-lg font-semibold"
-              >
-                <Download className="mr-3 h-6 w-6" />
-                Download Catalog
-              </Button>
-              <Button
-                size="lg"
-                variant="outline"
-                className="border-2 border-white text-white hover:bg-white hover:text-green-600 shadow-2xl bg-transparent px-10 py-4 text-lg font-semibold"
-              >
-                Request Custom Quote
-                <ArrowRight className="ml-3 h-5 w-5" />
-              </Button>
-            </div>
+            <ContactUsButtons size="lg" />
           </ScrollAnimation>
         </div>
       </section>

@@ -358,7 +358,7 @@ export default function ContactPage() {
                 Common Questions
               </h2>
               <p className="text-xl text-gray-600">
-                Quick answers to help you get started with K & M Aluminum
+                Quick answers to help you get started with Ketar Aluminum
               </p>
             </div>
           </ScrollAnimation>
