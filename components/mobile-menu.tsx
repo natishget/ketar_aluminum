@@ -51,7 +51,15 @@ export function MobileMenu({ currentPage }: MobileMenuProps) {
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <div className="p-6 pt-24">
+        <div className="p-6 pt-14 relative">
+          <Button
+            variant="ghost"
+            size="sm"
+            onClick={toggleMenu}
+            className="absolute top-4 right-4"
+          >
+            <X className="h-6 w-6" />
+          </Button>
           {/* Logo */}
           <div className="flex items-center space-x-3 mb-8 pb-6 border-b border-gray-200">
             <div className="relative">
@@ -87,12 +95,12 @@ export function MobileMenu({ currentPage }: MobileMenuProps) {
 
           {/* CTA Section */}
           <div className="space-y-4">
-            <Button
+            {/* <Button
               className="w-full bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white"
               onClick={toggleMenu}
             >
               Get Free Quote
-            </Button>
+            </Button> */}
             <div className="flex items-center justify-center space-x-2 text-gray-600">
               <Phone className="h-4 w-4" />
               <a href="tel:0930329599" className="text-sm font-medium">
