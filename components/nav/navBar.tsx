@@ -11,11 +11,7 @@ const navBar = () => {
         <div className="flex justify-between items-center h-20">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <Image
-              src={ketar_logo}
-              alt="Ketar Logo"
-              className="w-16"
-            />
+            <Image src={ketar_logo} alt="Ketar Logo" className="w-16" />
             {/* <div className="relative">
               <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg flex items-center justify-center shadow-lg">
                 <span className="text-white font-bold text-xl">K</span>
@@ -25,8 +21,11 @@ const navBar = () => {
               </div>
             </div> */}
             <div>
-              <h1 className="text-2xl font-bold text-gray-900">
-                Ketar Aluminum
+              <h1 className="text-2xl font-bold text-gray-900 text-green-700">
+                Ketar{" "}
+                <span className="text-sm text-red-600">
+                  Aluminum Technics PLC
+                </span>
               </h1>
               <p className="text-sm text-gray-600">
                 Product and Service at its best
