@@ -17,10 +17,12 @@ import {
   CheckCircle,
   Settings,
   Wrench,
+  Drill,
   Award,
   Target,
   Zap,
   Clock,
+  FlaskConical,
 } from "lucide-react";
 import Link from "next/link";
 import { MobileMenu } from "@/components/mobile-menu";
@@ -58,9 +60,10 @@ export default function ServicesPage() {
               <span className="text-green-600 block">Aluminum Solutions</span>
             </h1>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              From anodized and powder-coated aluminum profiles to complete technical works, 
-              Ketar Aluminum provides a full range of aluminum solutions tailored to Ethiopia's 
-              construction and architectural demands.
+              From anodized and powder-coated aluminum profiles to complete
+              technical works, Ketar Aluminum provides a full range of aluminum
+              solutions tailored to Ethiopia's construction and architectural
+              demands.
             </p>
           </div>
         </div>
@@ -88,9 +91,9 @@ export default function ServicesPage() {
                         Anodized Aluminum Profiles
                       </h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">
-                        High-quality anodized aluminum profiles designed for durability, 
-                        aesthetics, and corrosion resistance — a trusted choice by public 
-                        and private sector clients.
+                        High-quality anodized aluminum profiles designed for
+                        durability, aesthetics, and corrosion resistance — a
+                        trusted choice by public and private sector clients.
                       </p>
                       <ul className="space-y-3 mb-8">
                         <li className="flex items-center text-sm text-gray-600">
@@ -133,9 +136,9 @@ export default function ServicesPage() {
                         Powder Coating <br /> Services
                       </h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">
-                        Durable powder coating finishes in a wide color selection. 
-                        Enhance appearance and protection with our professionally 
-                        coated aluminum profiles.
+                        Durable powder coating finishes in a wide color
+                        selection. Enhance appearance and protection with our
+                        professionally coated aluminum profiles.
                       </p>
                       <ul className="space-y-3 mb-8">
                         <li className="flex items-center text-sm text-gray-600">
@@ -178,9 +181,9 @@ export default function ServicesPage() {
                         Aluminum Doors & Windows
                       </h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">
-                        Custom aluminum doors and windows, combining modern aesthetics, 
-                        reliable performance, and expert installation for both residential 
-                        and commercial needs.
+                        Custom aluminum doors and windows, combining modern
+                        aesthetics, reliable performance, and expert
+                        installation for both residential and commercial needs.
                       </p>
                       <ul className="space-y-3 mb-8">
                         <li className="flex items-center text-sm text-gray-600">
@@ -223,9 +226,9 @@ export default function ServicesPage() {
                         Curtain Wall Systems
                       </h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">
-                        Advanced curtain wall solutions including structural glazing, 
-                        aluminum cladding, and weatherproof sealing — installed with 
-                        precision and care.
+                        Advanced curtain wall solutions including structural
+                        glazing, aluminum cladding, and weatherproof sealing —
+                        installed with precision and care.
                       </p>
                       <ul className="space-y-3 mb-8">
                         <li className="flex items-center text-sm text-gray-600">
@@ -268,8 +271,9 @@ export default function ServicesPage() {
                         Handrails & Guardrails
                       </h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">
-                        Functional and stylish aluminum handrails and guardrails for stairs, 
-                        balconies, and walkways — crafted for safety and built to last.
+                        Functional and stylish aluminum handrails and guardrails
+                        for stairs, balconies, and walkways — crafted for safety
+                        and built to last.
                       </p>
                       <ul className="space-y-3 mb-8">
                         <li className="flex items-center text-sm text-gray-600">
@@ -295,6 +299,88 @@ export default function ServicesPage() {
                 </Card>
               </ScrollAnimation>
 
+              {/* Screw Producation and Distribution */}
+              <ScrollAnimation>
+                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg bg-white overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="relative">
+                      <div className="h-64 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center relative overflow-hidden">
+                        <div className="absolute inset-0 bg-black/20"></div>
+                        <div className="absolute top-4 right-4 w-14 h-14 border-2 border-white/30 rounded-full"></div>
+                        <div className="absolute bottom-4 left-4 w-10 h-10 border-2 border-white/30 rounded-lg transform rotate-12"></div>
+                        <Drill className="h-20 w-20 text-white relative z-10" />
+                      </div>
+                    </div>
+                    <div className="p-8">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                        Screw Production and Distribution
+                      </h3>
+                      <p className="text-gray-600 mb-6 leading-relaxed">
+                        We offer the best, high-quality screws with exceptional
+                        strength, durability, and variety, ensuring reliable
+                        performance and satisfaction for every project.
+                      </p>
+                      <ul className="space-y-3 mb-8">
+                        <li className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-red-500 mr-3 flex-shrink-0" />
+                          Self Screws
+                        </li>
+                        <li className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-red-500 mr-3 flex-shrink-0" />
+                          Clipboard Screws
+                        </li>
+                        <li className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-red-500 mr-3 flex-shrink-0" />
+                          Drywall Screws
+                        </li>
+                      </ul>
+                      <LearnMoreButton color="red" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+
+              {/* supply of electroplating (galvanizing ) chemicals */}
+              <ScrollAnimation>
+                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg bg-white overflow-hidden">
+                  <CardContent className="p-0">
+                    <div className="relative">
+                      <div className="h-64 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center relative overflow-hidden">
+                        <div className="absolute inset-0 bg-black/20"></div>
+                        <div className="absolute top-4 left-4 w-10 h-10 border-2 border-white/30 rounded-lg"></div>
+                        <div className="absolute bottom-4 right-4 w-6 h-6 border-2 border-white/30 rounded-full"></div>
+                        <FlaskConical className="h-20 w-20 text-white relative z-10" />
+                      </div>
+                    </div>
+                    <div className="p-8">
+                      <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                        Electroplating (Galvanizing) Chemicals
+                      </h3>
+                      <p className="text-gray-600 mb-6 leading-relaxed">
+                        High-performance electroplating and galvanizing
+                        chemicals — engineered for superior coating, enhanced
+                        durability, and long-lasting protection.
+                      </p>
+                      <ul className="space-y-3 mb-8">
+                        <li className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-3 flex-shrink-0" />
+                          Corrosion-Resistant Formulas
+                        </li>
+                        <li className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-3 flex-shrink-0" />
+                          Consistent, Quality Finish
+                        </li>
+                        <li className="flex items-center text-sm text-gray-600">
+                          <CheckCircle className="h-4 w-4 text-green-500 mr-3 flex-shrink-0" />
+                          Industrial-Grade Performance
+                        </li>
+                      </ul>
+                      <LearnMoreButton color="green" />
+                    </div>
+                  </CardContent>
+                </Card>
+              </ScrollAnimation>
+
               {/* Additional Services */}
               <ScrollAnimation>
                 <Card className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg bg-white overflow-hidden">
@@ -312,9 +398,9 @@ export default function ServicesPage() {
                         Additional Services
                       </h3>
                       <p className="text-gray-600 mb-6 leading-relaxed">
-                        We also offer expert installation of aluminum 
-                        partitions, skylights, sun barkers, aluminum 
-                        cladding, and composite panels.
+                        We also offer expert installation of aluminum
+                        partitions, skylights, sun barkers, aluminum cladding,
+                        and composite panels.
                       </p>
                       <ul className="space-y-3 mb-8">
                         <li className="flex items-center text-sm text-gray-600">
@@ -366,8 +452,8 @@ export default function ServicesPage() {
                 Integrity & Honesty
               </h3>
               <p className="text-gray-600">
-                We conduct all our business with honesty and integrity 
-                to build lasting trust with every client.
+                We conduct all our business with honesty and integrity to build
+                lasting trust with every client.
               </p>
             </div>
 
@@ -379,7 +465,7 @@ export default function ServicesPage() {
                 Helpful Support
               </h3>
               <p className="text-gray-600">
-                Our team is always ready to assist and provide practical 
+                Our team is always ready to assist and provide practical
                 solutions at every stage of your project.
               </p>
             </div>
@@ -392,8 +478,8 @@ export default function ServicesPage() {
                 Proven Track Record
               </h3>
               <p className="text-gray-600">
-                Trusted by both private and public sectors across Ethiopia 
-                for consistent quality and reliability.
+                Trusted by both private and public sectors across Ethiopia for
+                consistent quality and reliability.
               </p>
             </div>
 
@@ -405,7 +491,8 @@ export default function ServicesPage() {
                 Family-Owned Quality
               </h3>
               <p className="text-gray-600">
-                Built on strong family values, we deliver service with a personal touch and attention to detail.
+                Built on strong family values, we deliver service with a
+                personal touch and attention to detail.
               </p>
             </div>
           </div>
