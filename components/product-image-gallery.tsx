@@ -12,9 +12,10 @@ import Image, { StaticImageData } from "next/image"
 import Product1 from "@/assets/Products/composite-panels.jpg";
 import Product2 from "@/assets/Products/AluminumAccessories.jpg";
 import Product3 from "@/assets/Products/AluminumProfiles.jpg";
-import Product4 from "@/assets/Products/ColoredGlass.jpg";
-import Product5 from "@/assets/Products/AluminumProfile.jpg";
-import Product6 from "@/assets/Products/Partitions2.jpg";
+import Product4 from "@/assets/Products/DryWallScrews.webp";
+import Product5 from "@/assets/Products/ColoredGlass.jpg";
+import Product6 from "@/assets/Products/AluminumProfile.jpg";
+import Product7 from "@/assets/Products/Partitions2.jpg";
 
 
 interface ProductImage {
@@ -273,27 +274,35 @@ export function ExampleProductGallery() {
       title: "Aluminum Accessories & Gaskets",
       category: "Accessories",
     },
-    {
+        {
       id: 4,
       src: Product4,
+      alt: "Drywall screws for metal and wood studs",
+      title: "Drywall Screws",
+      category: "Fasteners",
+    },
+    {
+      id: 5,
+      src: Product5,
       alt: "Colored glasses",
       title: "Colored Glasses",
       category: "Glasses",
     },
     {
-      id: 5,
-      src: Product5,
+      id: 6,
+      src: Product6,
       alt: "Aluminum Profiles",
       title: "Various Aluminum Profiles",
       category: "Accessories",
     },
     {
-      id: 6,
-      src: Product6,
+      id: 7,
+      src: Product7,
       alt: "Aluminum partitions",
       title: "Office Aluminum Partitions",
       category: "Partitions",
     },
+
   ]
 
   return <ProductImageGallery productName="Premium Aluminum Products" images={sampleImages} />
