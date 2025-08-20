@@ -60,7 +60,7 @@ export const metadata: Metadata = {
       "Leading aluminum supplier in Ethiopia since 2006. Specializing in anodized and powder coating aluminum profiles, doors, windows, curtain walls, and technical services.",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "@/assests/ketar_logo2.png",
         width: 1200,
         height: 630,
         alt: "Ketar Aluminum - Product and Service at its best",
@@ -71,7 +71,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ketar Aluminum - Product and Service at its best",
     description:
-      "Leading aluminum supplier in Ethiopia since 2006. Quality aluminum profiles and technical services.",
+      "Leading aluminum supplier in Ethiopia since 2006. Quality aluminum profiles, screws, Electroplating (galvanizing) chemicals and technical services.",
     images: ["/og-image.jpg"],
   },
 
@@ -123,7 +123,7 @@ export default function RootLayout({
               url: "https://ketaraluminum.com",
               logo: "https://ketaraluminum.com/logo.png",
               description:
-                "Leading aluminum supplier in Ethiopia since 2006. Specializing in anodized and powder coating aluminum profiles, doors, windows, curtain walls, and technical services.",
+                "Leading aluminum supplier in Ethiopia since 2006. Specializing in anodized and powder coating aluminum profiles, doors, windows, curtain walls, screws, Electroplating (Galvanizing) Chemicals and technical services.",
               foundingDate: "2006-10-07",
               founder: {
                 "@type": "Person",
@@ -146,8 +146,25 @@ export default function RootLayout({
               ],
               hasOfferCatalog: {
                 "@type": "OfferCatalog",
-                name: "Aluminum Products and Services",
+                name: "Aluminum Products, Services, Screws and Electroplating (Galvanizing) Chemicals",
                 itemListElement: [
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Product",
+                      name: "Electroplating Chemicals",
+                      description: "Galvanizing Chemicals, Zinc Electroplating",
+                    },
+                  },
+                  {
+                    "@type": "Offer",
+                    itemOffered: {
+                      "@type": "Product",
+                      name: "Screws",
+                      description:
+                        "Screw production and distributions. Self Drill screws, Clipboard Screws, Drywall screws",
+                    },
+                  },
                   {
                     "@type": "Offer",
                     itemOffered: {
