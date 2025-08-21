@@ -34,18 +34,24 @@ import {
 
 import product1 from "@/assets/Products/aluminum-profiles.jpg";
 import product2 from "@/assets/Products/composite-panels.jpg";
-import product3 from "@/assets/Products/aluminum-accessories.jpg";
+import product3 from "@/assets/Products/aluminum-accessories.webp";
 import product4 from "@/assets/Products/aluminum-doors-windows.jpg";
 import product5 from "@/assets/Products/curtain-wall.avif";
 import product6 from "@/assets/Products/handrails.webp";
 import product7 from "@/assets/Products/sun-barkers.avif";
 import product8 from "@/assets/Products/partitions.webp";
+import product9 from "@/assets/Products/GalvanizingChemicals.jpg";
+import product10 from "@/assets/Products/FasteningScrews.avif";
 
 import Product1 from "@/assets/Products/AnodizedAluminumProfile.jpg";
 import Product2 from "@/assets/Products/PowderCoatedProfile.jpg";
 import Product3 from "@/assets/Products/AluminumCompositePanel.jpg";
 import Product4 from "@/assets/Products/AluminumDoorWindow.jpg";
 import Product5 from "@/assets/Products/CurtainWallSystem.jpg";
+import Product6 from "@/assets/Products/HandrailFeatured.png";
+import Product7 from "@/assets/Products/Electroplating.jpg";
+import Product8 from "@/assets/Products/SelfDrillingScrews.avif";
+
 import { ViewProductsButton } from "./ViewProductsButton";
 import ContactUsButtons from "./ContactUsButtons";
 
@@ -97,7 +103,7 @@ export default function ProductsPage() {
   },
   {
     id: 7,
-    name: "Sun Barkers & Skylights",
+    name: "Sun Breaker & Skylights",
     description: "Functional aluminum systems for shading and daylighting.",
     image: product7,
     color: "green",
@@ -105,9 +111,23 @@ export default function ProductsPage() {
   {
     id: 8,
     name: "Aluminum Partitions",
-    description: "Elegant aluminum partition systems for interior layouts.",
+    description: "Elegant aluminum partition systems for interior \n layouts.",
     image: product8,
     color: "red",
+  },
+  {
+      id: 9,
+      name: "Galvanizing Chemicals",
+      description: "Premium chemicals for electroplating and corrosion protection.",
+      image: product9,
+      color: "green",
+  },
+  {
+      id: 10,
+      name: "Fastening Screws",
+      description: "Self drilling screws, \n Clipboard screws & Drywall screws.",
+      image: product10,
+      color: "red",
   },
 ];
 
@@ -178,39 +198,91 @@ const featuredProducts = [
     inStock: true,
     category: "Curtain Wall",
   },
+    {
+    id: 6,
+    name: "Glass-Filled Aluminum Balustrade",
+    description: "Sleek railing with tempered glass for modern balconies and terraces.",
+    price: "Quote",
+    unit: "per linear meter",
+    rating: 4.8,
+    reviews: 82,
+    image: Product6,
+    specs: [
+      "Glass: 10–12mm Tempered, Clear or Tinted",
+      "Frame: Powder-Coated Aluminum",
+      "Height: Standard 1.1m or Custom",
+    ],
+    inStock: true,
+    category: "Extrusions",
+  },
+  {
+  id: 7,
+  name: "Electroplating Chemical",
+  description: "High-purity chemical solution for durable zinc coating and rust protection.",
+  price: "Quote",
+  unit: "per liter",
+  rating: 4.7,
+  reviews: 54,
+  image: Product7,
+  specs: [
+    "Type: Acid Zinc Plating Solution",
+    "Volume: 1L, 5L, 20L",
+    "Use: Metal Corrosion Protection"
+  ],
+  inStock: true,
+  category: "Chemicals",
+  },
+  {
+    id: 8,
+    name: "Self-Drilling Screws",
+    description: "Sharp-tip steel screws for fast, secure metal-to-metal fastening.",
+    price: "Quote",
+    unit: "per box (1000 pcs)",
+    rating: 4.8,
+    reviews: 92,
+    image: Product8,
+    specs: [
+      "Diameter: 4.2mm, 4.8mm, 5.5mm",
+      "Length: 19mm – 130mm",
+      "Finish: Zinc Plated"
+    ],
+    inStock: true,
+    category: "Fasteners",
+  },
+
 ];
 
 
-  const alloySpecs = [
-    {
-      alloy: "6061-T6",
-      strength: "High",
-      corrosion: "Excellent",
-      weldability: "Good",
-      applications: "Structural, Marine",
-    },
-    {
-      alloy: "6063-T5",
-      strength: "Medium",
-      corrosion: "Good",
-      weldability: "Excellent",
-      applications: "Extrusions, Trim",
-    },
-    {
-      alloy: "5052-H32",
-      strength: "Medium",
-      corrosion: "Excellent",
-      weldability: "Good",
-      applications: "Marine, Tanks",
-    },
-    {
-      alloy: "3003-H14",
-      strength: "Low",
-      corrosion: "Good",
-      weldability: "Excellent",
-      applications: "General Purpose",
-    },
-  ];
+  // const alloySpecs = [
+  //   {
+  //     alloy: "6061-T6",
+  //     strength: "High",
+  //     corrosion: "Excellent",
+  //     weldability: "Good",
+  //     applications: "Structural, Marine",
+  //   },
+  //   {
+  //     alloy: "6063-T5",
+  //     strength: "Medium",
+  //     corrosion: "Good",
+  //     weldability: "Excellent",
+  //     applications: "Extrusions, Trim",
+  //   },
+  //   {
+  //     alloy: "5052-H32",
+  //     strength: "Medium",
+  //     corrosion: "Excellent",
+  //     weldability: "Good",
+  //     applications: "Marine, Tanks",
+  //   },
+  //   {
+  //     alloy: "3003-H14",
+  //     strength: "Low",
+  //     corrosion: "Good",
+  //     weldability: "Excellent",
+  //     applications: "General Purpose",
+  //   },
+  // ];
   
   const which = "product";
 
@@ -270,11 +342,12 @@ const featuredProducts = [
           </ScrollAnimation>
 
           <StaggerAnimation animation="scaleIn" staggerDelay={150}>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <div className="grid md:grid-cols-2 lg:flex lg:flex-wrap lg:justify-center gap-8 lg:w-full">
+
               {productCategories.map((category) => (
                 <Card
                   key={category.id}
-                  className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg overflow-hidden cursor-pointer"
+                  className="w-full md:w-auto lg:w-[23%] group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg overflow-hidden cursor-pointer"
                 >
                   <CardContent className="p-0">
                     <div className="relative h-48 overflow-hidden">
@@ -298,7 +371,14 @@ const featuredProducts = [
                         ))}
                       </h3>
                       <p className="text-gray-600 mb-4">
-                        {category.description}
+                        {category.description.split("\n").map((line, index) => (
+                          <span key={index}>
+                            {line}
+                            {index < category.description.split("\n").length - 1 && (
+                              <br />
+                            )}
+                          </span>
+                        ))}
                       </p>
                       <ViewProductsButton
                         color={category.color as "green" | "red"}
@@ -330,14 +410,14 @@ const featuredProducts = [
             </div>
           </ScrollAnimation>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:flex lg:flex-wrap lg:justify-center gap-8">
             {featuredProducts.map((product, index) => (
               <ScrollAnimation
                 key={product.id}
                 animation="slideUp"
                 delay={index * 100}
               >
-                <Card className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg overflow-hidden">
+                <Card className="w-full md:w-auto max-w-sm group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg overflow-hidden">
                   <CardContent className="p-0">
                     <div className="relative h-64 overflow-hidden">
                       <Image
