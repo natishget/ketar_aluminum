@@ -12,7 +12,14 @@ import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { ArrowRight, Factory, Phone } from "lucide-react";
+import {
+  ArrowRight,
+  CheckCircle,
+  Factory,
+  Phone,
+  Star,
+  Users,
+} from "lucide-react";
 import aluminumHeroImg from "@/assets/home/aluminum_home3.jpg";
 
 function TypewriterWords({ words }: { words: string[] }) {
@@ -46,7 +53,7 @@ function TypewriterWords({ words }: { words: string[] }) {
           }
         }
       },
-      !deleting ? (isWordComplete ? 1200 : 60) : 35
+      !deleting ? (isWordComplete ? 1500 : 140) : 70
     );
 
     return () => clearTimeout(timeout);
@@ -123,12 +130,19 @@ export function Hero() {
                 transition={{ duration: 0.6 }}
                 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-tight text-gray-900"
               >
-                Build Bold.
-                <span className="block">Last Longer.</span>
+                {/* <span className="block">Last Longer.</span> */}
                 <span className="block mt-2">
-                  In <span className="text-green-600">Aluminum</span>{" "}
+                  Excellence in <span className="text-green-600">Aluminum</span>
+                  <br />
                   <TypewriterWords
-                    words={["Profiles", "Doors", "Curtain Walls", "Solutions"]}
+                    words={[
+                      "Profiles",
+                      "Doors",
+                      "Partitions",
+                      "Curtain Walls",
+                      "Sheet Panel",
+                      "Solutions",
+                    ]}
                   />
                 </span>
               </motion.h1>
@@ -140,9 +154,9 @@ export function Hero() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 className="text-lg sm:text-xl text-gray-600 max-w-xl"
               >
-                Friendly experts. Fast turnaround. Beautiful, durable results—
-                from profiles to doors, windows, and curtain walls crafted in
-                Ethiopia.
+                Ethiopia's trusted aluminum supplier offering premium anodized
+                and powder coating profiles, technical services, and complete
+                aluminum solutions for over 12 years.
               </motion.p>
             </div>
 
@@ -183,22 +197,61 @@ export function Hero() {
               transition={{ duration: 0.6, delay: 0.2 }}
               className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 pt-4 text-sm text-gray-600"
             >
-              <div className="flex items-center gap-2">
-                <Factory className="h-5 w-5 text-green-600" />
-                Ethiopian leader in aluminum solutions
+              <div className="flex items-center space-x-2">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+                <span className="text-sm text-gray-600 font-medium">
+                  Trusted Quality
+                </span>
               </div>
-              <div className="hidden sm:block h-4 w-px bg-gray-200" />
-              <div className="flex items-center gap-2">
-                <span className="font-semibold text-gray-900">
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="h-5 w-5 text-green-500" />
+                <span className="text-sm text-gray-600 font-medium">
+                  TIN: 00 53 39 59 97
+                </span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Users className="h-5 w-5 text-blue-500" />
+                <span className="text-sm text-gray-600 font-medium">
                   500+ Projects
                 </span>
-                delivered on time
-              </div>
-              <div className="hidden sm:block h-4 w-px bg-gray-200" />
-              <div className="flex items-center gap-2">
-                TIN: <span className="font-medium">00 53 39 59 97</span>
               </div>
             </motion.div>
+
+            {/* Trust Indicators */}
+            {/* <div className="flex items-center space-x-8 pt-8">
+              <div className="flex items-center space-x-2">
+                <div className="flex -space-x-1">
+                  {[1, 2, 3, 4, 5].map((i) => (
+                    <Star
+                      key={i}
+                      className="h-5 w-5 text-yellow-400 fill-current"
+                    />
+                  ))}
+                </div>
+                <span className="text-sm text-gray-600 font-medium">
+                  Trusted Quality
+                </span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <CheckCircle className="h-5 w-5 text-green-500" />
+                <span className="text-sm text-gray-600 font-medium">
+                  TIN: 00 53 39 59 97
+                </span>
+              </div>
+              <div className="flex items-center space-x-2">
+                <Users className="h-5 w-5 text-blue-500" />
+                <span className="text-sm text-gray-600 font-medium">
+                  500+ Projects
+                </span>
+              </div>
+            </div> */}
 
             {/* Animated stats */}
             <motion.div
