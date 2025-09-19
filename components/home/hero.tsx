@@ -19,7 +19,10 @@ import {
   Phone,
   Star,
   Users,
+  Shield,
+  Award,
 } from "lucide-react";
+import { Card2 } from "@/components/ui/card2";
 import aluminumHeroImg from "@/assets/home/aluminum_home3.jpg";
 
 function TypewriterWords({ words }: { words: string[] }) {
@@ -101,244 +104,145 @@ function StatCounter({
 
 export function Hero() {
   return (
-    <section className="relative overflow-hidden min-h-[90vh] flex items-center">
-      {/* Animated gradient glow behind content */}
-      <motion.div
-        aria-hidden
-        className="pointer-events-none absolute -z-10 left-1/2 top-1/2 h-[60rem] w-[60rem] -translate-x-1/2 -translate-y-1/2 rounded-full blur-3xl"
+    <section className="relative min-h-screen flex items-center overflow-hidden">
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{
-          background:
-            "radial-gradient(40% 40% at 50% 50%, rgba(16,185,129,0.18) 0%, rgba(239,68,68,0.12) 35%, rgba(255,255,255,0) 70%)",
+          backgroundImage: `url('/aluminum-manufacturing-industrial-background.png')`,
         }}
-        animate={{ scale: [1, 1.05, 1] }}
-        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-      />
+      >
+        <div className="absolute inset-0 bg-slate-900/40"></div>
+      </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Copy */}
-          <div className="space-y-8">
-            <Badge className="bg-green-100 text-green-800 hover:bg-green-100 px-3 py-1 w-fit">
-              🏭 Premium Aluminum Since 2006
-            </Badge>
+      {/* Content Container */}
+      <div className="relative z-10 w-full px-6 py-16 lg:py-24">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-4xl mx-auto text-center">
+            {/* Main Content */}
+            <div className="space-y-8">
+              <div className="backdrop-blur-sm bg-white/70 rounded-3xl p-12 border border-white/20 shadow-2xl">
+                <Badge
+                  variant="secondary"
+                  className="w-fit bg-emerald-500/20 text-green-600 border-emerald-400/30 mb-6 mx-auto backdrop-blur-sm"
+                >
+                  <Award className="w-4 h-4 mr-2" />
+                  Premium Aluminium Since 2008
+                </Badge>
 
-            <div className="space-y-6">
-              <motion.h1
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.6 }}
-                transition={{ duration: 0.6 }}
-                className="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-tight text-gray-900"
-              >
-                {/* <span className="block">Last Longer.</span> */}
-                <span className="block mt-2">
-                  Excellence in <span className="text-green-600">Aluminum</span>
-                  <br />
-                  <TypewriterWords
-                    words={[
-                      "Profiles",
-                      "Doors",
-                      "Partitions",
-                      "Curtain Walls",
-                      "Sheet Panel",
-                      "Solutions",
-                    ]}
-                  />
-                </span>
-              </motion.h1>
+                <div className="space-y-6">
+                  <h1 className="text-5xl lg:text-7xl font-bold text-balance leading-tight text-slate-900">
+                    <motion.h1
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true, amount: 0.6 }}
+                      transition={{ duration: 0.6 }}
+                      className="text-4xl sm:text-6xl lg:text-7xl font-extrabold leading-tight text-gray-900"
+                    >
+                      {/* <span className="block">Last Longer.</span> */}
+                      <span className="block mt-2">
+                        Excellence in{" "}
+                        <span className="text-green-600">Aluminum</span>
+                        <br />
+                        <TypewriterWords
+                          words={[
+                            "Profiles",
+                            "Doors",
+                            "Partitions",
+                            "Curtain Walls",
+                            "Sheet Panel",
+                            "Solutions",
+                          ]}
+                        />
+                      </span>
+                    </motion.h1>
+                  </h1>
 
-              <motion.p
-                initial={{ opacity: 0, y: 12 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, amount: 0.6 }}
-                transition={{ duration: 0.6, delay: 0.1 }}
-                className="text-lg sm:text-xl text-gray-600 max-w-xl"
-              >
-                Ethiopia's trusted aluminum supplier offering premium anodized
-                and powder coating profiles, technical services, and complete
-                aluminum solutions for over 12 years.
-              </motion.p>
+                  <p className="text-xl text-slate-700 text-pretty leading-relaxed max-w-3xl mx-auto">
+                    Ethiopia's trusted aluminum supplier offering premium
+                    anodized and powder coating profiles, technical services,
+                    and complete aluminum solutions for over 12 years.
+                  </p>
+                </div>
+
+                <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
+                  <Button
+                    size="lg"
+                    className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg"
+                  >
+                    Explore Now
+                    <ArrowRight className="w-5 h-5 ml-2" />
+                  </Button>
+                  <Button
+                    variant="outline"
+                    size="lg"
+                    className="border-slate-400 text-slate-800 hover:bg-slate-100 bg-white/80 backdrop-blur-sm"
+                  >
+                    <Phone className="w-4 h-4 mr-2" />
+                    Call Us
+                  </Button>
+                </div>
+
+                <div className="flex flex-wrap items-center justify-center gap-6 pt-6 mt-6 border-t border-slate-300">
+                  <div className="flex items-center gap-2">
+                    <div className="flex">
+                      {[...Array(5)].map((_, i) => (
+                        <Star
+                          key={i}
+                          className="w-4 h-4 fill-emerald-500 text-emerald-500"
+                        />
+                      ))}
+                    </div>
+                    <span className="text-sm text-slate-700">
+                      Trusted Quality
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <Shield className="w-4 h-4 text-emerald-600" />
+                    <span className="text-sm text-slate-700">
+                      TIN: 00 53 39 59 97
+                    </span>
+                  </div>
+
+                  <div className="flex items-center gap-2">
+                    <Users className="w-4 h-4 text-emerald-600" />
+                    <span className="text-sm text-slate-700">
+                      500+ Projects
+                    </span>
+                  </div>
+                </div>
+              </div>
             </div>
-
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 0.5, delay: 0.15 }}
-              className="flex flex-col sm:flex-row gap-4 sm:gap-6"
-            >
-              <Link href="/products" className="group">
-                <Button
-                  size="lg"
-                  className="px-8 py-6 text-base sm:text-lg font-semibold text-white shadow-xl bg-gradient-to-r from-green-500 to-green-600 transition-all duration-300 group-hover:shadow-2xl group-hover:scale-[1.02]"
-                >
-                  Explore Now
-                  <ArrowRight className="ml-2 h-5 w-5 transition-transform duration-300 group-hover:translate-x-1" />
-                </Button>
-              </Link>
-
-              <Link href="tel:+251-930-329599" className="group">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="px-8 py-6 text-base sm:text-lg font-semibold border-2 border-red-500 text-red-600 bg-transparent transition-all duration-300 group-hover:bg-red-50 group-hover:shadow-lg"
-                >
-                  Call Us
-                  <Phone className="ml-2 h-5 w-5" />
-                </Button>
-              </Link>
-            </motion.div>
-
-            {/* Trust indicators */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              whileInView={{ opacity: 1 }}
-              viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="flex flex-col sm:flex-row sm:items-center gap-3 sm:gap-6 pt-4 text-sm text-gray-600"
-            >
-              <div className="flex items-center space-x-2">
-                <div className="flex -space-x-1">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-                <span className="text-sm text-gray-600 font-medium">
-                  Trusted Quality
-                </span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="h-5 w-5 text-green-500" />
-                <span className="text-sm text-gray-600 font-medium">
-                  TIN: 00 53 39 59 97
-                </span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Users className="h-5 w-5 text-blue-500" />
-                <span className="text-sm text-gray-600 font-medium">
-                  500+ Projects
-                </span>
-              </div>
-            </motion.div>
-
-            {/* Trust Indicators */}
-            {/* <div className="flex items-center space-x-8 pt-8">
-              <div className="flex items-center space-x-2">
-                <div className="flex -space-x-1">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <Star
-                      key={i}
-                      className="h-5 w-5 text-yellow-400 fill-current"
-                    />
-                  ))}
-                </div>
-                <span className="text-sm text-gray-600 font-medium">
-                  Trusted Quality
-                </span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <CheckCircle className="h-5 w-5 text-green-500" />
-                <span className="text-sm text-gray-600 font-medium">
-                  TIN: 00 53 39 59 97
-                </span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <Users className="h-5 w-5 text-blue-500" />
-                <span className="text-sm text-gray-600 font-medium">
-                  500+ Projects
-                </span>
-              </div>
-            </div> */}
-
-            {/* Animated stats */}
-            <motion.div
-              initial={{ opacity: 0, y: 12 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.6 }}
-              transition={{ duration: 0.6, delay: 0.15 }}
-              className="grid grid-cols-3 gap-6 pt-8 border-t border-gray-200"
-            >
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-extrabold text-green-600 mb-1 flex items-center justify-center gap-2">
-                  <StatCounter value={12} />
-                </div>
-                <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                  Years Experience
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-extrabold text-red-600 mb-1 flex items-center justify-center gap-2">
-                  <StatCounter value={500} />
-                </div>
-                <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                  Projects Completed
-                </div>
-              </div>
-              <div className="text-center">
-                <div className="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-1 flex items-center justify-center gap-2">
-                  <StatCounter value={100} suffix="%" />
-                </div>
-                <div className="text-xs sm:text-sm text-gray-600 font-medium">
-                  Client Satisfaction
-                </div>
-              </div>
-            </motion.div>
           </div>
 
-          {/* Visual */}
-          <div className="relative">
-            {/* Floating accent blocks */}
-            <motion.div
-              aria-hidden
-              className="absolute -top-6 -right-6 w-20 h-20 sm:w-24 sm:h-24 rounded-2xl bg-gradient-to-br from-green-400 to-green-500 opacity-80 shadow-xl"
-              animate={{ y: [0, -10, 0] }}
-              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            />
-            <motion.div
-              aria-hidden
-              className="absolute -bottom-6 -left-6 w-16 h-16 sm:w-20 sm:h-20 rounded-xl bg-gradient-to-br from-red-400 to-red-500 opacity-80 shadow-xl"
-              animate={{ y: [0, 10, 0] }}
-              transition={{ duration: 7, repeat: Infinity, ease: "easeInOut" }}
-            />
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, amount: 0.5 }}
-              transition={{ duration: 0.6 }}
-              className="relative z-10"
-            >
-              <Image
-                src={aluminumHeroImg}
-                alt="Premium aluminum profiles and facility"
-                width={640}
-                height={760}
-                className="rounded-3xl shadow-2xl w-full h-auto"
-                priority
-              />
-              {/* Overlay Badge */}
-              <div className="absolute top-4 left-4 bg-white/90 backdrop-blur-sm rounded-xl p-3 sm:p-4 shadow-lg">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-green-600 rounded-lg grid place-items-center">
-                    <Factory className="h-5 w-5 sm:h-6 sm:w-6 text-white" />
-                  </div>
-                  <div>
-                    <div className="text-xs sm:text-sm font-semibold text-gray-900">
-                      Ethiopian Leader
-                    </div>
-                    <div className="text-[10px] sm:text-xs text-gray-600">
-                      Aluminum Solutions
-                    </div>
-                  </div>
-                </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
+            <Card2 className="p-8 text-center bg-white/95 backdrop-blur-sm border-white/30 shadow-2xl hover:shadow-3xl transition-shadow">
+              <div className="text-5xl font-bold text-emerald-600 mb-3">
+                12+
               </div>
-            </motion.div>
+              <div className="text-slate-700 font-medium">Years Experience</div>
+            </Card2>
+
+            <Card2 className="p-8 text-center bg-white/95 backdrop-blur-sm border-white/30 shadow-2xl hover:shadow-3xl transition-shadow">
+              <div className="text-5xl font-bold text-teal-600 mb-3">500+</div>
+              <div className="text-slate-700 font-medium">
+                Projects Completed
+              </div>
+            </Card2>
+
+            <Card2 className="p-8 text-center bg-white/95 backdrop-blur-sm border-white/30 shadow-2xl hover:shadow-3xl transition-shadow">
+              <div className="text-5xl font-bold text-cyan-600 mb-3">100%</div>
+              <div className="text-slate-700 font-medium">
+                Client Satisfaction
+              </div>
+            </Card2>
           </div>
         </div>
       </div>
+
+      <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-emerald-400 rounded-full animate-ping opacity-20"></div>
+      <div className="absolute top-3/4 right-1/3 w-1 h-1 bg-teal-400 rounded-full animate-ping opacity-30 delay-500"></div>
+      <div className="absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-cyan-400 rounded-full animate-ping opacity-15 delay-1000"></div>
     </section>
   );
 }
