@@ -106,21 +106,22 @@ export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center overflow-hidden">
       <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat "
         style={{
           backgroundImage: `url('/aluminum-manufacturing-industrial-background.png')`,
         }}
       >
         <div className="absolute inset-0 bg-slate-900/40"></div>
       </div>
+      <div className="absolute inset-0 backdrop-blur-sm bg-gradient-to-r from-green-700/70 to-red-300/70 z-10"></div>
 
       {/* Content Container */}
-      <div className="relative z-10 w-full px-6 py-16 lg:py-24">
+      <div className="relative z-10 w-full px-6 py-14 lg:py-16">
         <div className="max-w-7xl mx-auto">
           <div className="max-w-4xl mx-auto text-center">
             {/* Main Content */}
             <div className="space-y-8">
-              <div className="backdrop-blur-sm bg-white/70 rounded-3xl p-12 border border-white/20 shadow-2xl">
+              <div className="backdrop-blur-sm bg-white/50 rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
                 <Badge
                   variant="secondary"
                   className="w-fit bg-emerald-500/20 text-green-600 border-emerald-400/30 mb-6 mx-auto backdrop-blur-sm"
@@ -130,7 +131,7 @@ export function Hero() {
                 </Badge>
 
                 <div className="space-y-6">
-                  <h1 className="text-5xl lg:text-7xl font-bold text-balance leading-tight text-slate-900">
+                  <div className="text-5xl lg:text-7xl font-bold text-balance leading-tight text-slate-900">
                     <motion.h1
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
@@ -141,7 +142,7 @@ export function Hero() {
                       {/* <span className="block">Last Longer.</span> */}
                       <span className="block mt-2">
                         Excellence in{" "}
-                        <span className="text-green-600">Aluminum</span>
+                        <span className="text-green-700">Aluminum</span>
                         <br />
                         <TypewriterWords
                           words={[
@@ -155,9 +156,9 @@ export function Hero() {
                         />
                       </span>
                     </motion.h1>
-                  </h1>
+                  </div>
 
-                  <p className="text-xl text-slate-700 text-pretty leading-relaxed max-w-3xl mx-auto">
+                  <p className="md:text-xl text-sm text-slate-700 text-pretty leading-relaxed max-w-3xl mx-auto">
                     Ethiopia's trusted aluminum supplier offering premium
                     anodized and powder coating profiles, technical services,
                     and complete aluminum solutions for over 12 years.
@@ -167,7 +168,7 @@ export function Hero() {
                 <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
                   <Button
                     size="lg"
-                    className="bg-emerald-600 hover:bg-emerald-700 text-white shadow-lg"
+                    className="bg-green-700 hover:bg-green-800 text-white shadow-lg"
                   >
                     Explore Now
                     <ArrowRight className="w-5 h-5 ml-2" />
@@ -175,7 +176,7 @@ export function Hero() {
                   <Button
                     variant="outline"
                     size="lg"
-                    className="border-slate-400 text-slate-800 hover:bg-slate-100 bg-white/80 backdrop-blur-sm"
+                    className="border-slate-400 text-slate-800 hover:bg-green-100 bg-white/80 backdrop-blur-sm hidden md:flex"
                   >
                     <Phone className="w-4 h-4 mr-2" />
                     Call Us
@@ -188,7 +189,7 @@ export function Hero() {
                       {[...Array(5)].map((_, i) => (
                         <Star
                           key={i}
-                          className="w-4 h-4 fill-emerald-500 text-emerald-500"
+                          className="w-4 h-4 fill-green-600 text-green-600"
                         />
                       ))}
                     </div>
@@ -198,14 +199,14 @@ export function Hero() {
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <Shield className="w-4 h-4 text-emerald-600" />
+                    <Shield className="w-4 h-4 text-green-700" />
                     <span className="text-sm text-slate-700">
                       TIN: 00 53 39 59 97
                     </span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <Users className="w-4 h-4 text-emerald-600" />
+                    <Users className="w-4 h-4 text-green-700" />
                     <span className="text-sm text-slate-700">
                       500+ Projects
                     </span>
@@ -215,23 +216,21 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-20">
-            <Card2 className="p-8 text-center bg-white/95 backdrop-blur-sm border-white/30 shadow-2xl hover:shadow-3xl transition-shadow">
-              <div className="text-5xl font-bold text-emerald-600 mb-3">
-                12+
-              </div>
+          <div className="w-full flex flex-col md:flex-row md:justify-evenly md:gap-8 gap-5 mt-10">
+            <Card2 className="md:p-6 p-3 text-center bg-white/50 backdrop-blur-sm border-white/30 shadow-2xl hover:shadow-3xl transition-shadow">
+              <div className="text-5xl font-bold text-green-700 mb-3">12+</div>
               <div className="text-slate-700 font-medium">Years Experience</div>
             </Card2>
 
-            <Card2 className="p-8 text-center bg-white/95 backdrop-blur-sm border-white/30 shadow-2xl hover:shadow-3xl transition-shadow">
-              <div className="text-5xl font-bold text-teal-600 mb-3">500+</div>
+            <Card2 className="md:p-6 p-3 text-center bg-white/50 backdrop-blur-sm border-white/30 shadow-2xl hover:shadow-3xl transition-shadow">
+              <div className="text-5xl font-bold text-green-700 mb-3">500+</div>
               <div className="text-slate-700 font-medium">
                 Projects Completed
               </div>
             </Card2>
 
-            <Card2 className="p-8 text-center bg-white/95 backdrop-blur-sm border-white/30 shadow-2xl hover:shadow-3xl transition-shadow">
-              <div className="text-5xl font-bold text-cyan-600 mb-3">100%</div>
+            <Card2 className="md:p-6 p-3 text-center bg-white/50 backdrop-blur-sm border-white/30 shadow-2xl hover:shadow-3xl transition-shadow">
+              <div className="text-5xl font-bold text-green-700 mb-3">100%</div>
               <div className="text-slate-700 font-medium">
                 Client Satisfaction
               </div>
