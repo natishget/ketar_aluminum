@@ -24,6 +24,8 @@ import {
   Building,
   Home,
   Layers,
+  Drill,
+  FlaskConical,
 } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
@@ -66,6 +68,20 @@ export const metadata: Metadata = {
 };
 
 export default function HomePage() {
+  const products = [
+    { id: 1, name: "Galvanizing Chemicals", src: "/chemical1.jpg" },
+    {
+      id: 2,
+      name: "Composite panel",
+      src: "AluminumCompositePanel.jpg",
+    },
+    { id: 3, name: "Dry Wall Screws", src: "/screw1.jpg" },
+    { id: 4, name: "Curtain Wall System", src: "/CurtainWallSystem.jpg" },
+    { id: 5, name: "Aluminum Profiles", src: "/AluminumProfiles.jpg" },
+    { id: 6, name: "Self Drilling Screws", src: "/SelfDrillingScrews.avif" },
+    { id: 7, name: "Fastening Screws", src: "/FasteningScrews.avif" },
+    { id: 8, name: "Partitions", src: "/Partitions2.jpg" },
+  ];
   return (
     <div className="min-h-screen bg-gradient-to-b from-white to-gray-50 relative overflow-hidden">
       <AluminumBackground />
@@ -308,8 +324,131 @@ export default function HomePage() {
                   </div>
                 </CardContent>
               </Card>
+
+              {/* Electroplastic Chemicals  */}
+              <Card className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg bg-white overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative">
+                    <div className="h-48 bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+                      <FlaskConical className="h-16 w-16 text-white" />
+                    </div>
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                  </div>
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      Electroplating (Galvanizing) Chemicals
+                    </h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      High-performance electroplating and galvanizing chemicals
+                      — engineered for superior coating, enhanced durability,
+                      and long-lasting protection.
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      <li className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        Corrosion-Resistant Formulas
+                      </li>
+                      <li className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        Consistent, Quality Finish
+                      </li>
+                      <li className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="h-4 w-4 text-green-500 mr-2" />
+                        Industrial-Grade Performance
+                      </li>
+                    </ul>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="text-green-600 border-green-600 hover:bg-green-50 bg-transparent"
+                    >
+                      Learn More
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
+
+              {/* Screws  */}
+              <Card className="group hover:shadow-2xl transition-all duration-500 border-0 shadow-lg bg-white overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="relative">
+                    <div className="h-48 bg-gradient-to-br from-red-500 to-red-600 flex items-center justify-center">
+                      <Drill className="h-16 w-16 text-white" />
+                    </div>
+                    <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-colors"></div>
+                  </div>
+                  <div className="p-8">
+                    <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                      Screw Production and Distribution
+                    </h3>
+                    <p className="text-gray-600 mb-6 leading-relaxed">
+                      We offer the best, high-quality screws with exceptional
+                      strength, durability, and variety, ensuring reliable
+                      performance and satisfaction for every project.
+                    </p>
+                    <ul className="space-y-2 mb-6">
+                      <li className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="h-4 w-4 text-red-500 mr-2" />
+                        Self Screws
+                      </li>
+                      <li className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="h-4 w-4 text-red-500 mr-2" />
+                        Clipboard Screws
+                      </li>
+                      <li className="flex items-center text-sm text-gray-600">
+                        <CheckCircle className="h-4 w-4 text-red-500 mr-2" />
+                        Drywall Screws
+                      </li>
+                    </ul>
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="text-green-600 border-green-600 hover:bg-green-50 bg-transparent"
+                    >
+                      Learn More
+                    </Button>
+                  </div>
+                </CardContent>
+              </Card>
             </div>
           </StaggerAnimation>
+
+          {/* Gallery Section */}
+          <section className="px-6 py-10">
+            <h2 className="text-3xl font-bold mb-2 text-center">
+              Some of Our Best Products
+            </h2>
+            <h3 className="text-lg text-green-600 mb-6 text-center">
+              Product and Service at its Best
+            </h3>
+            <div className="grid grid-cols-1 sm:grid-cols-6 gap-4 auto-rows-[200px]">
+              {products.map((product, index) => (
+                <div
+                  key={product.id}
+                  className={`
+              relative group overflow-hidden rounded-xl shadow-xl
+              ${
+                index % 4 === 0
+                  ? "sm:col-span-3 sm:row-span-2"
+                  : "sm:col-span-2 sm:row-span-1"
+              }
+            `}
+                >
+                  <Image
+                    src={product.src}
+                    alt={product.name}
+                    fill
+                    className="object-cover transition-transform duration-300 group-hover:scale-110"
+                  />
+                  <div className="absolute inset-0 bg-black/50 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                    <p className="text-white text-lg font-semibold">
+                      {product.name}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </section>
 
           {/* Additional Services */}
           <div className="bg-white rounded-3xl shadow-xl p-12">
@@ -534,6 +673,9 @@ export default function HomePage() {
           <ScrollAnimation animation="fadeIn" delay={300}>
             <InteractiveCarousel />
           </ScrollAnimation>
+          <div className="w-full text-center mt-10 font-semibold text-xl">
+            Product and Service at its best
+          </div>
         </div>
       </section>
 

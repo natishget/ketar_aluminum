@@ -127,7 +127,7 @@ export function Hero() {
                   className="w-fit bg-emerald-500/20 text-green-600 border-emerald-400/30 mb-6 mx-auto backdrop-blur-sm"
                 >
                   <Award className="w-4 h-4 mr-2" />
-                  Premium Aluminium Since 2008
+                  Product and Service at its best
                 </Badge>
 
                 <div className="space-y-6">
@@ -165,22 +165,21 @@ export function Hero() {
                   </p>
                 </div>
 
-                <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center">
-                  <Button
-                    size="lg"
-                    className="bg-green-700 hover:bg-green-800 text-white shadow-lg"
+                <div className="flex gap-4 mt-8 justify-center">
+                  <Link
+                    href="/products"
+                    className="flex bg-green-700 hover:bg-green-800 text-white shadow-lg rounded md:p-3 px-1 text-sm items-center justify-center"
                   >
                     Explore Now
                     <ArrowRight className="w-5 h-5 ml-2" />
-                  </Button>
-                  <Button
-                    variant="outline"
-                    size="lg"
-                    className="border-slate-400 text-slate-800 hover:bg-green-100 bg-white/80 backdrop-blur-sm hidden md:flex"
+                  </Link>
+                  <a
+                    href="tel:0930329599"
+                    className="border border-slate-400 text-slate-800 hover:bg-green-100 bg-white/80 backdrop-blur-sm rounded flex justify-center items-center px-7 py-3"
                   >
                     <Phone className="w-4 h-4 mr-2" />
                     Call Us
-                  </Button>
+                  </a>
                 </div>
 
                 <div className="flex flex-wrap items-center justify-center gap-6 pt-6 mt-6 border-t border-slate-300">
