@@ -1,13 +1,21 @@
-"use client"
+"use client";
 
-import type React from "react"
+import type React from "react";
 
-import { useState } from "react"
-import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
-import { Badge } from "@/components/ui/badge"
-import { X, ChevronLeft, ChevronRight, ZoomIn, Download, Share2, Maximize2 } from "lucide-react"
-import Image, { StaticImageData } from "next/image"
+import { useState } from "react";
+import { Button } from "@/components/ui/button";
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
+import {
+  X,
+  ChevronLeft,
+  ChevronRight,
+  ZoomIn,
+  Download,
+  Share2,
+  Maximize2,
+} from "lucide-react";
+import Image, { StaticImageData } from "next/image";
 
 import Product1 from "@/assets/Products/composite-panels.jpg";
 import Product2 from "@/assets/Products/AluminumAccessories.jpg";
@@ -16,57 +24,64 @@ import Product4 from "@/assets/Products/DryWallScrews.webp";
 import Product5 from "@/assets/Products/ColoredGlass.jpg";
 import Product6 from "@/assets/Products/AluminumProfile.jpg";
 import Product7 from "@/assets/Products/Partitions2.jpg";
-
+import Product8 from "@/assets/Products/SelfDrillingScrews.avif";
+import Product9 from "@/assets/Products/FasteningScrews.avif";
+import Product10 from "@/assets/Products/galvanizing.jpg";
+import Product11 from "@/assets/Products/Zinc.jpg";
+import Product12 from "@/assets/Products/chemicals.jpg";
 
 interface ProductImage {
-  id: number
-  src: StaticImageData
-  alt: string
-  title: string
-  category: string
+  id: number;
+  src: StaticImageData;
+  alt: string;
+  title: string;
+  category: string;
 }
 
 interface ProductImageGalleryProps {
-  productName: string
-  images: ProductImage[]
+  productName: string;
+  images: ProductImage[];
 }
 
-export function ProductImageGallery({ productName, images }: ProductImageGalleryProps) {
-  const [selectedImageIndex, setSelectedImageIndex] = useState(0)
-  const [isModalOpen, setIsModalOpen] = useState(false)
-  const [isZoomed, setIsZoomed] = useState(false)
+export function ProductImageGallery({
+  productName,
+  images,
+}: ProductImageGalleryProps) {
+  const [selectedImageIndex, setSelectedImageIndex] = useState(0);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isZoomed, setIsZoomed] = useState(false);
 
   const openModal = (index: number) => {
-    setSelectedImageIndex(index)
-    setIsModalOpen(true)
-    setIsZoomed(false)
-  }
+    setSelectedImageIndex(index);
+    setIsModalOpen(true);
+    setIsZoomed(false);
+  };
 
   const closeModal = () => {
-    setIsModalOpen(false)
-    setIsZoomed(false)
-  }
+    setIsModalOpen(false);
+    setIsZoomed(false);
+  };
 
   const goToPrevious = () => {
-    setSelectedImageIndex((prev) => (prev - 1 + images.length) % images.length)
-    setIsZoomed(false)
-  }
+    setSelectedImageIndex((prev) => (prev - 1 + images.length) % images.length);
+    setIsZoomed(false);
+  };
 
   const goToNext = () => {
-    setSelectedImageIndex((prev) => (prev + 1) % images.length)
-    setIsZoomed(false)
-  }
+    setSelectedImageIndex((prev) => (prev + 1) % images.length);
+    setIsZoomed(false);
+  };
 
   const toggleZoom = () => {
-    setIsZoomed(!isZoomed)
-  }
+    setIsZoomed(!isZoomed);
+  };
 
   const handleDownload = () => {
-    const link = document.createElement("a")
-    link.href = images[selectedImageIndex].src.src
-    link.download = `${productName}-${images[selectedImageIndex].title}.jpg`
-    link.click()
-  }
+    const link = document.createElement("a");
+    link.href = images[selectedImageIndex].src.src;
+    link.download = `${productName}-${images[selectedImageIndex].title}.jpg`;
+    link.click();
+  };
 
   const handleShare = async () => {
     if (navigator.share) {
@@ -75,44 +90,46 @@ export function ProductImageGallery({ productName, images }: ProductImageGallery
           title: `${productName} - ${images[selectedImageIndex].title}`,
           text: `Check out this ${productName} image`,
           url: window.location.href,
-        })
+        });
       } catch (error) {
-        console.log("Error sharing:", error)
+        console.log("Error sharing:", error);
       }
     } else {
       // Fallback: copy to clipboard
-      navigator.clipboard.writeText(window.location.href)
-      alert("Link copied to clipboard!")
+      navigator.clipboard.writeText(window.location.href);
+      alert("Link copied to clipboard!");
     }
-  }
+  };
 
   // Keyboard navigation
   const handleKeyDown = (e: React.KeyboardEvent) => {
-    if (!isModalOpen) return
+    if (!isModalOpen) return;
 
     switch (e.key) {
       case "Escape":
-        closeModal()
-        break
+        closeModal();
+        break;
       case "ArrowLeft":
-        goToPrevious()
-        break
+        goToPrevious();
+        break;
       case "ArrowRight":
-        goToNext()
-        break
+        goToNext();
+        break;
       case "z":
       case "Z":
-        toggleZoom()
-        break
+        toggleZoom();
+        break;
     }
-  }
+  };
 
   return (
     <>
       {/* Gallery Grid */}
       <div className="space-y-6">
         <div className="text-center">
-          <h3 className="text-2xl font-bold text-gray-900 mb-2">Product Gallery</h3>
+          <h3 className="text-2xl font-bold text-gray-900 mb-2">
+            Product Gallery
+          </h3>
           <p className="text-gray-600">Click any image to view in full size</p>
         </div>
 
@@ -140,8 +157,12 @@ export function ProductImageGallery({ productName, images }: ProductImageGallery
                   </div>
                 </div>
                 <div className="p-3">
-                  <Badge className="bg-green-100 hover:bg-green-200 text-green-800 text-xs mb-2">{image.category}</Badge>
-                  <h4 className="text-sm font-semibold text-gray-900 truncate">{image.title}</h4>
+                  <Badge className="bg-green-100 hover:bg-green-200 text-green-800 text-xs mb-2">
+                    {image.category}
+                  </Badge>
+                  <h4 className="text-sm font-semibold text-gray-900 truncate">
+                    {image.title}
+                  </h4>
                 </div>
               </CardContent>
             </Card>
@@ -158,27 +179,52 @@ export function ProductImageGallery({ productName, images }: ProductImageGallery
           tabIndex={0}
         >
           {/* Modal Content */}
-          <div className="relative max-w-6xl max-h-full w-full" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="relative max-w-6xl max-h-full w-full"
+            onClick={(e) => e.stopPropagation()}
+          >
             {/* Header */}
             <div className="absolute top-0 left-0 right-0 z-10 bg-gradient-to-b from-black/50 to-transparent p-6">
               <div className="flex items-center justify-between text-white">
                 <div>
-                  <h3 className="text-xl font-bold">{images[selectedImageIndex].title}</h3>
+                  <h3 className="text-xl font-bold">
+                    {images[selectedImageIndex].title}
+                  </h3>
                   <p className="text-sm opacity-80">
                     {selectedImageIndex + 1} of {images.length}
                   </p>
                 </div>
                 <div className="flex items-center space-x-2">
-                  <Button variant="ghost" size="sm" onClick={handleDownload} className="text-white hover:bg-white/20">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={handleDownload}
+                    className="text-white hover:bg-white/20"
+                  >
                     <Download className="h-4 w-4" />
                   </Button>
-                  <Button variant="ghost" size="sm" onClick={handleShare} className="text-white hover:bg-white/20">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={handleShare}
+                    className="text-white hover:bg-white/20"
+                  >
                     <Share2 className="h-4 w-4" />
                   </Button>
-                  <Button variant="ghost" size="sm" onClick={toggleZoom} className="text-white hover:bg-white/20">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={toggleZoom}
+                    className="text-white hover:bg-white/20"
+                  >
                     <Maximize2 className="h-4 w-4" />
                   </Button>
-                  <Button variant="ghost" size="sm" onClick={closeModal} className="text-white hover:bg-white/20">
+                  <Button
+                    variant="ghost"
+                    size="sm"
+                    onClick={closeModal}
+                    className="text-white hover:bg-white/20"
+                  >
                     <X className="h-4 w-4" />
                   </Button>
                 </div>
@@ -229,7 +275,9 @@ export function ProductImageGallery({ productName, images }: ProductImageGallery
                     key={image.id}
                     onClick={() => setSelectedImageIndex(index)}
                     className={`flex-shrink-0 w-16 h-16 rounded-lg overflow-hidden border-2 transition-colors ${
-                      index === selectedImageIndex ? "border-green-500" : "border-transparent hover:border-white/50"
+                      index === selectedImageIndex
+                        ? "border-green-500"
+                        : "border-transparent hover:border-white/50"
                     }`}
                   >
                     <Image
@@ -247,7 +295,7 @@ export function ProductImageGallery({ productName, images }: ProductImageGallery
         </div>
       )}
     </>
-  )
+  );
 }
 
 // Example usage component
@@ -255,26 +303,47 @@ export function ExampleProductGallery() {
   const sampleImages: ProductImage[] = [
     {
       id: 1,
+      src: Product10,
+      alt: "Chemicals",
+      title: "Galvanizing (ElectroPlanting) Chemicals",
+      category: "Chemicals",
+    },
+    {
+      id: 2,
+      src: Product11,
+      alt: "Chemicals",
+      title: "Zinc Chloride Chemicals",
+      category: "Chemicals",
+    },
+    {
+      id: 3,
+      src: Product12,
+      alt: "Chemicals",
+      title: "Boric Acid Chemicals",
+      category: "Chemicals",
+    },
+    {
+      id: 11,
       src: Product1,
       alt: "Aluminum sheet sample",
       title: "Aluminum Sheet Panel",
       category: "Sheets",
     },
     {
-      id: 2,
+      id: 12,
       src: Product2,
       alt: "Aluminum profiles & sections",
       title: "Aluminum Profiles & Sections",
       category: "Extrusions",
     },
     {
-      id: 3,
+      id: 13,
       src: Product3,
       alt: "Aluminum accessories & gaskets",
       title: "Aluminum Accessories & Gaskets",
       category: "Accessories",
     },
-        {
+    {
       id: 4,
       src: Product4,
       alt: "Drywall screws for metal and wood studs",
@@ -302,8 +371,33 @@ export function ExampleProductGallery() {
       title: "Office Aluminum Partitions",
       category: "Partitions",
     },
+    {
+      id: 8,
+      src: Product8,
+      alt: "Self Drilling Screws",
+      title: "Self Drilling Screws",
+      category: "Screws",
+    },
+    {
+      id: 9,
+      src: Product4,
+      alt: "Dry Wall Screws",
+      title: "Dry Wall Screws",
+      category: "Screws",
+    },
+    {
+      id: 10,
+      src: Product9,
+      alt: "Fastening Screws",
+      title: "Fasteniing Screws",
+      category: "Screws",
+    },
+  ];
 
-  ]
-
-  return <ProductImageGallery productName="Premium Aluminum Products" images={sampleImages} />
+  return (
+    <ProductImageGallery
+      productName="Premium Aluminum Products"
+      images={sampleImages}
+    />
+  );
 }
