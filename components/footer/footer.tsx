@@ -122,6 +122,8 @@ const footerBar = () => {
                     <div className="text-gray-300 font-medium">
                       <a href="tel:+251-30-329599">+251-930-329599</a> <br />
                       <a href="tel:+251-911-690818">+251-911-690818</a>
+                      <br />
+                      <a href="tel:0930424242">+251-930-424242</a>
                     </div>
                     <div className="text-gray-500 text-sm">
                       Mon-Fri 8AM-5PM <br />
