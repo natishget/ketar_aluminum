@@ -123,6 +123,8 @@ export default function ContactPage() {
                     <div className="text-lg font-semibold text-gray-900">
                       <a href="tel:0930329599">+251-930-32-9599</a> <br />
                       <a href="tel:0911690818">+251-911-69-0818</a>
+                      <br />
+                      <a href="tel:0930424242">+251-930-42-4242</a>
                     </div>
                     <div className="text-sm text-gray-600">
                       Mon-Sun: 8AM-6PM EST

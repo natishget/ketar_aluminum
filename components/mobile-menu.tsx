@@ -103,9 +103,14 @@ export function MobileMenu({ currentPage }: MobileMenuProps) {
             </Button> */}
             <div className="flex items-center justify-center space-x-2 text-gray-600">
               <Phone className="h-4 w-4" />
-              <a href="tel:0930329599" className="text-sm font-medium">
-                +251-930-32-9599
-              </a>
+              <div className="flex flex-col">
+                <a href="tel:0930424242" className="text-sm font-medium">
+                  +251-930-42-4242
+                </a>
+                <a href="tel:0930329599" className="text-sm font-medium">
+                  +251-930-32-9599
+                </a>
+              </div>
             </div>
           </div>
         </div>
