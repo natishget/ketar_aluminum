@@ -83,6 +83,10 @@ export const metadata: Metadata = {
   },
   generator: "ByteForge",
 };
+<meta
+  name="google-site-verification"
+  content="90yjdmrZFycb0ixqGeD6crcaQI3G1sn4DkB9P0jk9KM"
+/>;
 
 export default function RootLayout({
   children,
@@ -111,6 +115,12 @@ export default function RootLayout({
           href="@/assets/ketar_logo2.png"
         />
         <link rel="manifest" href="/site.webmanifest" />
+
+        {/* google meta tag */}
+        <meta
+          name="google-site-verification"
+          content="90yjdmrZFycb0ixqGeD6crcaQI3G1sn4DkB9P0jk9KM"
+        />
 
         {/* Structured Data */}
         <script
