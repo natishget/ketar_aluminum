@@ -60,7 +60,7 @@ export const metadata: Metadata = {
       "Leading aluminum supplier in Ethiopia since 2006. Specializing in anodized and powder coating aluminum profiles, doors, windows, curtain walls, and technical services.",
     images: [
       {
-        url: "@/assests/ketar_logo2.png",
+        url: "https://ketaraluminum.com/assests/ketar_logo2.png",
         width: 1200,
         height: 630,
         alt: "Ketar Aluminum - Product and Service at its best",
@@ -75,9 +75,6 @@ export const metadata: Metadata = {
     images: ["/og-image.jpg"],
   },
 
-  verification: {
-    google: "your-google-verification-code",
-  },
   alternates: {
     canonical: "https://ketaraluminum.com",
   },

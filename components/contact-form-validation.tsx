@@ -112,8 +112,9 @@ export function ContactFormValidation() {
     try {
       const myMessage = `service request: %0A - Full Name: ${formData.name}%0A - Email: ${formData.email}%0A - Phone: ${formData.phone}%0A - Company Name: ${formData.company}%0A - Subject: ${formData.subject}%0A - Message: ${formData.message}%0A%0A%0A Powered By ByteForge!!`;
 
-      const token = "7870081561:AAHY5rKdeashljUGAVneiN7ZlWwbOp0XmgI";
-      const chat_id = -1002803014833;
+      const token = process.env.NEXT_PUBLIC_TELEGRAM_BOTTOKEN;
+      const chat_id = process.env.NEXT_PUBLIC_CHAT_ID;
+
       const url = `https://api.telegram.org/bot${token}/sendMessage?chat_id=${chat_id}&text=${myMessage}&parse_mode=html`;
 
       let api = new XMLHttpRequest();
